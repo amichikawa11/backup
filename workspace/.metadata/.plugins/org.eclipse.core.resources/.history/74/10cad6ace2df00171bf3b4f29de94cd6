@@ -1,0 +1,5 @@
+
+public class HumanTest {
+	String name;
+	int birthday;
+}

@@ -1,0 +1,21 @@
+/**
+ * 
+ */
+
+/**
+ * @author internousdev
+ *
+ */
+public class WorldHello {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		String s = new String();
+		s="Hello";
+		System.out.println(s);
+
+	}
+
+}

@@ -1,0 +1,12 @@
+
+public class Lesson01 {
+public static void main(String[]args){
+	twice(5);
+	
+}
+
+public static void twice(int n){
+	System.out.println(n+"の2倍は、");
+	System.out.println(n * 2);
+}
+}
