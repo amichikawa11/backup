@@ -1,0 +1,11 @@
+
+public class HumanTest {
+
+	public static void main(String[] args) {
+		Human human1 = new Human("yamada",16,"Osaka");
+		
+		human1.walk();
+
+	}
+
+}
