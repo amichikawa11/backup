@@ -1,9 +1,0 @@
-
-public class FruitTest {
-public static void main(String[]args){
-	Fruit fruit1 = new Fruit(1,"apple",200,"amai");
-}
-
-
-   System.out.println(fruit1.name+"は"+fruit1.azi);
-}
