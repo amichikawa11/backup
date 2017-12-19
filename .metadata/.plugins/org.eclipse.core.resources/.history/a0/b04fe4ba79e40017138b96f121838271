@@ -1,0 +1,10 @@
+
+public class HumanTest {
+	public static void main(String[]args){
+		
+		Human human1 = new Human("yamada",25,"dokusyo");
+		
+		
+		System.out.println(human1.syumi);
+	}
+}

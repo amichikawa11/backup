@@ -1,0 +1,21 @@
+
+public class Fruit {
+
+	int id;
+	String name;
+	int price;
+	String azi;
+	
+	Fruit(int id,String name,int price,String azi){
+		this.id=id;
+		this.name=name;
+		this.price=price;
+		this.azi=azi;
+	}
+	
+	Fruit(int id,String name){
+		this(id,name,0,null);
+	}
+
+	
+}

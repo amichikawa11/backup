@@ -1,0 +1,19 @@
+
+public class HumanTest {
+	public static void main(String[]args){
+		Human human = new Human("nobuo",19901101);
+		Human human2 = new Human("takasi",20071022);
+		Human human3 = new Human("ayane",20110101);
+		
+		
+		System.out.println("名前："+human.name);
+		System.out.println("誕生日:"+human.birthday);
+		
+		System.out.println("名前"+human3.name);
+		System.out.println("誕生日："+human3.birthday);
+
+		
+	
+		
+	}
+}

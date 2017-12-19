@@ -1,0 +1,12 @@
+
+public class Fruit {
+	
+	int id;
+	String fruit_name;
+	int price;
+	String team;
+	
+	
+	
+	
+}

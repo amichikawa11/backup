@@ -1,0 +1,19 @@
+
+public class Human {
+	String name;
+	int birthday;
+	int manpukudo;
+	
+	
+	Human(){
+		this.name="nobuo";
+		this.birthday=19770101;
+		this.manpukudo=50;
+	}
+	
+	
+	void eat(){
+		this.manpukudo += 60;
+	}
+
+}

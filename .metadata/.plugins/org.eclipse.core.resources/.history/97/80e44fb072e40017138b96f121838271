@@ -1,0 +1,13 @@
+
+public class HumanTest {
+	public static void main(String[]args){
+		Human human = new Human();
+		human.name = "nobuo";
+		human.age = 19771101;
+		
+		human2.name = "ayane";
+		human2.age= 20110103;
+		
+		System.out.println(human.name);
+	}
+}
