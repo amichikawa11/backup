@@ -2,10 +2,13 @@
 public class HumanTest {
 
 	public static void main(String[] args) {
-		Human human1 = new Human("yamada",16,"Osaka");
+		System.out.println(Human.getCount_Human());
 		
-		human1.walk();
-		System.out.println("出身地は"+human1.syussin+"です");
+		Human human1 = new Human();
+		System.out.println(Human.getCount_Human());
+		
+		Human human2 = new Human();
+		System.out.println(Human.getCount_Human());
 
 	}
 
