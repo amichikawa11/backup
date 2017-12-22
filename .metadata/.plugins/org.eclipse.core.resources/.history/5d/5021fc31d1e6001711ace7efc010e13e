@@ -1,0 +1,8 @@
+
+public class Human2 {
+	String name;
+	void eat(){};
+	void sleep(){};
+	
+
+}

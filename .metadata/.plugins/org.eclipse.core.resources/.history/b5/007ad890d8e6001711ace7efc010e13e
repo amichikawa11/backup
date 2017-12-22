@@ -1,0 +1,7 @@
+
+public class Programmer extends Human{
+
+	Programmer(){
+		System.out.println("プログラマー誕生");
+	}
+}

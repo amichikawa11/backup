@@ -1,0 +1,13 @@
+public class Score{
+     public static void main(String[] args){
+
+    	powerOfTwo(5);
+     }
+
+     public static void powerOfTwo(int n){
+    	 System.out.print(n+"の"+n+"乗は");
+    	 System.out.print(n*n);
+
+
+     }
+     }

@@ -1,0 +1,5 @@
+
+public class Programmer extends Human2{
+	void programming(){};
+
+}

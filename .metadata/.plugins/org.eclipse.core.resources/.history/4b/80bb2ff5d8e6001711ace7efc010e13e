@@ -1,0 +1,7 @@
+
+public class Human {
+
+	Human(){
+		System.out.println("人間誕生");
+	}
+}

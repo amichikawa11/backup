@@ -1,0 +1,22 @@
+
+public class Score {
+	public static void main(String[] args){
+		String[] names = new String[] {"aoki","yamada","hukuda","momoti"};
+
+		int[] scores = new int[]{80,65,70,95};
+
+		for(int i =0; i<names.length;i++){
+			System.out.println(names[i]+"さんの点数："+scores[i]+"点です");
+		}
+
+
+	   for(int i =0; i <=9; i++){
+		   String a = "";
+		   for(int j=1; j<=9; j++){
+			   a += i * j +" ";
+		   }
+		   System.out.println(a);
+	   }
+	}
+
+}

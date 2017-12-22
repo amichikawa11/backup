@@ -1,0 +1,10 @@
+
+public class EconomyCar extends Car {
+
+	@Override
+	public void drive(int gas){
+		this.gas -= gas;
+		System.out.println(gas * 20 +"km走りました");
+	}
+
+}

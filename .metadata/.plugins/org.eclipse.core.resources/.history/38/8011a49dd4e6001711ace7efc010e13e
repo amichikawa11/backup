@@ -1,0 +1,8 @@
+
+public class EconomyCar extends Car {
+
+	int nenpi =20;
+
+	}
+
+}
