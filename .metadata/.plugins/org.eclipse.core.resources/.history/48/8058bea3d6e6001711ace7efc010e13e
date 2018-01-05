@@ -1,6 +1,0 @@
-
-public class SuperEconomyCar {
-SuperEconomyCar(){
-	super.nenpi = 30;
-}
-}
