@@ -1,27 +1,26 @@
 public class Test {
 
 	public static void main(String[] args) {
+		TestUserDAO dao = new TestUserDAO();
 
-	TestUserDAO dao = new TestUserDAO();
 
-	/** dao.select("jiro","456");
 
-	 * dao.selectAll();
-	 * dao.selectByName("taro");
-	 * dao.selectByPassword("123");
-	 * dao.updateUserNameByUserName("taro","saburo");
-	 * dao.insert(4, "shiro","012");
-	 * dao.delete("shiro");
-	 * dao.selectAll();
-	 */
+		/**
+		 * 	dao.insert(4, "shiro", "012");
+		 *  dao.selectAll();
+		 *dao.selectByName("hanako");
+		 * dao.select("tanaka", "123");
+		 * dao.selectAll();
+		 * dao.selectByPassword("568");
+		 * dao.updateUserNameByUserName("tanaka","shiraishi");
+		 */
 
-	dao.selectByPassword("123");
+		dao.delete("shiro");
+		dao.selectAll();
+
+
 
 
 	}
 
-
-
-	}
-
-
+}
