@@ -15,10 +15,8 @@ int count=Integer.parseInt(request.getParameter("count"));
 int delivery=Integer.parseInt(request.getParameter("delivery"));
 
 %>
-
-<%= price  %>円x<%=count %>個+送料<%=delivery %>円=<a></a>
-<%= price*count+delivery %>円
-
+<%= price %>円x<%=count %>個+送料<%=delivery %>)円＝<a></a>
+<%=price*count+delivery %>円
 
 
 </body>

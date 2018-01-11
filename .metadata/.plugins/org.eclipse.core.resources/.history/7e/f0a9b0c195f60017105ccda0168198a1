@@ -1,0 +1,17 @@
+class Dog{
+	private String Name;
+	private int age;
+
+	public void SetName(String nm){
+		Name=nm;
+	}
+
+	public void setAge(int ag){
+		age=ag;
+	}
+
+	public void ShowProfile(){
+		System.out.println("この子の名前は"+Name+"です");
+		System.out.println("この子の年齢は"+age+"歳です");;
+	}
+}

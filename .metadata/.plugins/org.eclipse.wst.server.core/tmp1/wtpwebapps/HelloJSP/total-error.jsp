@@ -8,28 +8,30 @@
 </head>
 <body>
 <%@page isErrorPage="true" %>
-<p>数値を入力してください。</p>
-<button onclick="history.back()">戻る</button>
+<p>数値を入力してください</p>
+<button onClick="history.back()">戻る</button>
 <br>
 <p><%=exception %></p>
 <table border=1>
 <tr>
-	<td><strong>エラーメッセージ</strong></td>
-	<td><%= exception.getMessage() %></td>
-</tr>
-<tr>
-	<td><strong>例外を文字列に変換</strong></td>
-	<td><%= exception.toString() %></td>
-</tr>
-<tr>
-	<td><strong>スタックとレース</strong></td>
-	<td>
-	<%
-	exception.printStackTrace(new java.io.PrintWriter(out));
-	%>
-</td>
+<td><strong>エラーメッセージ</strong></td>
+<td><%=exception.getMessage() %></td>
 </tr>
 
+<tr>
+<td><strong>例外を文字列に変換</strong></td>
+<td><%= exception.toString() %></td>
+</tr>
+
+<tr>
+<td><strong>スタックとレース</strong></td>
+<td>
+<%
+	exception.printStackTrace(new java.io.PrintWriter(out));
+%>
+</td></tr>
+
 </table>
+
 </body>
 </html>

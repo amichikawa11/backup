@@ -1,0 +1,22 @@
+
+public class Dog {
+	private String Name;
+
+	public void SetName(String nm){
+		Name = nm;
+	}
+
+	public void ShowProfile(){
+		System.out.println("名前は"+Name+"です");
+	}
+
+}
+
+	public class Exercise{
+		public static void main(String[] args){
+			Dog dog = new Dog();
+
+			dog.SetName("わんこ");
+			dog.ShowProfile();
+		}
+	}
