@@ -1,5 +1,4 @@
 package com.internousdev.template.action;
-
 import java.util.Map;
 
 import org.apache.struts2.interceptor.SessionAware;
@@ -14,14 +13,15 @@ public class LoginAction extends ActionSupport implements SessionAware{
 	public Map<String,Object> session;
 	private LoginDAO loginDAO = new LoginDAO();
 	private LoginDTO loginDTO = new LoginDTO();
-	private BuyItemDAO buyItemDAO = new BuyItemDAO();
+	private BuyItemDAO buyItenDAO = new BuyItemDAO();
+
+
 	public String getLoginUserId(){
 		return loginUserId;
 	}
 
-	public void setLoginUserId(String loginUserId){
-		this.loginUserId = loginUserId;
-
+	public void setLoginUserId(String loginUserID){
+		this.loginUserId=loginUserId;
 	}
 
 	public String getLoginPassword(){
@@ -33,21 +33,21 @@ public class LoginAction extends ActionSupport implements SessionAware{
 	}
 
 	@Override
-	public void setSession(Map<String,Object>session){
+	public void setSession(Map<String,Object> session){
 		this.session = session;
 	}
 
 	public String execute(){
 		result = ERROR;
-		loginDTO =loginDAO.getLoginUserInfo(loginUserId,loginPassword);
+		loginDTO = loginDAO.getLoginUserInfo(loginUserId,loginPassword);
 		session.put("loginUser",loginDTO);
 
 		if(((LoginDTO)session.get("loginUser")).getLoginFlg()){
 			result = SUCCESS;
 			BuyItemDTO buyItemDTO = buyItemDAO.getBuyItemInfo();
 
-			session.put("login_user_id",loginDTO.getLoginId());
-			session.putAll("id",buyItemDTO.getId());
+			session.putAll("login_user_id",loginDTO.getLoginId());;
+			session.put("id",buyItemDTO.getId());
 			session.put("buyItem_name",buyItemDTO.getItemName());
 			session.put("buyItem_price",buyItemDTO.getItemPrice());
 
@@ -57,5 +57,4 @@ public class LoginAction extends ActionSupport implements SessionAware{
 	}
 
 }
-
 
