@@ -9,9 +9,15 @@
 <fullyQualifiedTypeName name="com.internousdev.login.util.DBconnector"/>
 <fullyQualifiedTypeName name="com.sun.jndi.url.corbaname.corbanameURLContextFactory"/>
 <fullyQualifiedTypeName name="com.internousdev.login.util.DBConnector"/>
-<fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
 <fullyQualifiedTypeName name="java.lang.Exception"/>
 <fullyQualifiedTypeName name="com.mysql.jdbc.PreparedStatement"/>
-<fullyQualifiedTypeName name="java.sql.ResultSet"/>
+<fullyQualifiedTypeName name="com.internousdev.template.dao.BuyItemCompleteDAO"/>
 <fullyQualifiedTypeName name="com.internousdev.template.dao.UserCreateCompleteDAO"/>
+<fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
+<fullyQualifiedTypeName name="java.sql.ResultSet"/>
+<fullyQualifiedTypeName name="com.internousdev.template.dao.MyPageDAO"/>
+<fullyQualifiedTypeName name="com.internousdev.template.dto.BuyItemDTO"/>
+<fullyQualifiedTypeName name="com.internousdev.template.dao.BuyItemDAO"/>
+<fullyQualifiedTypeName name="com.internousdev.template.dao.LoginDAO"/>
+<fullyQualifiedTypeName name="com.internousdev.template.dto.LoginDTO"/>
 </qualifiedTypeNameHistroy>
