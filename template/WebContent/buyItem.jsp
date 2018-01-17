@@ -16,7 +16,7 @@
 
 <style type="text/css">
 
-	/*=====TAG LAYOUT =========*/
+/*===== TAG LAYOUT =====*/
 
 	body{
 		margin:0;
@@ -34,12 +34,12 @@
 		margin:0 auto;
 	}
 
-	/*======= ID LAYOUT ===========*/
+	/*===== ID LAYOUT =====*/
 
 	#top{
 		width:780px;
 		margin:30px auto;
-		border:1px solid #333;
+		border:1px sokid #333;
 	}
 
 	#header{
@@ -81,7 +81,7 @@
 						<span>商品名</span>
 					</td>
 					<td>
-						<s:property value="session.buyItem_name" />
+						<s:property value="session.buyItem_name"/>
 					</td>
 				</tr>
 				<tr>
@@ -89,7 +89,7 @@
 						<span>値段</span>
 					</td>
 					<td>
-					<s:property value="session.buyItem_price" />
+					<s:property value="session.buyItem_price"/>
 						<span>円</span>
 					</td>
 				</tr>
@@ -100,10 +100,10 @@
 					<td>
 						<select name="stock">
 						<option value="1" selected="selected">1</option>
-							<option value="2">2</option>
-							<option value="3">3</option>
-							<option value="4">4</option>
-							<option value="5">5</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5</option>
 						</select>
 					</td>
 				</tr>
@@ -118,11 +118,12 @@
 				</tr>
 				<tr>
 					<td>
-						<s:submit value="購入" />
+						<s:submit value="購入"/>
 					</td>
 				</tr>
+
 			</table>
-		</s:form>
+			</s:form>
 
 			<div>
 				<span>前画面に戻る場合は</span>
@@ -130,10 +131,11 @@
 			</div>
 		</div>
 	</div>
-
 	<div id="footer">
 		<div id="pr">
 		</div>
 	</div>
+
+
 </body>
 </html>

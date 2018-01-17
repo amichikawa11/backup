@@ -1,4 +1,5 @@
 package com.internousdev.template.action;
+
 import java.util.Map;
 
 import org.apache.struts2.interceptor.SessionAware;
@@ -11,13 +12,14 @@ public class BuyItemCompleteAction extends ActionSupport implements SessionAware
 	private String result;
 
 	public String execute(){
-		result= SUCCESS;
+
+		result = SUCCESS;
 		return result;
 	}
 
 	@Override
 	public void setSession(Map<String,Object> session){
-		this.session=session;
+		this.session = session;
 	}
 
 }

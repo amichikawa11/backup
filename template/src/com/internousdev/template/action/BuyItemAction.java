@@ -1,4 +1,5 @@
 package com.internousdev.template.action;
+
 import java.util.Map;
 
 import org.apache.struts2.interceptor.SessionAware;
@@ -18,17 +19,20 @@ public class BuyItemAction extends ActionSupport implements SessionAware{
 		session.put("stock",stock);
 		int intStock = Integer.parseInt(session.get("stock").toString());
 		int intPrice = Integer.parseInt(session.get("buyItem_price").toString());
-		session.put("buyItem_price",intStock * intPrice);
+		session.put("buyItem_price",intStock*intPrice);
 		String payment;
 
 		if(pay.equals("1")){
+
 			payment = "現金払い";
 			session.put("pay",payment);
 
 		}else{
-			payment="クレジットカード";
+
+			payment = "クレジットカード";
 			session.put("pay",payment);
 		}
+
 		return result;
 	}
 
@@ -37,7 +41,7 @@ public class BuyItemAction extends ActionSupport implements SessionAware{
 	}
 
 	public void setStock(int stock){
-		this.stock=stock;
+		this.stock = stock;
 	}
 
 	public String getPay(){
@@ -50,7 +54,8 @@ public class BuyItemAction extends ActionSupport implements SessionAware{
 
 	@Override
 	public void setSession(Map<String,Object> session){
-		this.session=session;
+		this.session = session;
 	}
+
 
 }

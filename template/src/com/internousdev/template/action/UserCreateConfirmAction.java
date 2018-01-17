@@ -13,17 +13,15 @@ public class UserCreateConfirmAction extends ActionSupport implements SessionAwa
 	public Map<String,Object> session;
 	private String errorMassage;
 
-
 	public String execute(){
-
 		String result = SUCCESS;
 
 		if(!(loginUserId.equals(""))
 				&&!(loginPassword.equals(""))
 				&&!(userName.equals(""))){
-					session.put("loginUserId", loginUserId);
-					session.put("loginPassword", loginPassword);
-					session.put("userName", userName);
+			session.put("loginUserID",loginUserId);
+			session.put("loginPassword",loginPassword);
+			session.put("userName",userName);
 		}else{
 			setErrorMassage("未入力の項目があります。");
 			result = ERROR;
@@ -52,7 +50,12 @@ public class UserCreateConfirmAction extends ActionSupport implements SessionAwa
 	}
 
 	public void setUserName(String userName){
-		this.userName=userName;
+		this.userName = userName;
+	}
+
+	@Override
+	public void setSession(Map<String,Object> session){
+		this.session = session;
 	}
 
 	public String getErrorMassage(){
@@ -60,14 +63,6 @@ public class UserCreateConfirmAction extends ActionSupport implements SessionAwa
 	}
 
 	public void setErrorMassage(String errorMassage){
-		this.errorMassage=errorMassage;
+		this.errorMassage = errorMassage;
 	}
-
-	@Override
-	public void setSession(Map<String, Object> arg0) {
-		// TODO 自動生成されたメソッド・スタブ
-
-	}
-
-
 }

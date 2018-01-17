@@ -5,17 +5,17 @@
 <html>
 <head>
 
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<meta http^equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<meta http-equiv="Content-Style-Type" content="text/css" />
 	<meta http-equiv="Content-Script-Type" content="text/javascript" />
-	<meta http-equiv="imagetoolbar" content="no">
+	<meta http-equiv="imagetoolbar" content="no" />
 	<meta name="description" content="" />
 	<meta name="keywords" content="" />
-<title>UserCreateComplete画面</title>
 
+<title>UserCreateComplete画面</title>
 <style type="text/css">
 
-	/*======TAG LAYOUT =========*/
+	/*=====TAG LAYOUT =====*/
 
 	body{
 		margin:0;
@@ -33,12 +33,12 @@
 		margin:0 auto;
 	}
 
-	/* ======== TD LAYOUT ===========*/
+	/*===== ID LAYOUT =====*/
 
 	#top{
 		width:780px;
 		margin:30px auto;
-		border:1px solid #333;
+		border:1px sokid #333;
 	}
 
 	#header{
@@ -60,7 +60,6 @@
 		clear:both;
 	}
 
-
 </style>
 </head>
 <body>
@@ -74,13 +73,13 @@
 			<p>UserCreateComplete</p>
 		</div>
 		<div>
-			 <h3>ユーザーの登録が完了いたしました。</h3>
-			 <div>
-			 	<a href='<s:url action="HomeAction" />'>ログインへ</a>
-			 </div>
+				<h3>ユーザーの登録が完了いたしました。</h3>
+				<div>
+						<a href='<s:url action="HomeAction"/>'>ログインへ</a>
+				</div>
 		</div>
-	</div>
 
+	</div>
 	<div id="footer">
 		<div id="pr">
 		</div>
