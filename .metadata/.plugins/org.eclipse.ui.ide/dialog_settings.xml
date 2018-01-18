@@ -12,6 +12,7 @@
 		<item value="false" key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID"/>
 		<item value="false" key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="C:\Users\internousdev\Desktop\struts-2.3.34-all"/>
 			<item value="C:\Users\internousdev\Desktop\workspace\workspace-ichikawa\backup\workspace\Person2"/>
 		</list>
 		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
