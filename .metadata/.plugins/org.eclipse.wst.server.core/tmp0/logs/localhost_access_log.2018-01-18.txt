@@ -17,3 +17,12 @@
 0:0:0:0:0:0:0:1 - - [18/Jan/2018:16:38:48 +0900] "POST /template2/BuyItemAction.action HTTP/1.1" 200 1878
 0:0:0:0:0:0:0:1 - - [18/Jan/2018:16:38:49 +0900] "POST /template2/BuyItemConfirmAction.action HTTP/1.1" 200 1441
 0:0:0:0:0:0:0:1 - - [18/Jan/2018:16:38:50 +0900] "GET /template2/MyPageAction.action HTTP/1.1" 200 2128
+127.0.0.1 - - [18/Jan/2018:17:32:48 +0900] "GET / HTTP/1.1" 404 1019
+0:0:0:0:0:0:0:1 - - [18/Jan/2018:17:32:49 +0900] "GET /WebProj/ HTTP/1.1" 500 3225
+127.0.0.1 - - [18/Jan/2018:17:33:46 +0900] "GET / HTTP/1.1" 404 1019
+0:0:0:0:0:0:0:1 - - [18/Jan/2018:17:33:49 +0900] "GET /WebProj/ HTTP/1.1" 200 284
+0:0:0:0:0:0:0:1 - - [18/Jan/2018:17:33:59 +0900] "GET /WebProj/HelloStrutsAction HTTP/1.1" 200 150
+127.0.0.1 - - [18/Jan/2018:17:49:06 +0900] "GET / HTTP/1.1" 404 1019
+0:0:0:0:0:0:0:1 - - [18/Jan/2018:17:49:10 +0900] "GET /WebProj/ HTTP/1.1" 200 434
+0:0:0:0:0:0:0:1 - - [18/Jan/2018:17:49:12 +0900] "GET /WebProj/WelcomeAction HTTP/1.1" 200 853
+0:0:0:0:0:0:0:1 - - [18/Jan/2018:17:49:19 +0900] "POST /WebProj/LoginAction.action HTTP/1.1" 200 149
