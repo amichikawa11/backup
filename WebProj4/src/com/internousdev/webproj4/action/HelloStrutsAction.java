@@ -25,6 +25,12 @@ public class HelloStrutsAction extends ActionSupport{
 		return ret;
 	}
 
-	public List<Hello>
+	public List<HelloStrutsDTO> getHelloStrutsDTOList(){
+		return HelloStrutsDTOList;
+	}
+
+	public void setHelloStrutsDTOList(List<HelloStrutsDTO> helloStrutsDTOList){
+		HelloStrutsDTOList = helloStrutsDTOList;
+	}
 
 }
