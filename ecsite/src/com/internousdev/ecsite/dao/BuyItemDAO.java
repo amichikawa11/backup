@@ -12,6 +12,12 @@ public class BuyItemDAO {
 	private Connection connection = dbConnector.getConnection();
 	private BuyItemDTO buyItemDTO = new BuyItemDTO();
 
+	/**
+	 * 商品情報取得メソッド
+	 *
+	 * @return BuyItemDTO
+	 */
+
 	public BuyItemDTO getBuyItemInfo(){
 		String sql = "SELECT id,item_name,item_price FROM item_info_transaction";
 

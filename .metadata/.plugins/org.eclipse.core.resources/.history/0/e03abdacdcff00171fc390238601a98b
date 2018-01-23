@@ -1,0 +1,44 @@
+package com.internousdev.ecsite.dto;
+
+public class CatalogDTO {
+	private int itemId;
+	private String itemName;
+	private int itemPrice;
+	private String detail;
+	private String result;
+
+	public int getItemd() {
+		return itemId;
+	}
+	public void setItemId(int itemId) {
+		this.itemId = itemId;
+	}
+	public String getItemName() {
+		return itemName;
+	}
+	public void setItemName(String itemName) {
+		this.itemName = itemName;
+	}
+	public int getItemPrice() {
+		return itemPrice;
+	}
+	public void setPrice(int itemPrice) {
+		this.itemPrice = itemPrice;
+	}
+	public String getDetail() {
+		return detail;
+	}
+	public void setDetail(String detail) {
+		this.detail = detail;
+	}
+	public String getResult() {
+		return result;
+	}
+	public void setResult(String result) {
+		this.result = result;
+	}
+
+
+
+
+}

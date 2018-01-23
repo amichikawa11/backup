@@ -67,6 +67,8 @@
 			<result name="success">home.jsp</result>
 		</action>
 
+
+
 	</package>
 
 </struts>

@@ -41,6 +41,26 @@ create table item_buy_item_transaction(
 	delete_date datetime
 );
 
+
+/*
+ * 商品カタログ
+ */
+
+create table catalog(
+item_id int not null primary key auto_increment,
+item_name varchar(255) not null,
+item_price int not null,
+item_detail varchar(255) not null,
+pictureurl varchar(255) not null,
+primary key('id')
+);
+
+
 INSERT INTO item_info_transaction(item_name,item_price,item_stock) VALUES ("ノートBook",100,50);
 
 INSERT INTO login_user_transaction(login_id,login_pass,user_name) VALUES("internous","internous01","test");
+
+INSERT INTO catalog(item_id,item_name,item_price,item_detail,pictureurl) VALUES
+(1,"焼き菓子",700,"東京バナナパイ","/image/bananapai.jpg");
+(2,"洋菓子",800,"ごまたまごプリン","/image/gomatamago.jpg");
+(,"和菓子",500,"栗きんとん","/image/kurikinton.jpg");
