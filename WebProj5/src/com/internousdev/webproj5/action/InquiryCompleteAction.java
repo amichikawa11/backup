@@ -22,6 +22,11 @@ public class InquiryCompleteAction extends ActionSupport implements SessionAware
 	public String execute(){
 		String ret = ERROR;
 		InquiryCompleteDAO dao = new InquiryCompleteDAO();
+
+		/**
+		 * DAOのinsertメソッドで取得した登録件数分だけ
+		 * DTOリストの内容を追加
+		 */
 		int count = dao.insert(name,qtype,body);
 		if(count > 0){
 			inquiryDTOList = dao.select();
