@@ -31,7 +31,18 @@
 		margin:0 auto;
 	}
 
+	ul{
+		list-style:none;
+	}
+
+	li{
+		float:left;
+	}
+
 	/* ===== ecsite LAYOUT =====*/
+
+
+	/* ヘッダー */
 
 	#top{
 		width:780px;
@@ -45,6 +56,16 @@
 		background-color:black;
 	}
 
+	#left-list{
+		float:left;
+	}
+
+	#right-list{
+		float:right;
+	}
+
+
+	/* メイン */
 	#main{
 		width:100%;
 		height:500px;
@@ -68,6 +89,26 @@
 <body>
 
 	<div id="header">
+
+		<div id="left-list">
+		<ul>
+		<li>TOPへ戻る</li>
+		<li>商品情報</li>
+		</ul>
+		</div>
+
+		<div id="right-list">
+		<ul>
+		<li>新規登録</li>
+		<li>ログイン</li>
+		<li>買い物カート</li>
+		</ul>
+		</div>
+
+		<div id="header-logo">
+		SITE TITLE</div>
+
+
 		<div id="pr">
 		</div>
 	</div>

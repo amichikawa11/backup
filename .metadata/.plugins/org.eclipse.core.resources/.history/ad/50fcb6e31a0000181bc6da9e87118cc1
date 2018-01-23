@@ -107,6 +107,7 @@ create table product_info(
 id int not null primary key,
 product_id int not null unique,
 product_name varchar(100) not null unique,
+product_name_kana varchar(100) not null unique,
 product_description varchar(255) not null,
 category_id int not null,
 price int,
