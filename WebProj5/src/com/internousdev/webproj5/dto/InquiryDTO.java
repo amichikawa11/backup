@@ -5,7 +5,6 @@ public class InquiryDTO {
 	private String name;
 	private String qtype;
 	private String body;
-
 	public String getName() {
 		return name;
 	}

@@ -1,0 +1,44 @@
+@CHARSET "UTF-8";
+
+/*全体共通デザイン*/
+ul{
+	list-style:none;
+}
+
+li{
+	float:left;
+	margin-right:15px;
+}
+#top {
+width:780px;
+margin:30px auto;
+border:1px solid #333;
+}
+
+前の続きです。
+
+次へ続きます。
+
+home.jspの作成
+
+#header {
+width: 100%;
+height: 80px;
+background-color: black;
+}
+#main {
+width: 100%;
+height: 500px;
+text-align: center;
+}
+#footer {
+width: 100%;
+height: 80px;
+background-color: black;
+clear:both;
+}
+#text-center {
+display: inline-block;
+text-align: center;
+
+}

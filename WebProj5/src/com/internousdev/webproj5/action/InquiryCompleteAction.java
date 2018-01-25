@@ -10,8 +10,8 @@ import com.internousdev.webproj5.dao.InquiryCompleteDAO;
 import com.internousdev.webproj5.dto.InquiryDTO;
 import com.opensymphony.xwork2.ActionSupport;
 
-public class InquiryCompleteAction extends ActionSupport implements SessionAware{
 
+public class InquiryCompleteAction extends ActionSupport implements SessionAware{
 	private String name;
 	private String qtype;
 	private String body;
@@ -22,12 +22,7 @@ public class InquiryCompleteAction extends ActionSupport implements SessionAware
 	public String execute(){
 		String ret = ERROR;
 		InquiryCompleteDAO dao = new InquiryCompleteDAO();
-
-		/**
-		 * DAOのinsertメソッドで取得した登録件数分だけ
-		 * DTOリストの内容を追加
-		 */
-		int count = dao.insert(name,qtype,body);
+		int count = dao.insert(name, qtype, body);
 		if(count > 0){
 			inquiryDTOList = dao.select();
 			session.put("inquiryDTOList", inquiryDTOList);
@@ -35,6 +30,7 @@ public class InquiryCompleteAction extends ActionSupport implements SessionAware
 			ret = SUCCESS;
 		}
 		return ret;
+
 	}
 
 	public String getName() {
@@ -61,14 +57,6 @@ public class InquiryCompleteAction extends ActionSupport implements SessionAware
 		this.body = body;
 	}
 
-	public List<InquiryDTO> getInquiryDTOList() {
-		return inquiryDTOList;
-	}
-
-	public void setInquiryDTOList(List<InquiryDTO> inquiryDTOList) {
-		this.inquiryDTOList = inquiryDTOList;
-	}
-
 	public Map<String, Object> getSession() {
 		return session;
 	}
@@ -76,7 +64,6 @@ public class InquiryCompleteAction extends ActionSupport implements SessionAware
 	public void setSession(Map<String, Object> session) {
 		this.session = session;
 	}
-
 
 
 }

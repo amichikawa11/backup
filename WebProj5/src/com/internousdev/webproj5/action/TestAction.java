@@ -10,16 +10,11 @@ import com.internousdev.webproj5.dao.TestDAO;
 import com.internousdev.webproj5.dto.LoginDTO;
 import com.opensymphony.xwork2.ActionSupport;
 
-
-
-public class TestAction extends ActionSupport implements SessionAware{
-
+public class TestAction extends ActionSupport implements SessionAware {
 	private String username;
-
 	private String password;
 
 	private List<LoginDTO> loginDTOList = new ArrayList<LoginDTO>();
-
 	private Map<String,Object> session;
 
 	public String execute(){
@@ -28,7 +23,7 @@ public class TestAction extends ActionSupport implements SessionAware{
 		TestDAO dao = new TestDAO();
 		int count = dao.insert(username, password);
 
-		if(count>0){
+		if(count > 0){
 			ret = SUCCESS;
 		}else{
 			ret = ERROR;
@@ -56,13 +51,6 @@ public class TestAction extends ActionSupport implements SessionAware{
 		this.password = password;
 	}
 
-	public List<LoginDTO> getLoginDTOList() {
-		return loginDTOList;
-	}
-
-	public void setLoginDTOList(List<LoginDTO> loginDTOList) {
-		this.loginDTOList = loginDTOList;
-	}
 
 	public Map<String, Object> getSession() {
 		return session;

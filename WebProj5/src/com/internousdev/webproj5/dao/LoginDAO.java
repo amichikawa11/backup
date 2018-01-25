@@ -11,14 +11,31 @@ import com.internousdev.webproj5.dto.LoginDTO;
 import com.internousdev.webproj5.util.DBConnector;
 
 public class LoginDAO {
+
 	public String username;
 	public String password;
 
 	public List<LoginDTO> loginDTOList = new ArrayList<LoginDTO>();
 
+	/**
+	 * username	と passwordを引数にとるselectメソッド
+	 * 入力したusernameとpasswordをデータベースにセットしている
+	 */
+
 	public List<LoginDTO> select(String username,String password){
+
+		/**
+		 * データベースに接続
+		 */
+
 		DBConnector db = new DBConnector();
 		Connection con = db.getConnection();
+
+		/**
+		 * 値を入力したいテーブルの場所を指定
+		 * user_nameに入力されたusername を
+		 * passwordに入力されたpassword を順にセット
+		 */
 
 		String sql = "select * from users where user_name=? and password=?";
 
@@ -26,7 +43,18 @@ public class LoginDAO {
 			PreparedStatement ps = con.prepareStatement(sql);
 			ps.setString(1, username);
 			ps.setString(2, password);
+
+			/**
+			 * executeQueryで検索した結果を
+			 * ResultSetに格納
+			 */
+
 			ResultSet rs = ps.executeQuery();
+
+			/**
+			 * 新しく入力されたusernameとpasswordの値を
+			 * DTOリストにセット↓
+			 */
 
 			while(rs.next()){
 				LoginDTO dto = new LoginDTO();
@@ -41,10 +69,10 @@ public class LoginDAO {
 				dto.setPassword("該当なし");
 				loginDTOList.add(dto);
 			}
-
 		}catch(SQLException e){
 			e.printStackTrace();
-		}try{
+		}
+		try{
 			con.close();
 		}catch(SQLException e){
 			e.printStackTrace();

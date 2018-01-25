@@ -1,0 +1,51 @@
+@CHARSET "UTF-8";
+
+/*全体共通デザイン*/
+ul{
+	list-style:none;
+}
+
+li{
+	float:left;
+	margin-right:15px;
+}
+
+body{
+	background-image:url("./image/b074.jpg");
+}
+
+/*ヘッダー部分*/
+header{
+	width:100%;
+	heght:80px;
+	background-color:white;
+	color:#663333;
+}
+
+.header-logo{
+	margin:0 auto;
+}
+
+.left-list{
+	float:left;
+}
+
+.right-list{
+	float:right;
+}
+
+
+/*コンテンツ部分*/
+main{
+	width:100%;
+	height:800px;
+	margin-bottom:50px;
+}
+
+
+/*フッター部分*/
+footer{
+	width:100%;
+	height:80px;
+	margin-top:20px;
+}

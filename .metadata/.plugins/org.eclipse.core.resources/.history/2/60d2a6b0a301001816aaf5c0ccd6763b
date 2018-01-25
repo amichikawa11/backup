@@ -1,0 +1,93 @@
+
+/*■全体のスタイル■*/
+
+body {
+
+margin:0;
+padding:0;
+line-height:1.6;
+letter-spacing:1px;
+font-family:Verdana, Helvetica, sans-serif;
+font-size:12px;
+color:#333;
+background-image:url("../image/b074.jpg");
+}
+
+table {
+text-align:center;
+margin:0 auto;
+}
+
+
+#text-center {
+display: inline-block;
+text-align: center;
+
+}
+
+
+
+/*■リストスタイル■*/
+ul{
+	list-style:none;
+}
+
+li{
+	float:left;
+	margin-right:15px;
+}
+
+
+/*■ヘッダー部分■*/
+
+.top-menu{
+	float:left;
+}
+
+#top {
+width:100%;
+margin:30px auto;
+border:1px solid #333;
+}
+
+
+#header {
+width: 100%;
+height: 80px;
+
+}
+
+.left-list{
+	float:left;
+}
+
+.right-list{
+	float:right;
+}
+
+
+/*■メインコンテンツ部分■*/
+
+#main {
+width: 100%;
+height: 500px;
+text-align: center;
+}
+
+
+/*■フッター部分■*/
+#footer {
+width: 100%;
+height: 100px;
+background-image:url("../image/renga.jpg");
+clear:both;
+}
+
+.h{
+	padding-top:40px;
+}
+
+.footer-message{
+	text-align:center;
+	background:rgba(255,239,209,0.5);
+}

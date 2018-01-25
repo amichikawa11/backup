@@ -6,7 +6,7 @@ import java.sql.SQLException;
 
 public class DBConnector {
 	/**
-	 * JDBCドライバー名
+	 * JDBCドライバー
 	 */
 
 	private static String driverName = "com.mysql.jdbc.Driver";
@@ -14,7 +14,6 @@ public class DBConnector {
 	/**
 	 * データベース接続URL
 	 */
-
 	private static String url = "jdbc:mysql://localhost/testdb";
 
 	/**
@@ -29,8 +28,14 @@ public class DBConnector {
 
 	private static String password = "mysql";
 
+
+	/**
+	 * データベース接続メソッド
+	 */
+
 	public Connection getConnection(){
 		Connection con = null;
+
 		try{
 			Class.forName(driverName);
 			con = DriverManager.getConnection(url,user,password);
@@ -39,7 +44,8 @@ public class DBConnector {
 			e.printStackTrace();
 		}catch(SQLException e){
 			e.printStackTrace();
-		}
+	}
 		return con;
+
 	}
 }
