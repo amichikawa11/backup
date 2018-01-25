@@ -16,20 +16,20 @@
 	<th>お問い合わせの種類</th>
 	<th>お問い合わせの内容</th>
 </tr>
-<tr>
+
 	<s:iterator value="#session.inquiryDTOList">
 		<tr>
 			<td><s:property value="name"/></td>
 
-			<s:if test='qtype="company'>
+			<s:if test='qtype=="company"'>
 				<td>会社について</td>
 			</s:if>
 
-			<s:if test='qtype="product'>
+			<s:if test='qtype=="product"'>
 				<td>製品について</td>
 			</s:if>
 
-			<s:if test='qtype="support'>
+			<s:if test='qtype=="support"'>
 				<td>アフターサポートについて</td>
 			</s:if>
 
