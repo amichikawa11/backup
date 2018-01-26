@@ -10,15 +10,17 @@
 <meta http-equiv="imagetoolbar" content="no" />
 <meta name="description" content="" />
 <meta name="keywords" content="" />
-<link rel="stylesheet" type="text/css" href="./css/style1.css">
+<link rel="stylesheet" type="text/css" href="./css/home_style.css">
+<link rel="stylesheet" type="text/css" href="./css/basis_style.css">
 <title>Home画面</title>
 </head>
 <body>
 
 <!-- ヘッダー部分 -->
+<div class="container">
 <header>
 	<div id="header">
-		<div class="header-logo">MRS DONUT</div>
+		<div class="header-logo">SWEETS PIA</div>
 
 	<div class="top-menu">
 
@@ -33,9 +35,9 @@
 
 	<div class="right-list">
 		<ul>
-			<li>SIGN UP</li>
-			<li>LOG IN</li>
-			<li>MY CART</li>
+			<li><a href='<s:url action="UserCreateAction"/>'>SIGNUP</a></li>
+			<li>LOGIN</li>
+			<li>CART</li>
 			<li>MAIL</li>
 		</ul>
 	</div>
@@ -48,29 +50,38 @@
 <img src="./image/donut.jpg" class="top-image" >
 <div class="main-contents">
 	<div class="top"></div>
-	<div class="feature-newItem"></div>
-	<div class="feature-pon"></div>
-	<div class="feature-choko"></div>
-	<div class="news"></div>
+
+	<div class="feature-newItem">
+		<p>新商品の紹介</p>
+	</div>
+
+	<div class="feature-pickUpItem">
+		<p>おすすめの商品</p>
+	</div>
+
+	<div class="feature-seasonItem">
+		<p>季節の商品</p>
+	</div>
+	<div class="news">
+		<p>更新情報</p>
+	</div>
 
 </div>
 </div>
-<br>
+
+<div class="push"></div>
 
 <!-- フッター部分 -->
 <footer>
-<div id="footer">
 
 	<div class="h"></div>
 
 	<div class="footer-message">
-		Copyright©2018 MRS DONUT. All Rights Reserved.
+		Copyright©2018 SWEETS PIA. All Rights Reserved.
 	</div>
 
-</div>
-
 </footer>
-
+</div>
 
 
 </body>
