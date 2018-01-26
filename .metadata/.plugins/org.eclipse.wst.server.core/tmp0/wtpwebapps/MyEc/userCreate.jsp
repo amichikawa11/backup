@@ -47,6 +47,7 @@
 </header>
 
 <!-- メイン部分 -->
+<div class="top-push"></div>
 <div id="main">
 <div class="main-contents">
 	<div class="top">
@@ -88,7 +89,7 @@
 				<label>なまえ（ふりがな）:</label>
 			</td>
 			<td>
-				<input type="text" name="nameKana" value=""/>
+				<input type="text" name="userKana" value=""/>
 			</td>
 		</tr>
 		<tr>
@@ -102,6 +103,15 @@
 		</tr>
 		<tr>
 			<td>
+				<label>住所</label>
+			</td>
+			<td>
+				<input type="text" name="address" value=""/>
+			</td>
+		</tr>
+
+		<tr>
+			<td>
 				<label>TEL番号（ハイフン必須）</label>
 			</td>
 			<td>
@@ -113,7 +123,7 @@
 				<label>メールアドレス</label>
 			</td>
 			<td>
-				<input type="text" name="mailaddress" value=""/>
+				<input type="text" name="mail" value=""/>
 			</td>
 		</tr>
 		<tr>
@@ -123,6 +133,9 @@
 		</tr>
 		</s:form>
 		</table>
+
+
+			<!-- GoHomeAction未作成 -->
 
 			<p>Homeへ戻る場合は
 				<a href='<s:url action="GohomeAction"/>'>こちら</a>

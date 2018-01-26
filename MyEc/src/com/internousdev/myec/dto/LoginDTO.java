@@ -16,6 +16,12 @@ public class LoginDTO {
 
 	private int sex;
 
+	private String address;
+
+	private String tellNumber;
+
+	private String mail;
+
 	private boolean loginFlg = false;
 
 	public String getLoginId() {
@@ -56,6 +62,31 @@ public class LoginDTO {
 
 	public void setSex(int sex) {
 		this.sex = sex;
+	}
+
+	public String getAddress() {
+		return address;
+	}
+
+	public void setAddress(String address) {
+		this.address = address;
+	}
+
+	public String getTellNumber() {
+		return tellNumber;
+	}
+
+	public void setTellNumber(String tellNumber) {
+		this.tellNumber = tellNumber;
+	}
+
+
+	public String getMail() {
+		return mail;
+	}
+
+	public void setMail(String mail) {
+		this.mail = mail;
 	}
 
 	public boolean isLoginFlg() {

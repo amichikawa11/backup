@@ -36,7 +36,7 @@
 	<div class="right-list">
 		<ul>
 			<li><a href='<s:url action="UserCreateAction"/>'>SIGNUP</a></li>
-			<li>LOGIN</li>
+			<li><a href='<s:url action="LoginPageAction"/>'>LOGIN</a></li>
 			<li>CART</li>
 			<li>MAIL</li>
 		</ul>
@@ -53,6 +53,16 @@
 
 	<div class="feature-newItem">
 		<p>新商品の紹介</p>
+
+		<s:iterator value="#session.buyItemDTOList">
+		<tr>
+			<td><s:property value="item_name"/></td>
+			<td><s:property value="item_price"/></td>
+			<td><s:property value="image_file_path"/></td>
+		</tr>
+		</s:iterator>
+
+
 	</div>
 
 	<div class="feature-pickUpItem">

@@ -47,6 +47,7 @@
 </header>
 
 <!-- メイン部分 -->
+<div class="top-push"></div>
 <div id="main">
 <div class="main-contents">
 	<div class="top">

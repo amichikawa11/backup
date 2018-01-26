@@ -20,6 +20,15 @@ font-family:Verdana, Helvetica, sans-serif;
 font-size:12px;
 color:#333;
 background-image:url("../image/b074.jpg");
+
+
+scrollbar-arrow-color:#c9825e;
+scrollbar-face-color:#c9825e;
+scrollbar-3dlight-color:#f7f2e9;
+scrollbar-darkshadow-color:#f7f2e9;
+scrollbar-highlight-color:#f7f2e9;
+scrollbar-shadow-color:#f7f2e9;
+scrollbar-track-color:#f1deac;
 }
 
 main{
@@ -57,12 +66,14 @@ height: 100%;
 text-align: center;
 background-color:rgba(255,239,209,0.5);
 margin:0 auto;
-margin-top:200px;
 margin-bottom:200px;
 padding-bottom:50px;
 padding-top:50px;
 }
 
+.top-push{
+	margin-top:200px;
+}
 
 /*ヘッダー*/
 
@@ -81,6 +92,7 @@ background-color:rgba(255,255,255,0.8);
 	margin-bottm:20px;
 	text-align:center;
 	font-size:25px;
+	padding-top:10px;
 }
 
 .left-list{

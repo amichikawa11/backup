@@ -10,9 +10,7 @@
 <fullyQualifiedTypeName name="com.sun.jndi.url.corbaname.corbanameURLContextFactory"/>
 <fullyQualifiedTypeName name="com.internousdev.login.util.DBConnector"/>
 <fullyQualifiedTypeName name="java.lang.Exception"/>
-<fullyQualifiedTypeName name="com.mysql.jdbc.PreparedStatement"/>
 <fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
-<fullyQualifiedTypeName name="java.sql.ResultSet"/>
 <fullyQualifiedTypeName name="com.internousdev.template.dao.MyPageDAO"/>
 <fullyQualifiedTypeName name="com.internousdev.template.dao.LoginDAO"/>
 <fullyQualifiedTypeName name="com.internousdev.template.dto.LoginDTO"/>
@@ -26,4 +24,9 @@
 <fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="com.internousdev.webproj5.dao.InquiryCompleteDAO"/>
 <fullyQualifiedTypeName name="com.opensymphony.xwork2.Action"/>
+<fullyQualifiedTypeName name="com.internousdev.myec.dao.UserCreateCompleteDAO"/>
+<fullyQualifiedTypeName name="com.mysql.jdbc.PreparedStatement"/>
+<fullyQualifiedTypeName name="java.sql.ResultSet"/>
+<fullyQualifiedTypeName name="com.internousdev.myec.dao.BuyItemDAO"/>
+<fullyQualifiedTypeName name="com.internousdev.myec.dao.LoginDAO"/>
 </qualifiedTypeNameHistroy>

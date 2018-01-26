@@ -46,7 +46,8 @@ login_pass varchar(16),
 user_name varchar(50),
 user_kana varchar(50),
 sex tinyint not null default 0,
-tell varchar(13),
+address varchar(100),
+tellnumber varchar(13),
 mail varchar(50),
 insert_date datetime,
 updated_date datetime,
@@ -54,8 +55,8 @@ updated_date datetime,
 foreign key(sex) references sex_name(sex_id)
 );
 
-INSERT INTO login_user_transaction(id,login_id,login_pass,user_name,user_kana,sex,tell,mail)values
-(1,"internous","internous01","山本もも","やまもともも",0,"080-0000-0000","yamamoto@yahoo.co.jp");
+INSERT INTO login_user_transaction(id,login_id,login_pass,user_name,user_kana,sex,address,tellnumber,mail)values
+(1,"internous","internous01","山本もも","やまもともも",0,"東京都調布市","080-0000-0000","yamamoto@yahoo.co.jp");
 
 
 /*
@@ -70,7 +71,6 @@ INSERT INTO login_user_transaction(id,login_id,login_pass,user_name,user_kana,se
 drop table if exists item_info;
 create table if not exists item_info(
 id int not null primary key auto_increment,
-item_id int not null unique,
 category varchar(50) not null,
 item_name varchar(100) not null,
 item_price int not null,
@@ -84,8 +84,8 @@ foreign key(deleteFlg) references status_type(status_id)
 
 );
 
-INSERT INTO item_info(id,item_id,category,item_name,item_price,description,image_file_path,deleteFlg)values
-(1,1,"choko","チョコケーキ",150,"ベルギー産のチョコレートを使用しています。","../WebContent/image/cake1.png",1);
+INSERT INTO item_info(id,category,item_name,item_price,description,image_file_path,deleteFlg)values
+(1,"choko","チョコケーキ",150,"ベルギー産のチョコレートを使用しています。","../WebContent/image/cake1.png",1);
 
 
 

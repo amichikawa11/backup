@@ -17,8 +17,10 @@ public class UserCreateConfirmAction extends ActionSupport implements SessionAwa
 	private String userName;
 	private String userKana;
 	private String sex;
-	private String tellNumber;
 	private String address;
+	private String tellNumber;
+	private String mail;
+
 
 	public Map<String,Object> session;
 	private String errorMassage;
@@ -37,15 +39,18 @@ public class UserCreateConfirmAction extends ActionSupport implements SessionAwa
 				&&!(userName.equals(""))
 				&&!(userKana.equals(""))
 				&&!(sex.equals(""))
+				&&!(address.equals(""))
 				&&!(tellNumber.equals(""))
-				&&!(address.equals(""))){
+				&&!(mail.equals(""))){
 					session.put("loginUserId", loginUserId);
 					session.put("loginPassword", loginPassword);
 					session.put("userName", userName);
 					session.put("userKana", userKana);
 					session.put("sex", sex);
-					session.put("tellNumber", tellNumber);
 					session.put("address", address);
+					session.put("tellNumber", tellNumber);
+					session.put("mail", mail);
+
 		}else{
 			setErrorMassage("未入力の項目があります。");
 			result = ERROR;
@@ -103,6 +108,15 @@ public class UserCreateConfirmAction extends ActionSupport implements SessionAwa
 		this.sex = sex;
 	}
 
+	public String getAddress() {
+		return address;
+	}
+
+
+	public void setAddress(String address) {
+		this.address = address;
+	}
+
 
 	public String getTellNumber() {
 		return tellNumber;
@@ -114,13 +128,14 @@ public class UserCreateConfirmAction extends ActionSupport implements SessionAwa
 	}
 
 
-	public String getAddress() {
-		return address;
+
+	public String getMail() {
+		return mail;
 	}
 
 
-	public void setAddress(String address) {
-		this.address = address;
+	public void setMail(String mail) {
+		this.mail = mail;
 	}
 
 
