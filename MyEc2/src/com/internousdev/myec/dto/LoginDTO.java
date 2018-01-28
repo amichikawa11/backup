@@ -12,13 +12,15 @@ public class LoginDTO {
 
 	private String userName;
 
-	private int userSex;
+	private String userSex;
 
 	private String userAddress;
 
 	private String userTell;
 
 	private String userMail;
+
+	private String userNumber;
 
 	private boolean loginFlg = false;
 
@@ -50,11 +52,11 @@ public class LoginDTO {
 		this.userName = userName;
 	}
 
-	public int getUserSex() {
+	public String getUserSex() {
 		return userSex;
 	}
 
-	public void setUserSex(int userSex) {
+	public void setUserSex(String userSex) {
 		this.userSex = userSex;
 	}
 
@@ -82,21 +84,31 @@ public class LoginDTO {
 		this.userMail = userMail;
 	}
 
-	public boolean isLoginFlg() {
+	public boolean getLoginFlg() {
 		return loginFlg;
+	}
+
+	public String getUserNumber() {
+		return userNumber;
+	}
+
+	public void setUserNumber(String userNumber) {
+		this.userNumber = userNumber;
 	}
 
 	public void setLoginFlg(boolean loginFlg) {
 		this.loginFlg = loginFlg;
 	}
 
-	public boolean isLoginMaster() {
+	public boolean getLoginMaster() {
 		return loginMaster;
 	}
 
 	public void setLoginMaster(boolean loginMaster) {
 		this.loginMaster = loginMaster;
 	}
+
+
 
 
 

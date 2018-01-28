@@ -21,7 +21,7 @@
 <div class="container">
 <header>
 	<div id="header">
-		<div class="header-logo">SWEETS PIA</div>
+		<div class="header-logo">SWEETOPIA</div>
 
 	<div class="top-menu">
 
@@ -53,7 +53,29 @@
 	<div class="top">
 		<p>PRODUCT LIST</p>
 	</div>
-	<p>商品一覧をのせます</p>
+	<div>
+	<s:form action="BuyItemAction">
+		<table>
+			<s:iterator value="buyItemDTOList">
+			<tr>
+				<td>
+					<p><s:property value="itemName"/></p>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p><s:property value="itemPrice"/></p>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p><s:property value="imageFilePath"/></p>
+				</td>
+			</tr>
+			</s:iterator>
+		</table>
+	</s:form>
+	</div>
 
 
 </div>
