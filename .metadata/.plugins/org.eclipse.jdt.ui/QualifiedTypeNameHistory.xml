@@ -27,6 +27,8 @@
 <fullyQualifiedTypeName name="com.internousdev.myec.dao.UserCreateCompleteDAO"/>
 <fullyQualifiedTypeName name="com.mysql.jdbc.PreparedStatement"/>
 <fullyQualifiedTypeName name="java.sql.ResultSet"/>
-<fullyQualifiedTypeName name="com.internousdev.myec.dao.BuyItemDAO"/>
 <fullyQualifiedTypeName name="com.internousdev.myec.dao.LoginDAO"/>
+<fullyQualifiedTypeName name="com.internousdev.myec.dao.BuyItemCompleteDAO"/>
+<fullyQualifiedTypeName name="com.internousdev.myec.dao.BuyItemDAO"/>
+<fullyQualifiedTypeName name="com.internousdev.myec.dto.BuyItemDTO"/>
 </qualifiedTypeNameHistroy>
