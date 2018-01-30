@@ -1,0 +1,165 @@
+@charset "utf-8";
+
+/*全体*/
+.container{
+	position: relative;
+	width: 100%;
+	height: auto !important;
+	height: 100%;
+	min-height: 100%;
+
+}
+
+body {
+	margin:0;
+	padding:0;
+	line-height:1.6;
+	letter-spacing:1px;
+	font-family:Verdana, Helvetica, sans-serif;
+	font-size:12px;
+	color:#333;
+	background-image:url("../image/b074.jpg");
+
+/*スクロールバーの色*/
+	scrollbar-arrow-color:#c9825e;
+	scrollbar-face-color:#c9825e;
+	scrollbar-3dlight-color:#f7f2e9;
+	scrollbar-darkshadow-color:#f7f2e9;
+	scrollbar-highlight-color:#f7f2e9;
+	scrollbar-shadow-color:#f7f2e9;
+	scrollbar-track-color:#f1deac;
+}
+
+main{
+	padding-top:15px;
+}
+
+#text-center {
+	display: inline-block;
+	text-align: center;
+
+}
+
+table {
+	text-align:center;
+	margin:0 auto;
+}
+
+/*ボタンの色*/
+
+.button {
+  display       : inline-block;
+  border-radius : 5%;          /* 角丸       */
+  font-size     : 9pt;        /* 文字サイズ */
+  text-align    : center;      /* 文字位置   */
+  cursor        : pointer;     /* カーソル   */
+  padding       : 5px 11px;   /* 余白       */
+  background    : #a99d85;     /* 背景色     */
+  color         : #ffffff;     /* 文字色     */
+  line-height   : 1em;         /* 1行の高さ  */
+  transition    : .3s;         /* なめらか変化 */
+  border        : 2px solid #a99d85;    /* 枠の指定 */
+}
+
+.button:hover {
+  color         : #a99d85;     /* 背景色     */
+  background    : #ffffff;     /* 文字色     */
+}
+
+
+
+/*リンクの色*/
+a:link { color: #333; }
+a:visited { color: #333; }
+a:hover { color: #a84848; background-color:rgba(230,200,193,0.5)}
+a:active { color: #333; }
+
+
+
+
+/*リスト*/
+
+ul{
+	list-style:none;
+}
+
+li{
+	float:left;
+	margin-right:15px;
+}
+
+
+/*メイン*/
+
+#main {
+	width: 80%;
+	height: 100%;
+	text-align: center;
+	background-color:rgba(255,239,209,0.5);
+	margin:0 auto;
+	margin-bottom:200px;
+	padding-bottom:50px;
+	padding-top:50px;
+}
+
+.top-push{
+	margin-top:200px;
+}
+
+/*ヘッダー*/
+
+#header {
+	width: 100%;
+	height: 80px;
+	top:0;
+	left:0;
+	position: fixed;
+	top:0;
+	margin-bottom:100px;
+	background-color:rgba(255,255,255,0.8);
+	z-index:10;
+}
+
+.header-logo{
+	margin-bottm:20px;
+	text-align:center;
+	font-size:25px;
+	padding-top:10px;
+}
+
+.left-list{
+	float:left;
+}
+
+.right-list{
+	float:right;
+}
+
+
+
+/*フッター*/
+.push{
+	height:50px;
+}
+
+footer {
+	width: 100%;
+	height: 100px;
+	background-image:url("../image/renga.jpg");
+	clear:both;
+	margin-top:50px;
+	position: absolute;
+	bottom: 0;
+}
+
+.h{
+	padding-top:40px;
+}
+
+.footer-message{
+	text-align:center;
+	background:rgba(255,239,209,0.5);
+}
+
+
+
