@@ -1,0 +1,30 @@
+package com.internousdev.myec.action;
+
+import java.util.Map;
+
+import org.apache.struts2.interceptor.SessionAware;
+
+import com.opensymphony.xwork2.ActionSupport;
+
+public class ProductPageAction extends ActionSupport implements SessionAware {
+	public Map<String, Object> session;
+
+	public String execute() {
+		String ret = ERROR;
+
+		if(session.containsKey("id")){
+			ret = SUCCESS;
+		}
+
+		return ret;
+	}
+
+	public Map<String, Object> getSession() {
+		return this.session;
+	}
+
+	@Override
+	public void setSession(Map<String, Object> session) {
+		this.session = session;
+	}
+}

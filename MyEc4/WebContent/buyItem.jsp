@@ -12,6 +12,7 @@
 <meta name="keywords" content="" />
 
 <link rel="stylesheet" type="text/css" href="./css/basis_style.css">
+<link rel="stylesheet" type="text/css" href="./css/item_style.css">
 
 <title>BuyItem画面</title>
 </head>
@@ -27,17 +28,16 @@
 
 	<div class="left-list">
 		<ul>
-			<li><a href='<s:url action="HomeAction"/>'>PAGE TOP</a></li>
-
-			<li>GUIDE</li>
-			<li>PRODUCT</li>
+			<li><a href='<s:url action="GoHomeAction"/>'>TOP</a></li>
+			<li><a href='<s:url action="HomeAction"/>'>PRODUCT</a></li>
+			<li><a href='<s:url action="UserCreateAction"/>'>SIGNUP</a></li>
 		</ul>
 	</div>
 
 	<div class="right-list">
 		<ul>
-			<li><a href='<s:url action="UserCreateAction"/>'>SIGNUP</a></li>
 			<li><a href='<s:url action="LoginPageAction"/>'>LOGIN</a></li>
+			<li><a href='<s:url action="MyPageAction"/>'>MYPAGE</a></li>
 			<li><a href='<s:url action="LogoutAction"/>'>LOGOUT</a></li>
 			<li><a href='<s:url action="InquiryAction"/>'>MAIL</a></li>
 		</ul>
@@ -54,63 +54,58 @@
 			<p>BUY ITEM</p>
 		</div>
 		<div>
+		<table>
 				<s:form action="BuyItemAction">
-			<table>
+
 
 			<!-- BuyItemAction で作ったbuyItemDTOListをループ処理 -->
 
 			<s:iterator value="buyItemDTOList">
-				<tr>
-				<td>
-				「商品画像」
-				</td>
+			<dl class="dl-list">
+			<dd class="dd-list">「商品画像」<br><br>
+			<s:property value="itemName" /><br>
+			<span>値段:</span>
+			<s:property value="itemPrice" /><span>円</span><br>
+			<span>在庫:</span>
 
-					<td>
-						<s:property value="itemName" /><br>
+				<s:if test="item_stock>0">
+					<s:property value="item_stock"/>
+				</s:if>
+				<s:else>
+					<span>品切れ</span>
+				</s:else>
+				<br>
+			<span>購入個数:</span>
 
-						<span>値段:</span>
-
-						<s:property value="itemPrice" /><span>円</span>
-						<br>
-
-						<span>在庫:</span>
-
-						<s:if test="item_stock>0">
-							<s:property value="item_stock"/>
-						</s:if>
-						<s:else>
-							<span>品切れ</span>
-						</s:else>
-						<br>
-
-						<span>購入個数:</span>
-
-					<s:if test="item_stock  > 0">
+					<s:if test="item_stock>0">
+					1<div class="select-box">
 						<select name="count">
-							<option value="0" selected="selected">0</option>
+							<option value="0" selected="selected">-</option>
 							<option value="1">1</option>
 							<option value="2">2</option>
 							<option value="3">3</option>
 							<option value="4">4</option>
 							<option value="5">5</option>
 						</select>
+						</div>
 					</s:if>
 					<s:else>
 						<select name="count">
 							<option value="0" selected="selected">0</option>
 						</select>
 					</s:else>
-					<br><br><br>
-					</td>
-				</tr>
+					</dd>
+					</dl>
 
 				</s:iterator>
 
 				<!-- 繰り返し処理ここまで、以下は支払方法選択 -->
 
+				<div class="clear"></div>
+
 				<tr>
 					<td>
-						<span>支払い方法</span>
+						<span>支払方法:</span>
 					</td>
 					<td>
 						<input type="radio" name="pay" value="1" checked="checked">現金払い
@@ -122,10 +117,9 @@
 						<s:submit class="button" value="購入"/>
 					</td>
 				</tr>
-			</table>
-		</s:form>
-		</div>
 
+		</s:form>
+					</table>
 			<div>
 				<p>前画面に戻る場合は<a href='<s:url action="GoHomeAction" />'>こちら</a></p>
 				<p>マイぺージは<a href='<s:url action="MyPageAction" />'>こちら</a></p>
@@ -135,6 +129,7 @@
 
 </div>
 
+</div>
 
 <div class="push"></div>
 

@@ -1,0 +1,16 @@
+@CHARSET "UTF-8";
+
+
+
+/*商品テーブルのCSS*/
+.dl-list{
+
+}
+
+.dd-list{
+	background-color: #222222;
+ 	display: inline-block;
+ 	font-size: 12px;
+ 	width: 25%;
+
+}

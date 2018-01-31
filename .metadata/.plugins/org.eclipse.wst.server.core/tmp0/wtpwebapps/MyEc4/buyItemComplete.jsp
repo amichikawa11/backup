@@ -25,17 +25,16 @@
 
 	<div class="left-list">
 		<ul>
-			<li><a href='<s:url action="HomeAction"/>'>PAGE TOP</a></li>
-
-			<li>GUIDE</li>
-			<li>PRODUCT</li>
+			<li><a href='<s:url action="GoHomeAction"/>'>TOP</a></li>
+			<li><a href='<s:url action="HomeAction"/>'>PRODUCT</a></li>
+			<li><a href='<s:url action="UserCreateAction"/>'>SIGNUP</a></li>
 		</ul>
 	</div>
 
 	<div class="right-list">
 		<ul>
-			<li><a href='<s:url action="UserCreateAction"/>'>SIGNUP</a></li>
 			<li><a href='<s:url action="LoginPageAction"/>'>LOGIN</a></li>
+			<li><a href='<s:url action="MyPageAction"/>'>MYPAGE</a></li>
 			<li><a href='<s:url action="LogoutAction"/>'>LOGOUT</a></li>
 			<li><a href='<s:url action="InquiryAction"/>'>MAIL</a></li>
 		</ul>
@@ -59,7 +58,7 @@
 			<br>
 
 			<p>お買い物を続ける場合はこちら</p>
-			<p>Homeへ戻る場合はこちら</p>
+			<p>Homeへ戻る場合は<a href='<s:url action="GoHomeAction"/>'>こちら</a></p>
 		</div>
 
 	</div>

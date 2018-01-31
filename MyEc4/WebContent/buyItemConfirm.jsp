@@ -13,6 +13,7 @@
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
 <link rel="stylesheet" type="text/css" href="./css/basis_style.css">
+<link rel="stylesheet" type="text/css" href="./css/item_style.css">
 
 	<script type="text/javascript">
 		function submitAction(url) {
@@ -35,17 +36,16 @@
 
 	<div class="left-list">
 		<ul>
-			<li><a href='<s:url action="HomeAction"/>'>PAGE TOP</a></li>
-
-			<li>GUIDE</li>
-			<li>PRODUCT</li>
+			<li><a href='<s:url action="GoHomeAction"/>'>TOP</a></li>
+			<li><a href='<s:url action="HomeAction"/>'>PRODUCT</a></li>
+			<li><a href='<s:url action="UserCreateAction"/>'>SIGNUP</a></li>
 		</ul>
 	</div>
 
 	<div class="right-list">
 		<ul>
-			<li><a href='<s:url action="UserCreateAction"/>'>SIGNUP</a></li>
 			<li><a href='<s:url action="LoginPageAction"/>'>LOGIN</a></li>
+			<li><a href='<s:url action="MyPageAction"/>'>MYPAGE</a></li>
 			<li><a href='<s:url action="LogoutAction"/>'>LOGOUT</a></li>
 			<li><a href='<s:url action="InquiryAction"/>'>MAIL</a></li>
 		</ul>
@@ -62,59 +62,71 @@
 		<p>BUY ITEM CONFIRM</p>
 	</div>
 	<div>
+	<table>
 					<s:form>
 					<s:iterator value="buyItemDTOList">
 					<s:if test="count !=0">
-				<tr>
-					<td>商品名</td>
-					<td><s:property value="itemName" /></td>
-				</tr>
-				<tr>
-					<td>値段</td>
-					<td><s:property value="total_price" /><span>円</span></td>
-				</tr>
-				<tr>
-					<td>購入個数</td>
-					<td><s:property value="count" /><span>個</span></td>
-				</tr>
+
+					<dl class="buy_item">
+
+					<dd>商品名:
+					<s:property value="itemName" /><br><br>
+
+					値段:
+					<s:property value="itemPrice" /><span>円</span><br>
+
+					購入個数:
+					<s:property value="count" /><span>個</span><br>
+
+					</dd>
+					</dl>
+
+
+
 			</s:if>
 			</s:iterator>
 
 			<!-- 繰り返し（商品別の計算）終了 -->
 
-			<tr>
-			<td><br></td>
-			</tr>
+			<div class="clear"></div>
 
-				<tr>
-					<td>支払い方法</td>
-					<td><s:property value="pay" /></td>
-				</tr>
+			<dl class="final">
+					<dd>
+					支払い方法:
+					<s:property value="session.pay" />
+					</dd>
+					<dd>
 
-				<br>
 
-				<tr>
-					<td>お届け先</td>
-					<td><s:property value="session.userAddress"/></td>
-				</tr>
+					お届け先:
+					<s:property value="session.userAddress"/><br>
+
 
 				<s:if test="buyItemDTOList.size()>1">
-				<tr>
-						<td>合計金額:</td>
-						<td><s:property value="session.totalPrice"/><span>円</span></td>
-				</tr>
+						合計金額:
+						<s:property value="session.totalPrice"/><span>円</span>
 				</s:if>
+				<s:else>
+						合計金額:
+						<s:property value="session.total_price"/><span>円</span>
+				</s:else>
+
+			</dd>
+			</dl>
+
 
 				<tr>
 					<td>
 						<br>
 					</td>
 				</tr>
+
 				<tr>
 					<td><input type="button" class="button" value="戻る" onclick="submitAction('HomeAction')" /></td>
 					<td><input type="button" class="button" value="完了" onclick="submitAction('BuyItemConfirmAction')" /></td>
 				</tr>
 			</s:form>
+			</table>
 
 	</div>
 
