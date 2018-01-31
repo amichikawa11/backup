@@ -58,7 +58,7 @@ public class BuyItemAction extends ActionSupport implements SessionAware {
 			String buyItemName = list.get(i).getItemName();
 			session.put("itemName",buyItemName);
 
-			String buyItemPrice = list.get(i).getItemPrice();
+			int buyItemPrice = list.get(i).getItemPrice();
 			session.put("itemPrice",buyItemPrice);
 
 			int buyItemId = list.get(i).getId();
@@ -66,9 +66,10 @@ public class BuyItemAction extends ActionSupport implements SessionAware {
 
 			int item_stock = list.get(i).getItem_stock();
 
+
 			//countはList型変数なのでget(i)で取得
 			int intCount = Integer.parseInt(count.get(i));
-			int intPrice = Integer.parseInt(list.get(i).getItemPrice());
+			int intPrice = list.get(i).getItemPrice();
 
 			//購入数が0でなければ実行
 			if(intCount != 0){
@@ -82,7 +83,9 @@ public class BuyItemAction extends ActionSupport implements SessionAware {
 				buyItemDTO.setItemName(session.get("itemName").toString());
 
 				//同じ理由でString型に変換
-				buyItemDTO.setItemPrice(session.get("itemPrice").toString());
+				buyItemDTO.setItemPrice((int) session.get("itemPrice"));
+
+				buyItemDTO.setCount(intCount);
 
 				//item_stockはそのまま取得しているのでキャストなし
 				buyItemDTO.setItem_stock(item_stock);
@@ -123,19 +126,42 @@ public class BuyItemAction extends ActionSupport implements SessionAware {
 		}
 			//buyItemDTOListの値を"list"に紐付け
 			session.put("list",buyItemDTOList);
+
+		}//←ここで繰り返し終わり
+
+		/**
+		 * 複数購入した時の合計額を取得
+		 * listにデータを格納した回数分(購入した数分）
+		 * total_priceを取得して加算するループ処理
+		 */
+
+		if(buyItemDTOList.size()>1){
+			int totalPrice = 0;
+			for(int a = 0;a<buyItemDTOList.size(); a++){
+				totalPrice = totalPrice +buyItemDTOList.get(a).getTotal_price();
+			}
+			System.out.println(totalPrice);
+			session.put("totalPrice",totalPrice);
+
 		}
-
-
-
 
 		return result;
 
 }
-	public int getCount() {
+
+	public ArrayList<BuyItemDTO> getBuyItemDTOList() {
+		return buyItemDTOList;
+	}
+
+	public void setBuyItemDTOList(ArrayList<BuyItemDTO> buyItemDTOList) {
+		this.buyItemDTOList = buyItemDTOList;
+	}
+
+	public List<String> getCount() {
 		return count;
 	}
 
-	public void setCount(int count) {
+	public void setCount(List<String> count) {
 		this.count = count;
 	}
 

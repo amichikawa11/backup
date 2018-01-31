@@ -13,7 +13,7 @@
 
 <link rel="stylesheet" type="text/css" href="./css/basis_style.css">
 
-<title>ItemList画面</title>
+<title>BuyItem画面</title>
 </head>
 <body>
 
@@ -51,41 +51,63 @@
 <div id="main">
 <div class="main-contents">
 <div id="top">
-			<p>BuyItem</p>
+			<p>BUY ITEM</p>
 		</div>
 		<div>
 				<s:form action="BuyItemAction">
 			<table>
+
+			<!-- BuyItemAction で作ったbuyItemDTOListをループ処理 -->
+
+			<s:iterator value="buyItemDTOList">
 				<tr>
+				<td>
+				「商品画像」
+				</td>
+
 					<td>
-						<span>商品名</span>
-					</td>
-					<td>
-						<s:property value="session.buyItem_name" /><br>
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<span>値段</span>
-					</td>
-					<td>
-						<s:property value="session.buyItem_price" /><span>円</span>
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<span>購入個数</span>
-					</td>
-					<td>
+						<s:property value="itemName" /><br>
+
+						<span>値段:</span>
+
+						<s:property value="itemPrice" /><span>円</span>
+						<br>
+
+						<span>在庫:</span>
+
+						<s:if test="item_stock>0">
+							<s:property value="item_stock"/>
+						</s:if>
+						<s:else>
+							<span>品切れ</span>
+						</s:else>
+						<br>
+
+						<span>購入個数:</span>
+
+					<s:if test="item_stock  > 0">
 						<select name="count">
-							<option value="1" selected="selected">1</option>
+							<option value="0" selected="selected">0</option>
+							<option value="1">1</option>
 							<option value="2">2</option>
 							<option value="3">3</option>
 							<option value="4">4</option>
 							<option value="5">5</option>
 						</select>
+					</s:if>
+					<s:else>
+						<select name="count">
+							<option value="0" selected="selected">0</option>
+						</select>
+					</s:else>
+					<br><br><br>
 					</td>
 				</tr>
+
+				</s:iterator>
+
+				<!-- 繰り返し処理ここまで、以下は支払方法選択 -->
+
 				<tr>
 					<td>
 						<span>支払い方法</span>
@@ -102,6 +124,8 @@
 				</tr>
 			</table>
 		</s:form>
+		</div>
+
 			<div>
 				<p>前画面に戻る場合は<a href='<s:url action="GoHomeAction" />'>こちら</a></p>
 				<p>マイぺージは<a href='<s:url action="MyPageAction" />'>こちら</a></p>
@@ -111,7 +135,6 @@
 
 </div>
 
-</div>
 
 <div class="push"></div>
 

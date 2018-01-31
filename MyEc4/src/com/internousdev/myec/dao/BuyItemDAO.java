@@ -34,7 +34,7 @@ public class BuyItemDAO {
 				BuyItemDTO dto = new BuyItemDTO();
 				dto.setId(resultSet.getInt("id"));
 				dto.setItemName(resultSet.getString("item_name"));
-				dto.setItemPrice(resultSet.getString("item_price"));
+				dto.setItemPrice(resultSet.getInt("item_price"));
 				dto.setItem_stock(resultSet.getInt("item_stock"));
 				dto.setItem_category(resultSet.getString("item_category"));
 				dto.setItem_description(resultSet.getString("item_description"));

@@ -1,14 +1,6 @@
 @charset "utf-8";
 
 /*全体*/
-.container{
-	position: relative;
-	width: 100%;
-	height: auto !important;
-	height: 100%;
-	min-height: 100%;
-
-}
 
 body {
 	margin:0;
@@ -28,6 +20,15 @@ body {
 	scrollbar-highlight-color:#f7f2e9;
 	scrollbar-shadow-color:#f7f2e9;
 	scrollbar-track-color:#f1deac;
+}
+
+.container{
+	position: relative;
+	width: 100%;
+	height: auto !important;
+	height: 100%;
+	min-height: 100%;
+
 }
 
 main{
@@ -73,6 +74,8 @@ a:link { color: #333; }
 a:visited { color: #333; }
 a:hover { color: #a84848; background-color:rgba(230,200,193,0.5)}
 a:active { color: #333; }
+
+/*リンクの下線を消す*/
 
 a{
 	text-decoration: none;

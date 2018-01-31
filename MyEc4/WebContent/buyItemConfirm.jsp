@@ -63,22 +63,48 @@
 	</div>
 	<div>
 					<s:form>
+					<s:iterator value="buyItemDTOList">
+					<s:if test="count !=0">
 				<tr>
 					<td>商品名</td>
-					<td><s:property value="session.buyItem_name" /></td>
+					<td><s:property value="itemName" /></td>
 				</tr>
 				<tr>
 					<td>値段</td>
-					<td><s:property value="session.total_price" /><span>円</span></td>
+					<td><s:property value="total_price" /><span>円</span></td>
 				</tr>
 				<tr>
 					<td>購入個数</td>
-					<td><s:property value="session.count" /><span>個</span></td>
+					<td><s:property value="count" /><span>個</span></td>
 				</tr>
+			</s:if>
+			</s:iterator>
+
+			<!-- 繰り返し（商品別の計算）終了 -->
+
+			<tr>
+			<td><br></td>
+			</tr>
+
 				<tr>
 					<td>支払い方法</td>
-					<td><s:property value="session.pay" /></td>
+					<td><s:property value="pay" /></td>
 				</tr>
+
+				<br>
+
+				<tr>
+					<td>お届け先</td>
+					<td><s:property value="session.userAddress"/></td>
+				</tr>
+
+				<s:if test="buyItemDTOList.size()>1">
+				<tr>
+						<td>合計金額:</td>
+						<td><s:property value="session.totalPrice"/><span>円</span></td>
+				</tr>
+				</s:if>
+
 				<tr>
 					<td>
 						<br>

@@ -62,7 +62,7 @@ public class BuyItemConfirmAction extends ActionSupport implements SessionAware{
 				session.get("login_user_id").toString(),
 				total_price,
 				count,
-				buyItemDTOList.get(i).pay,
+				buyItemDTOList.get(i).getPay(),
 				item_stock);
 		}
 		String result = SUCCESS;

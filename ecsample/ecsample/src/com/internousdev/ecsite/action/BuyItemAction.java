@@ -48,6 +48,7 @@ public class BuyItemAction extends ActionSupport implements SessionAware {
 
 		 //= (List<BuyItemDTO>) session.get("buyItemDTOList");
 		session.put("count", count);
+
 		@SuppressWarnings("unchecked")
 		List<BuyItemDTO> list= (List<BuyItemDTO>) session.get("buyItemDTOList");
 

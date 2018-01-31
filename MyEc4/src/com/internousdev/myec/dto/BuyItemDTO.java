@@ -7,7 +7,7 @@ public class BuyItemDTO {
 
 	private String itemName;
 
-	private String itemPrice;
+	private int itemPrice;
 
 	private int total_price;
 
@@ -36,11 +36,11 @@ public class BuyItemDTO {
 		this.itemName = itemName;
 	}
 
-	public String getItemPrice() {
+	public int getItemPrice() {
 		return itemPrice;
 	}
 
-	public void setItemPrice(String itemPrice) {
+	public void setItemPrice(int itemPrice) {
 		this.itemPrice = itemPrice;
 	}
 
