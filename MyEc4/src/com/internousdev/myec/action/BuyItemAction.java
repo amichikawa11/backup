@@ -14,6 +14,11 @@ public class BuyItemAction extends ActionSupport implements SessionAware {
 	private ArrayList<BuyItemDTO> buyItemDTOList = new ArrayList<>();
 
 	/**
+	 * ここのsessionの値をbuyItem.jspで表示しています。
+	 */
+
+
+	/**
 	 * アイテム購入個数（複数になるのでList(String)型の変数）
 	 */
 	private List<String> count;
@@ -27,6 +32,7 @@ public class BuyItemAction extends ActionSupport implements SessionAware {
 	 * アイテム情報を格納
 	 */
 	public Map<String, Object>  session;
+
 
 	/**
 	 * 商品情報取得メソッド
@@ -67,6 +73,11 @@ public class BuyItemAction extends ActionSupport implements SessionAware {
 			int item_stock = list.get(i).getItem_stock();
 
 
+			String image_file_path =  list.get(i).getImage_file_path();
+
+			String item_description = list.get(i).getItem_description();
+
+
 			//countはList型変数なのでget(i)で取得
 			int intCount = Integer.parseInt(count.get(i));
 			int intPrice = list.get(i).getItemPrice();
@@ -89,6 +100,13 @@ public class BuyItemAction extends ActionSupport implements SessionAware {
 
 				//item_stockはそのまま取得しているのでキャストなし
 				buyItemDTO.setItem_stock(item_stock);
+
+
+				//画像のファイルパス
+				buyItemDTO.setImage_file_path(image_file_path);
+
+				//商品の詳細説明
+				buyItemDTO.setItem_description(item_description);
 
 				//購入個数×金額の結果をDTOに格納
 				//"total_price"にも格納して他で使えるようにする

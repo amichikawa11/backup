@@ -61,9 +61,16 @@
 			<!-- BuyItemAction で作ったbuyItemDTOListをループ処理 -->
 
 			<s:iterator value="buyItemDTOList">
+
 			<dl class="dl-list">
 			<dd class="dd-list">
-			「商品画像」
+
+			<div class="item_description">
+			<a href="#">
+
+			<span class="remark"><s:property value="item_description"/></span>
+			<img class="image" style="width:150px; height:100px;" src="<s:property value='image_file_path'/>" >
+
 			<br><br>
 			<s:property value="itemName" /><br>
 			<span>値段:</span>
@@ -96,8 +103,12 @@
 							<option value="0" selected="selected">0</option>
 						</select>
 					</s:else>
+
+			</a>
+			</div>
 					</dd>
 					</dl>
+
 
 				</s:iterator>
 
