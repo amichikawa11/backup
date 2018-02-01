@@ -57,6 +57,15 @@ public class LoginAction extends ActionSupport implements SessionAware{
 
 		String result = ERROR;
 
+
+		if(session.containsKey("masterId")){
+			result = "alreadyLogged";
+
+		}else if(session.containsKey("id")){
+			result = "alreadyLogged";
+
+		}else{
+
 		// ログイン実行(LoginDAOのメソッドを使用）
 		//取得した値をloginDTOに格納
 		loginDTO = loginDAO.getLoginUserInfo(loginUserId, loginPassword);
@@ -96,8 +105,12 @@ public class LoginAction extends ActionSupport implements SessionAware{
 			session.put("login_user_id",loginDTO.getLoginId());
 			session.put("userName",loginDTO.getUserName());
 			session.put("userAddress",loginDTO.getUserAddress());
+			session.put("userSex",loginDTO.getUserSex());
+			session.put("userTell",loginDTO.getUserTell());
+			session.put("userMail",loginDTO.getUserMail());
 
 			}
+		}
 		}
 
 		return result;

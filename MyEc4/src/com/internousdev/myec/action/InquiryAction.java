@@ -39,8 +39,17 @@ public class InquiryAction extends ActionSupport implements SessionAware{
 		return ret;
 }
 
-	public void setSession(Map<String,Object> session){
+	@Override
+	public void setSession(Map<String, Object> session){
 		this.session = session;
+	}
+
+	public void setsession(Map<String, Object> session) {
+		this.session = session;
+	}
+
+	public Map<String, Object> getsession() {
+		return this.session;
 	}
 
 	}

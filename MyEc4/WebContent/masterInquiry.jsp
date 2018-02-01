@@ -36,8 +36,8 @@
 
 	<div class="right-list">
 		<ul>
-			<li><a href='<s:url action="LoginPageAction"/>'>LOGIN</a></li>
-			<li><a href='<s:url action="MyPageAction"/>'>MYPAGE</a></li>
+			<li><a href='<s:url action="LoginMovementAction"/>'>LOGIN</a></li>
+			<li><a href='<s:url action="MyPageMovementAction"/>'>MYPAGE</a></li>
 			<li><a href='<s:url action="LogoutAction"/>'>LOGOUT</a></li>
 			<li><a href='<s:url action="InquiryAction"/>'>MAIL</a></li>
 		</ul>
@@ -51,50 +51,50 @@
 <div id="main">
 <div class="main-contents">
 	<div class="top">
-		<p>お問い合わせ一覧</p>
+		<h3>MASTER INQUIRY</h3>
 	</div>
 
-	<table>
+	<table class="inquiry-table">
 	<tbody>
 		<tr>
-			<th>名前</th>
-			<th>メールアドレス</th>
-			<th>お問い合わせの種類</th>
-			<th>お問い合わせ内容</th>
+			<th class="inquiry-th">名前</th>
+			<th class="inquiry-th">メールアドレス</th>
+			<th class="inquiry-th">お問い合わせの種類</th>
+			<th class="inquiry-th">お問い合わせ内容</th>
 		</tr>
 
 	<!-- InquiryCompleteActionで定義したsessionの
 		"inquiryDTOList"を使用して値を取得 -->
 	<s:iterator value="#session.inquiryDTOList">
 	<tr>
-		<td><s:property value="inquiry_name"/></td>
+		<td class="inquiry-td"><s:property value="inquiry_name"/></td>
 
-		<td>
+		<td class="inquiry-td">
 			<s:property value="inquiry_mail"/>
 		</td>
 
 
 		<s:if test='qtype=="company"'>
-		<td>会社について</td>
+		<td class="inquiry-td">会社について</td>
 		</s:if>
 
 		<s:if test='qtype=="product"'>
-		<td>商品について</td>
+		<td class="inquiry-td">商品について</td>
 		</s:if>
 
 		<s:if test='qtype=="order"'>
-		<td>注文について</td>
+		<td class="inquiry-td">注文について</td>
 		</s:if>
 
 		<s:if test='qtype=="support"'>
-		<td>アフターサポートについて</td>
+		<td class="inquiry-td">アフターサポートについて</td>
 		</s:if>
 
 		<s:if test='qtype=="another"'>
-		<td>その他のお問い合わせ</td>
+		<td class="inquiry-td">その他のお問い合わせ</td>
 		</s:if>
 
-		<td>
+		<td class="inquiry-td">
 			<s:property value="body"/>
 		</td>
 	</tr>

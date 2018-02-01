@@ -33,8 +33,8 @@
 
 	<div class="right-list">
 		<ul>
-			<li><a href='<s:url action="LoginPageAction"/>'>LOGIN</a></li>
-			<li><a href='<s:url action="MyPageAction"/>'>MYPAGE</a></li>
+			<li><a href='<s:url action="LoginMovementAction"/>'>LOGIN</a></li>
+			<li><a href='<s:url action="MyPageMovementAction"/>'>MYPAGE</a></li>
 			<li><a href='<s:url action="LogoutAction"/>'>LOGOUT</a></li>
 			<li><a href='<s:url action="InquiryAction"/>'>MAIL</a></li>
 		</ul>
@@ -48,16 +48,16 @@
 <div id="main">
 <div class="main-contents">
 	<div class="top">
-		<p>BUY ITEM COMPLETE</p>
+		<h3>BUY ITEM COMPLETE</h3>
 	</div>
 	<br>
 	<div>
 		<p>購入手続きが完了いたしました。</p>
 		<div>
-			<p>マイページから購入履歴の確認ができます。</p>
+			<p><a href='<s:url action="MyPageAction"/>'>マイページから購入履歴の確認ができます。</a></p>
 			<br>
 
-			<p>お買い物を続ける場合はこちら</p>
+			<p>お買い物を続ける場合は<a href='<s:url action="BuyItemAction"/>'>こちら</a></p>
 			<p>Homeへ戻る場合は<a href='<s:url action="GoHomeAction"/>'>こちら</a></p>
 		</div>
 

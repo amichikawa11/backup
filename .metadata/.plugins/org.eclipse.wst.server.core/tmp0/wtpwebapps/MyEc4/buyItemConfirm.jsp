@@ -13,7 +13,7 @@
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
 <link rel="stylesheet" type="text/css" href="./css/basis_style.css">
-<link rel="stylesheet" type="text/css" href="./css/item_style.css">
+<link rel="stylesheet" type="text/css" href="./css/table_style.css">
 
 	<script type="text/javascript">
 		function submitAction(url) {
@@ -44,8 +44,8 @@
 
 	<div class="right-list">
 		<ul>
-			<li><a href='<s:url action="LoginPageAction"/>'>LOGIN</a></li>
-			<li><a href='<s:url action="MyPageAction"/>'>MYPAGE</a></li>
+			<li><a href='<s:url action="LoginMovementAction"/>'>LOGIN</a></li>
+			<li><a href='<s:url action="MyPageMovementAction"/>'>MYPAGE</a></li>'>MYPAGE</a></li>
 			<li><a href='<s:url action="LogoutAction"/>'>LOGOUT</a></li>
 			<li><a href='<s:url action="InquiryAction"/>'>MAIL</a></li>
 		</ul>
@@ -59,7 +59,7 @@
 <div id="main">
 <div class="main-contents">
 	<div class="top">
-		<p>BUY ITEM CONFIRM</p>
+		<h3>BUY ITEM CONFIRM</h3>
 	</div>
 	<div>
 	<table>

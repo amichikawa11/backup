@@ -12,7 +12,7 @@
 <meta name="keywords" content="" />
 
 <link rel="stylesheet" type="text/css" href="./css/basis_style.css">
-<link rel="stylesheet" type="text/css" href="./css/item_style.css">
+<link rel="stylesheet" type="text/css" href="./css/table_style.css">
 
 <title>BuyItem画面</title>
 </head>
@@ -36,8 +36,8 @@
 
 	<div class="right-list">
 		<ul>
-			<li><a href='<s:url action="LoginPageAction"/>'>LOGIN</a></li>
-			<li><a href='<s:url action="MyPageAction"/>'>MYPAGE</a></li>
+			<li><a href='<s:url action="LoginMovementAction"/>'>LOGIN</a></li>
+			<li><a href='<s:url action="MyPageMovementAction"/>'>MYPAGE</a></li>
 			<li><a href='<s:url action="LogoutAction"/>'>LOGOUT</a></li>
 			<li><a href='<s:url action="InquiryAction"/>'>MAIL</a></li>
 		</ul>
@@ -51,7 +51,7 @@
 <div id="main">
 <div class="main-contents">
 <div id="top">
-			<p>BUY ITEM</p>
+			<h3>BUY ITEM</h3>
 		</div>
 		<div>
 		<table>
@@ -62,7 +62,9 @@
 
 			<s:iterator value="buyItemDTOList">
 			<dl class="dl-list">
-			<dd class="dd-list">「商品画像」<br><br>
+			<dd class="dd-list">
+			「商品画像」
+			<br><br>
 			<s:property value="itemName" /><br>
 			<span>値段:</span>
 			<s:property value="itemPrice" /><span>円</span><br>
@@ -78,7 +80,7 @@
 			<span>購入個数:</span>
 
 					<s:if test="item_stock>0">
-					1<div class="select-box">
+					<div class="select-box">
 						<select name="count">
 							<option value="0" selected="selected">-</option>
 							<option value="1">1</option>
@@ -122,7 +124,7 @@
 					</table>
 			<div>
 				<p>前画面に戻る場合は<a href='<s:url action="GoHomeAction" />'>こちら</a></p>
-				<p>マイぺージは<a href='<s:url action="MyPageAction" />'>こちら</a></p>
+				<p>マイぺージは<a href='<s:url action="MyPageMovementAction" />'>こちら</a></p>
 			</div>
 	</div>
 

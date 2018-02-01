@@ -10,7 +10,7 @@
 <meta http-equiv="imagetoolbar" content="no" />
 <meta name="description" content="" />
 <meta name="keywords" content="" />
-<link rel="stylesheet" type="text/css" href="./css/home_style.css">
+
 <link rel="stylesheet" type="text/css" href="./css/basis_style.css">
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
@@ -45,8 +45,8 @@
 
 	<div class="right-list">
 		<ul>
-			<li><a href='<s:url action="LoginPageAction"/>'>LOGIN</a></li>
-			<li><a href='<s:url action="MyPageAction"/>'>MYPAGE</a></li>
+			<li><a href='<s:url action="LoginMovementAction"/>'>LOGIN</a></li>
+			<li><a href='<s:url action="MyPageMovementAction"/>'>MYPAGE</a></li>
 			<li><a href='<s:url action="LogoutAction"/>'>LOGOUT</a></li>
 			<li><a href='<s:url action="InquiryAction"/>'>MAIL</a></li>
 		</ul>
@@ -61,7 +61,13 @@
 <div class="main-contents">
 	<div class="top"></div>
 
-	<p>ここに内容を書くよ</p>
+	<h3>MASTER PAGE</h3>
+		<p>在庫管理</p>
+		<p>商品管理</p>
+		<p>問合せ管理</p>
+		<br>
+		<p><a href='<s:url action="LogoutAction"/>'>ログアウト</a></p>
+
 
 </div>
 </div>

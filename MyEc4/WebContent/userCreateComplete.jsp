@@ -36,8 +36,8 @@
 
 	<div class="right-list">
 		<ul>
-			<li><a href='<s:url action="LoginPageAction"/>'>LOGIN</a></li>
-			<li><a href='<s:url action="MyPageAction"/>'>MYPAGE</a></li>
+			<li><a href='<s:url action="LoginMovementAction"/>'>LOGIN</a></li>
+			<li><a href='<s:url action="MyPageMovementAction"/>'>MYPAGE</a></li>
 			<li><a href='<s:url action="LogoutAction"/>'>LOGOUT</a></li>
 			<li><a href='<s:url action="InquiryAction"/>'>MAIL</a></li>
 		</ul>
@@ -51,12 +51,12 @@
 <div id="main">
 <div class="main-contents">
 	<div class="top">
-		<p>USER CREATE COMPLETE</p>
+		<h3>USER CREATE COMPLETE</h3>
 	</div>
 	<div>
 		<p>ユーザーの登録が完了いたしました。</p>
 		<div>
-			<a href='<s:url action="LoginPageAction"/>'>ログインへ</a>
+			<a href='<s:url action="LoginMovementAction"/>'>ログインへ</a>
 		</div>
 
 		</div>

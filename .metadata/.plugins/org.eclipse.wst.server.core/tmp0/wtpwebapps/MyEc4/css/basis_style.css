@@ -1,7 +1,6 @@
 @charset "utf-8";
 
 /*全体*/
-
 body {
 	margin:0;
 	padding:0;
@@ -22,32 +21,34 @@ body {
 	scrollbar-track-color:#f1deac;
 }
 
+
+/*ヘッダーからフッターまでのdiv（フッターの位置調整に必要）*/
 .container{
 	position: relative;
 	width: 100%;
 	height: auto !important;
 	height: 100%;
 	min-height: 100%;
-
 }
 
-main{
-	padding-top:15px;
-}
 
-#text-center {
-	display: inline-block;
-	text-align: center;
-
-}
-
+/*テーブル（詳細はtable_styleに記述）*/
 table {
 	text-align:center;
 	margin:0 auto;
 }
 
-/*ボタンの色*/
 
+/*エラーメッセージの色*/
+.error-message{
+	color:#a33f3f;
+}
+
+
+/*---------------------------------------------------------------------------------------*/
+/*ボタン関係*/
+
+/*ボタンの色*/
 .button {
   display       : inline-block;
   border-radius : 5%;          /* 角丸       */
@@ -68,22 +69,24 @@ table {
 }
 
 
+/*---------------------------------------------------------------------------------------*/
+/*リンク関係*/
 
-
-/*リンクの色*/
+/*色の指定*/
 a:link { color: #333; }
 a:visited { color: #333; }
 a:hover { color: #a84848; background-color:rgba(230,200,193,0.5)}
 a:active { color: #333; }
 
-/*リンクの下線を消す*/
 
+/*リンクの下線を消す*/
 a{
 	text-decoration: none;
 }
 
+/*---------------------------------------------------------------------------------------*/
 
-/*リスト*/
+/*リスト関係*/
 
 ul{
 	list-style:none;
@@ -94,25 +97,9 @@ li{
 	margin-right:15px;
 }
 
+/*---------------------------------------------------------------------------------------*/
 
-/*メイン*/
-
-#main {
-	width: 80%;
-	height: 100%;
-	text-align: center;
-	background-color:rgba(255,239,209,0.5);
-	margin:0 auto;
-	margin-bottom:200px;
-	padding-bottom:50px;
-	padding-top:50px;
-}
-
-.top-push{
-	margin-top:200px;
-}
-
-/*ヘッダー*/
+/*ヘッダー部分*/
 
 #header {
 	width: 100%;
@@ -141,12 +128,40 @@ li{
 	float:right;
 }
 
+/*ホームにあるスライドショーの写真*/
+.top-image{
+	height:500px;
+	margin-top:50px;
+	margin-bottom:30px;
+	z-index:5;
 
+}
+
+/*---------------------------------------------------------------------------------------*/
+
+/*メイン部分*/
+
+#main {
+	padding-top:15px;
+	width: 80%;
+	height: 100%;
+	text-align: center;
+	background-color:rgba(255,239,209,0.5);
+	margin:0 auto;
+	margin-bottom:200px;
+	padding-bottom:50px;
+	padding-top:50px;
+}
+
+
+/*行間をあける用のCSS*/
+.top-push{
+	margin-top:200px;
+}
+
+/*---------------------------------------------------------------------------------------*/
 
 /*フッター*/
-.push{
-	height:50px;
-}
 
 footer {
 	width: 100%;
@@ -158,14 +173,19 @@ footer {
 	bottom: 0;
 }
 
+
+/*行間をあける用のCSS*/
+.push{
+	height:50px;
+}
+
 .h{
 	padding-top:40px;
 }
 
+/*フッターにある文章のCSS*/
 .footer-message{
 	text-align:center;
 	background:rgba(255,239,209,0.5);
 }
-
-
 

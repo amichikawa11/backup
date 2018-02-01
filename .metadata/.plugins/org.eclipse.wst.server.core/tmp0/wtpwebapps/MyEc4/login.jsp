@@ -35,8 +35,8 @@
 
 	<div class="right-list">
 		<ul>
-			<li><a href='<s:url action="LoginPageAction"/>'>LOGIN</a></li>
-			<li><a href='<s:url action="MyPageAction"/>'>MYPAGE</a></li>
+			<li><a href='<s:url action="LoginMovementAction"/>'>LOGIN</a></li>
+			<li><a href='<s:url action="MyPageMovementAction"/>'>MYPAGE</a></li>
 			<li><a href='<s:url action="LogoutAction"/>'>LOGOUT</a></li>
 			<li><a href='<s:url action="InquiryAction"/>'>MAIL</a></li>
 		</ul>
@@ -50,8 +50,8 @@
 <div id="main">
 <div class="main-contents">
 	<div class="top">
-		<p>LOGIN</p>
-	</div>
+		<h3>LOGIN</h3>
+	</div><br>
 	<div>
 
 		<p>商品を購入する際はログインをお願いします。</p></div>

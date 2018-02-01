@@ -35,8 +35,8 @@
 
 	<div class="right-list">
 		<ul>
-			<li><a href='<s:url action="LoginPageAction"/>'>LOGIN</a></li>
-			<li><a href='<s:url action="MyPageAction"/>'>MYPAGE</a></li>
+			<li><a href='<s:url action="LoginMovementAction"/>'>LOGIN</a></li>
+			<li><a href='<s:url action="MyPageMovementAction"/>'>MYPAGE</a></li>
 			<li><a href='<s:url action="LogoutAction"/>'>LOGOUT</a></li>
 			<li><a href='<s:url action="InquiryAction"/>'>MAIL</a></li>
 		</ul>
@@ -50,10 +50,12 @@
 <div id="main">
 <div class="main-contents">
 	<div class="top">
-		<p>LOGIN ERROR</p>
-	</div>
-		<p>ログインに失敗しました。</p>
+		<h3>LOGIN ERROR</h3>
+		<br>
+
+		<p class="error-message">ログインに失敗しました。</p>
 		<p>ID・パスワードをご確認の上、再度ご入力ください。</p></div>
+		<br>
 		<s:form action="LoginAction">
 			<s:textfield name="loginUserId"/>
 			<s:password name="loginPassword"/>
@@ -65,7 +67,7 @@
 				<a href='<s:url action="UserCreateAction"/>'>こちら</a>
 			<p>Homeへ戻る場合は
 				<a href='<s:url action="GojomeAction"/>'>こちら</a>
-
+	</div>
 		</div>
 
 </div>
