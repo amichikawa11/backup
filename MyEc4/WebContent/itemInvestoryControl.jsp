@@ -73,33 +73,23 @@
 			<span>値段:</span>
 			<s:property value="itemPrice" /><span>円</span><br>
 			<span>現在の在庫:</span>
-			<s:property value="item_stock"/><span>個</span>
-				<br>
+			<s:property value="item_stock"/><span>個</span><br>
+
 			<span>変更後の在庫数:</span>
-					<form>
-						<select name="count">
-							<option value="0" selected="selected">-</option>
-							<script>
-							for(var i =0; i <=50; i++){
-								document.write("<option value='z'>");
-								document.write(i);
-								document.write("</option>");
-							}
 
-							</script>
-						</select>
-						</form>
-					<s:if test="item_stock>0">
-					<div class="select-box">
-
-
-						</div>
-					</s:if>
-					<s:else>
-						<select name="count">
-							<option value="0" selected="selected">0</option>
-						</select>
-					</s:else>
+								<select name="count">
+									<option value="0" selected="selected">-</option>
+									<option value="1">1</option>
+									<option value="2">2</option>
+									<option value="3">3</option>
+									<option value="4">4</option>
+									<option value="5">5</option>
+									<option value="6">6</option>
+									<option value="7">7</option>
+									<option value="8">8</option>
+									<option value="9">9</option>
+									<option value="10">10</option>
+								</select>
 
 					</dd>
 					</dl>
@@ -107,7 +97,7 @@
 
 				</s:iterator>
 
-				1<tr>
+				<tr>
 					<td>
 					<div class="push h"></div>
 						<s:submit class="button" value="在庫数の変更"/>

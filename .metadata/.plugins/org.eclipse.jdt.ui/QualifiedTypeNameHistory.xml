@@ -23,7 +23,6 @@
 <fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="com.internousdev.webproj5.dao.InquiryCompleteDAO"/>
 <fullyQualifiedTypeName name="com.internousdev.myec.dao.UserCreateCompleteDAO"/>
-<fullyQualifiedTypeName name="com.mysql.jdbc.PreparedStatement"/>
 <fullyQualifiedTypeName name="com.internousdev.myec.dao.LoginDAO"/>
 <fullyQualifiedTypeName name="com.internousdev.myec.dao.BuyItemCompleteDAO"/>
 <fullyQualifiedTypeName name="com.internousdev.myec.dao.BuyItemDAO"/>
@@ -32,4 +31,6 @@
 <fullyQualifiedTypeName name="java.sql.ResultSet"/>
 <fullyQualifiedTypeName name="java.sql.SQLException"/>
 <fullyQualifiedTypeName name="com.internousdev.myec.dto.BuyItemDTO"/>
+<fullyQualifiedTypeName name="com.internousdev.myec.util.DBConnector"/>
+<fullyQualifiedTypeName name="com.mysql.jdbc.PreparedStatement"/>
 </qualifiedTypeNameHistroy>

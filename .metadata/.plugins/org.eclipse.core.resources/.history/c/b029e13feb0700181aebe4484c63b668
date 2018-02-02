@@ -1,0 +1,31 @@
+package com.internousdev.myec.action;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.apache.struts2.interceptor.SessionAware;
+
+import com.internousdev.myec.dto.BuyItemDTO;
+import com.opensymphony.xwork2.ActionSupport;
+
+public class ItemInvestoryControlAction extends ActionSupport implements SessionAware{
+
+	private ArrayList<BuyItemDTO> buyItemDTOList = new ArrayList<BuyItemDTO>();
+
+	private List<String> count;
+
+	public Map<String,Object> session;
+
+
+	/**
+	 * 実行メソッド
+	 */
+
+	public String execute(){
+
+		String result = SUCCESS;
+
+		session.put("count",count);
+	}
+
+}

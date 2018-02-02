@@ -150,6 +150,11 @@
 		<result name="success">itemInvestoryControl.jsp</result>
 	</action>
 
+	<!-- ItemInvestoryControlAction -->
+		<action name="ItemInvestoryControlAction" class="com.internousdev.myec.action.ItemInvestoryControlAction" method="execute">
+		<result name="success">itemInvestoryComplete.jsp</result>
+	</action>
+
 
 
 
