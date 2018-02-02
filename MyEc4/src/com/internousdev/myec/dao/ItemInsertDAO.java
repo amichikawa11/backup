@@ -14,7 +14,7 @@ public class ItemInsertDAO {
 
 	private ItemInsertDTO itemInsertDTO = new ItemInsertDTO();
 
-	private String sql = "INSERT TO item_info_transaction(item_name, item_price, item_stock, item_category,item_description, image_file_path) VALUES(?,?,?,?,?,?";
+	private String sql = "INSERT INTO item_info_transaction(item_name, item_price, item_stock, item_category,item_description, image_file_path) VALUES(?,?,?,?,?,?)";
 
 
 	/**

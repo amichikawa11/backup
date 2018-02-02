@@ -13,6 +13,7 @@
 
 <link rel="stylesheet" type="text/css" href="./css/basis_style.css">
 
+
 <title>ItemInsert画面</title>
 </head>
 <body>
@@ -74,8 +75,15 @@
 
 		<s:submit class="button" value="商品を追加する"/>
 	</s:form>
-	</table>
 
+
+	<tr>
+		<td><br><br></td>
+	</tr>
+	<tr>
+		<td>管理ページに戻る場合は<a href='<s:url action="MasterMovementAction"/>'>こちら</a></td>
+	</tr>
+	</table>
 </div>
 </div>
 

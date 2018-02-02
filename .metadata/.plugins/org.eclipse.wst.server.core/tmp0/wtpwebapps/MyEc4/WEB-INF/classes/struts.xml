@@ -127,6 +127,28 @@
 	</action>
 
 
+	<!-- 管理者アクション -->
+
+	<!-- MasterMovementAction -->
+		<action name="MasterMovementAction" class="com.internousdev.myec.action.MasterMovementAction" method="execute">
+		<result name="success">master.jsp</result>
+	</action>
+
+	<!-- ItemInsertAction -->
+	<action name="ItemInsertAction" class="com.internousdev.myec.action.ItemInsertAction" method="execute">
+		<result name="success">itemInsertComplete.jsp</result>
+		<result name="error">itemInsert.jsp</result>
+	</action>
+
+	<!-- ItemInsertMovementAction -->
+	<action name="ItemInsertMovementAction" class="com.internousdev.myec.action.ItemInsertMovementAction" method="execute">
+		<result name="success">itemInsert.jsp</result>
+	</action>
+
+	<!-- ItemInvestoryMovementAction -->
+	<action name="ItemInvestoryMovementAction" class="com.internousdev.myec.action.ItemInvestoryMovementAction" method="execute">
+		<result name="success">itemInvestoryControl.jsp</result>
+	</action>
 
 
 
