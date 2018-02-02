@@ -64,7 +64,7 @@
 	<h3>MASTER PAGE</h3>
 		<p>在庫管理</p>
 		<p>商品管理</p>
-		<p>問合せ管理</p>
+		<p><a href='<s:url action="InquiryAction"/>'>問合せ管理</a></p>
 		<br>
 		<p><a href='<s:url action="LogoutAction"/>'>ログアウト</a></p>
 

@@ -45,7 +45,7 @@
 	<div class="right-list">
 		<ul>
 			<li><a href='<s:url action="LoginMovementAction"/>'>LOGIN</a></li>
-			<li><a href='<s:url action="MyPageMovementAction"/>'>MYPAGE</a></li>'>MYPAGE</a></li>
+			<li><a href='<s:url action="MyPageMovementAction"/>'>MYPAGE</a></li>
 			<li><a href='<s:url action="LogoutAction"/>'>LOGOUT</a></li>
 			<li><a href='<s:url action="InquiryAction"/>'>MAIL</a></li>
 		</ul>
@@ -69,7 +69,10 @@
 
 					<dl class="buy_item">
 
-					<dd>商品名:
+					<dd>
+					<img class="image" style="width:150px; height:100px;" src="<s:property value='image_file_path'/>" ><br>
+
+					商品名:
 					<s:property value="itemName" /><br><br>
 
 					値段:

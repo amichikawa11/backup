@@ -60,8 +60,7 @@
 		<div>
 		<s:form action="SearchAction">
 		<tr>
-		<td><s:textfield name="searchWord" value=""/></td>
-		<td><s:submit value="検索"/></td>
+		<td><s:textfield name="searchWord" value=""/><s:submit class="button" value="検索"/></td>
 		</tr>
 		</s:form>
 
@@ -71,6 +70,7 @@
 			<s:if test="searchMessage != null ">
 			<p><s:property value="searchMessage" escape="false"/></p>
 		</s:if>
+		</div>
 		<div>
 
 		<table>

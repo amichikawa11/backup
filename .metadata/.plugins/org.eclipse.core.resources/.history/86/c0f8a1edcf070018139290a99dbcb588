@@ -1,0 +1,17 @@
+package com.internousdev.myec.dao;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import com.internousdev.myec.dto.BuyItemDTO;
+
+public class ItemInsertDAO {
+
+	List<BuyItemDTO> buyItemDTO = new ArrayList<BuyItemDTO>();
+
+	/**
+	 * メソッド
+	 */
+
+
+}

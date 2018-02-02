@@ -34,7 +34,12 @@ public class SearchDAO {
 
 				//DBにある商品名or価格orカテゴリと検索ワードが部分一致した
 				//場合は結果をsearchListに格納する
-				if(itemName.matches("*"+ searchWord + "*") || itemPrice.matches("*" + searchWord + "*") || itemCategory.matches("*" + searchWord + "*")){
+				/**
+				 * macthesメソッドの引数に渡しているのが、正規表現。
+				 * matchesメソッドはその文字列と引数に渡された正規表現が
+				 * 合致するかどうかを調べるメソッドです。
+				 */
+				if(itemName.matches(".*"+ searchWord + ".*") || itemPrice.matches(".*" + searchWord + ".*") || itemCategory.matches(".*" + searchWord + ".*")){
 					BuyItemDTO dto = new BuyItemDTO();
 					dto.setId(resultSet.getInt("id"));
 					dto.setItemName(itemName);
@@ -44,6 +49,7 @@ public class SearchDAO {
 					dto.setImage_file_path(resultSet.getString("image_file_path"));
 					dto.setItem_description(resultSet.getString("Item_description"));
 					searchList.add(dto);
+
 				}
 			}
 		}catch(Exception e){
@@ -57,6 +63,10 @@ public class SearchDAO {
 	public List<BuyItemDTO> getBuyItemDTO(){
 		return searchList;
 	}
+
+
+
+
 
 
 }

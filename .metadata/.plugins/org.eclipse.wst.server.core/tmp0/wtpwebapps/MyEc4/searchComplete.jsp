@@ -61,7 +61,7 @@
 		<s:form action="SearchAction">
 		<tr>
 		<td><s:textfield name="searchWord" value=""/></td>
-		<td><s:submit value="検索"/></td>
+		<td><s:submit class="button" value="検索"/></td>
 		</tr>
 		</s:form>
 
@@ -73,9 +73,7 @@
 				<s:form action="BuyItemAction">
 
 
-			<!-- searchAction で作ったsearchListをループ処理 -->
-
-			<s:iterator value="searchList">
+			<s:iterator value="buyItemDTOList">
 
 			<dl class="dl-list">
 			<dd class="dd-list">

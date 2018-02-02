@@ -106,6 +106,7 @@
 		<result name="success">home.jsp</result>
 	</action>
 
+
 	<!-- 商品検索 -->
 	<!-- SearchAction -->
 	<action name="SearchAction" class="com.internousdev.myec.action.SearchAction" method="execute">

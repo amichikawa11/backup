@@ -95,7 +95,10 @@ ul{
 li{
 	float:left;
 	margin-right:15px;
+
 }
+
+
 
 /*---------------------------------------------------------------------------------------*/
 
@@ -130,7 +133,7 @@ li{
 
 /*ホームにあるスライドショーの写真*/
 .top-image{
-	height:500px;
+	height:450px;
 	margin-top:50px;
 	margin-bottom:30px;
 	z-index:5;

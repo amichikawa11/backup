@@ -53,8 +53,8 @@
 		<h3>MYPAGE ERROR</h3>
 		<br>
 
-		<p class="error-message">マイページログインに失敗しました。</p>
-		<p>ID・パスワードをご確認の上、再度ご入力ください。</p></div>
+		<p class="error-message">マイページの表示に失敗しました。</p>
+		<p>ログインページよりログインしてください。</p></div>
 		<br>
 		<div id="text-link">
 			<p>ログインは

@@ -36,7 +36,7 @@
 	<div class="right-list">
 		<ul>
 			<li><a href='<s:url action="LoginMovementAction"/>'>LOGIN</a></li>
-			<li><a href='<s:url action="MyPageMovementAction"/>'>MYPAGE</a></li>ction"/>'>MYPAGE</a></li>
+			<li><a href='<s:url action="MyPageMovementAction"/>'>MYPAGE</a></li>
 			<li><a href='<s:url action="LogoutAction"/>'>LOGOUT</a></li>
 			<li><a href='<s:url action="InquiryAction"/>'>MAIL</a></li>
 		</ul>
