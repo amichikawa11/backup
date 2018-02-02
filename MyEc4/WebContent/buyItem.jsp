@@ -53,7 +53,26 @@
 <div id="top">
 			<h3>BUY ITEM</h3>
 		</div>
+
+		<!-- カテゴリ表示機能 -->
+
+		<!-- 商品検索機能 -->
 		<div>
+		<s:form action="SearchAction">
+		<tr>
+		<td><s:textfield name="searchWord" value=""/></td>
+		<td><s:submit value="検索"/></td>
+		</tr>
+		</s:form>
+
+		</div>
+
+		<div>
+			<s:if test="searchMessage != null ">
+			<p><s:property value="searchMessage" escape="false"/></p>
+		</s:if>
+		<div>
+
 		<table>
 				<s:form action="BuyItemAction">
 

@@ -1,0 +1,21 @@
+package com.internousdev.myec.dao;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.util.ArrayList;
+import java.util.List;
+
+import com.internousdev.myec.dto.BuyItemDTO;
+import com.internousdev.myec.util.DBConnector;
+
+
+public class SearchDAO {
+
+	private DBConnector dbConnector = new DBConnector();
+	private Connection connection = dbConnector.getConnection();
+	private List<BuyItemDTO> searchList = new ArrayList<BuyItemDTO>();
+
+	public List<BuyItemDTO> get
+
+}

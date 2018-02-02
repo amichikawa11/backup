@@ -106,6 +106,13 @@
 		<result name="success">home.jsp</result>
 	</action>
 
+	<!-- 商品検索 -->
+	<!-- SearchAction -->
+	<action name="SearchAction" class="com.internousdev.myec.action.SearchAction" method="execute">
+		<result name="success">searchComplete.jsp</result>
+		<result name="error">buyItem.jsp</result>
+	</action>
+
 
 	<!-- 問い合わせ -->
 	<action name="InquiryAction" class="com.internousdev.myec.action.InquiryAction" method="execute">
