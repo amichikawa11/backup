@@ -73,11 +73,16 @@
 
 					<s:iterator value="buyItemDTOList">
 
+					<img class="image" style="width:150px; height:100px;" src="<s:property value='image_file_path'/>" ><br><br>
+
 					商品名:
 					<s:property value="itemName" /><br><br>
 
+					追加個数:
+					<s:property value="count"/><span>個</span><br><br>
+
 					在庫:
-					<s:property value="item_stock" /><span>個</span><br><br>
+					<s:property value="total_count" /><span>個</span><br><br>
 
 					</s:iterator>
 

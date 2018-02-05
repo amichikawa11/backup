@@ -1,5 +1,6 @@
 package com.internousdev.myec.action;
 
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -9,70 +10,65 @@ import org.apache.struts2.interceptor.SessionAware;
 import com.internousdev.myec.dto.BuyItemDTO;
 import com.opensymphony.xwork2.ActionSupport;
 
-public class ItemInvestoryControlAction extends ActionSupport implements SessionAware{
+public class ItemInvestoryControlAction extends ActionSupport implements SessionAware {
 
-	private ArrayList<BuyItemDTO> buyItemDTOList = new ArrayList<BuyItemDTO>();
+	private ArrayList<BuyItemDTO> buyItemDTOList=new ArrayList<>();
 
-	//itemInvestoryControl.jspで選択された在庫数
 	private List<String> count;
 
 	public Map<String,Object> session;
 
-
-	/**
-	 * 実行メソッド
-	 */
-
 	public String execute(){
+		String result=SUCCESS;
 
-		String result = SUCCESS;
+		session.put("count", count);
 
-		session.put("count",count);
-
-		//listに"buyItemDTOList"の値を格納
 		@SuppressWarnings("unchecked")
-		List<BuyItemDTO> list = (List<BuyItemDTO>) session.get("buyItemDTOList");
+		List<BuyItemDTO> list=(List<BuyItemDTO>) session.get("buyItemDTOList");
 
-		//countリストに格納されている要素数（在庫を変更した商品数）
-		//の分だけループ処理を行う
 		for(int i=0; i<count.size(); i++){
+			BuyItemDTO buyItemDTO=new BuyItemDTO();
 
-			BuyItemDTO dto = new BuyItemDTO();
-
-			String itemName = list.get(i).getItemName();
-			int itemStock = list.get(1).getItem_stock();
+			String itemName=list.get(i).getItemName();
+			String imageFilePath = list.get(i).getImage_file_path();
+			int itemStock=list.get(i).getItem_stock();
 			int intCount=Integer.parseInt(count.get(i));
-			int id = list.get(i).getId();
-			int totalCount = itemStock + intCount;
-
+			int id=list.get(i).getId();
+			int totalCount=itemStock + intCount;
 			if(intCount != 0){
-				dto.setItemName(itemName);
-				dto.setItem_stock(itemStock);
-				dto.setCount(intCount);
-				dto.setId(id);
-				dto.setTotal_count(totalCount);
+				buyItemDTO.setItemName(itemName);
+				buyItemDTO.setImage_file_path(imageFilePath);
+				buyItemDTO.setItem_stock(itemStock);
+				buyItemDTO.setCount(intCount);
+				buyItemDTO.setId(id);
+				buyItemDTO.setTotal_count(totalCount);
 
-			buyItemDTOList.add(dto);
-
+				buyItemDTOList.add(buyItemDTO);
 			}
-
 			session.put("list",buyItemDTOList);
+		}
+
+
+		return result;
+
 	}
 
-	return result;
-
-}
-
-	public List<String> getCount() {
+	public List<String> getCount(){
 		return count;
 	}
+	public void setCount(List<String> count){
+		this.count=count;
+	}
 
-	public void setCount(List<String> count) {
-		this.count = count;
+	public ArrayList<BuyItemDTO> getBuyItemDTOList(){
+		return buyItemDTOList;
+	}
+	public void setBuyItemDTOList(ArrayList<BuyItemDTO> buyItemDTOList){
+		this.buyItemDTOList=buyItemDTOList;
 	}
 
 	@Override
 	public void setSession(Map<String,Object> session){
-		this.session = session;
+		this.session=session;
 	}
 }

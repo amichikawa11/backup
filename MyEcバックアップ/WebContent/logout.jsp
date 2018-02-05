@@ -56,7 +56,7 @@
 	</div>
 	<br><br>
 	<div>
-		<p>もう一度ログインする場合は<a href='<s:url action="LoginPageAction"/>'>こちら</a></p>
+		<p>もう一度ログインする場合は<a href='<s:url action="LoginMovementAction"/>'>こちら</a></p>
 		<p>Homeへ戻る場合は<a href='<s:url action="GoHomeAction"/>'>こちら</a></p>
 	</div>
 

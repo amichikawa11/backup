@@ -152,9 +152,13 @@
 
 	<!-- ItemInvestoryControlAction -->
 		<action name="ItemInvestoryControlAction" class="com.internousdev.myec.action.ItemInvestoryControlAction" method="execute">
-		<result name="success">itemInvestoryComplete.jsp</result>
+		<result name="success">itemInvestoryConfirm.jsp</result>
 	</action>
 
+		<!-- ItemInvestoryConfirmAction -->
+		<action name="ItemInvestoryConfirmAction" class="com.internousdev.myec.action.ItemInvestoryConfirmAction" method="execute">
+		<result name="success">itemInvestoryComplete.jsp</result>
+	</action>
 
 
 

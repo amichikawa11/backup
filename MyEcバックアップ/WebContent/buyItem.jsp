@@ -53,7 +53,26 @@
 <div id="top">
 			<h3>BUY ITEM</h3>
 		</div>
+
+		<!-- カテゴリ表示機能 -->
+
+		<!-- 商品検索機能 -->
 		<div>
+		<s:form action="SearchAction">
+		<tr>
+		<td><s:textfield name="searchWord" value=""/><s:submit class="button" value="検索"/></td>
+		</tr>
+		</s:form>
+
+		</div>
+
+		<div>
+			<s:if test="searchMessage != null ">
+			<p><s:property value="searchMessage" escape="false"/></p>
+		</s:if>
+		</div>
+		<div>
+
 		<table>
 				<s:form action="BuyItemAction">
 
@@ -61,9 +80,16 @@
 			<!-- BuyItemAction で作ったbuyItemDTOListをループ処理 -->
 
 			<s:iterator value="buyItemDTOList">
+
 			<dl class="dl-list">
 			<dd class="dd-list">
-			「商品画像」
+
+			<div class="item_description">
+			<a href="#">
+
+			<span class="remark"><s:property value="item_description"/></span>
+			<img class="image" style="width:150px; height:100px;" src="<s:property value='image_file_path'/>" >
+
 			<br><br>
 			<s:property value="itemName" /><br>
 			<span>値段:</span>
@@ -96,8 +122,12 @@
 							<option value="0" selected="selected">0</option>
 						</select>
 					</s:else>
+
+			</a>
+			</div>
 					</dd>
 					</dl>
+
 
 				</s:iterator>
 

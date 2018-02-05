@@ -69,19 +69,21 @@ body varchar(255)
 
 
 INSERT INTO item_info_transaction(item_name, item_price, item_stock, item_category,item_description, image_file_path) VALUES
-("生チョコケーキ", 200, 50,"cake","チョコレートのケーキです。","../WebContent/image/cake1.png"),
-("チーズケーキ",170,50,"cake","チーズのコクが濃厚なケーキです。","../WebContent/image/cake4"),
-("フルーツロール",150,50,"cake","季節の果物がたくさん入ったケーキです。","../WebContent/image/roll1"),
-("チョコロール",150,50,"cake","甘さ控えめのロールケーキです。","../WebContent/image/roll2"),
-("ラズベリーパイ",250,50,"cake","数種類のベリーが入ったパイです。","../WebContent/image/pie2.jpg1"),
-("クリームマフィン",100,50,"bake","ラズベリー風味のクリームがたっぷりのったマフィンです。","../WebContent/image/muffin2.jpg"),
-("チョコクリームマフィン",100,50,"bake","チョコクリームがたっぷりのったマフィンです。","../WebContent/image/muffin3.jpg"),
-("シュークリーム",80,50,"bake","カスタードクリームたっぷりのシュークリームです。","../WebContent/image/bake1"),
-("クッキー詰め合わせ",800,50,"bake","クッキーの詰め合わせです。","../WebContent/image/cookie2"),
-("星型クッキー",100,50,"bake","星型のアイシングクッキーです。","../WebContent/image/cookie1"),
-("タイ焼き",120,50,"wagashi","粒あんが入ったタイ焼きです。","../WebContent/image/wagashi"),
-("桜餅",80,50,"wagashi","食べやすいサイズの桜餅です。","../WebContent/image/wagashi2"),
-("金魚の水菓子",190,50,"wagashi","見た目も涼しげなお菓子です。","../WebContent/image/wagashi4");
+("生チョコケーキ", 200, 50,"ケーキ","チョコレートのケーキです。","./image/cake1.jpg"),
+("チーズケーキ",170,50,"ケーキ","チーズのコクが濃厚なケーキです。","./image/cake4.jpg"),
+("ラズベリーパイ",250,50,"ケーキ","数種類のベリーが入ったパイです。","./image/pie1.jpg"),
+("フルーツロール",150,50,"ロール","季節の果物がたくさん入ったケーキです。","./image/roll1.jpg"),
+("チョコロール",150,50,"ロール","甘さ控えめのロールケーキです。","./image/roll2.jpg"),
+("キャラメルロール",150,50,"ロール","見た目もかわいいロールケーキです。","./image/roll3.jpg"),
+("クリームマフィン",100,50,"マフィン","ラズベリー風味のクリームがたっぷりのったマフィンです。","./image/muffin2.jpg"),
+("チョコクリームマフィン",100,50,"マフィン","チョコクリームがたっぷりのったマフィンです。","./image/muffin3.jpg"),
+("シュークリーム",80,50,"シュークリーム","カスタードクリームたっぷりのシュークリームです。","./image/bake1.jpg"),
+("星型クッキー",100,50,"クッキー","星型のアイシングクッキーです。","./image/cookie1.jpg"),
+("クッキー詰め合わせ",800,50,"クッキー","クッキーの詰め合わせです。","./image/cookie2.jpg"),
+("アップルクッキー",800,50,"クッキー","アップルジャム入りのクッキーです。","./image/cookie3.jpg"),
+("タイ焼き",120,50,"和菓子","粒あんが入ったタイ焼きです。","./image/wagashi1.jpg"),
+("桜餅",80,50,"和菓子","食べやすいサイズの桜餅です。","./image/wagashi2.jpg"),
+("金魚の水菓子",190,50,"和菓子","見た目も涼しげなお菓子です。","./image/wagashi3.jpg");
 
 INSERT INTO login_user_transaction(login_id, login_pass, user_name, user_address, user_sex, user_tell, user_mail) VALUES
 ("kanri", "123", "kanrisya","岡山","男","090-0000-1111","kanri@yahoo.co.jp"),

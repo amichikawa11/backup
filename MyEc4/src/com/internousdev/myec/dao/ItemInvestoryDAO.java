@@ -6,6 +6,11 @@ import java.sql.SQLException;
 
 import com.internousdev.myec.util.DBConnector;
 
+
+/**
+ * 在庫変更
+ */
+
 public class ItemInvestoryDAO {
 
 	private DBConnector dbConnector = new DBConnector();
