@@ -1,7 +1,0 @@
-package com.internousdev.myec.action;
-
-public class ItemInsertMovementAction {
-	public String execute(){
-		return SUCCESS;
-}
-}
