@@ -47,14 +47,14 @@
 </header>
 
 <!-- メイン部分 -->
-<div class="top-push"></div>
+<div class="top-push content-push"></div>
 <div id="main">
 <div class="main-contents">
 <div id="top">
 			<h3>ITEM INVESTORY CONTROL</h3>
 		</div>
 
-		<p>変更したい在庫数をプルダウンから選択してください。</p>
+		<p>追加したい数をプルダウンから選択してください。</p>
 
 		<div>
 
@@ -72,7 +72,7 @@
 			<s:property value="itemName" /><br>
 			<span>値段:</span>
 			<s:property value="itemPrice" /><span>円</span><br>
-			<span>現在の在庫:</span>
+			<span>追加する個数:</span>
 			<s:property value="item_stock"/><span>個</span><br>
 
 			<span>変更後の在庫数:</span>
@@ -96,6 +96,7 @@
 
 
 				</s:iterator>
+				<div class="clear"><br></div>
 
 				<tr>
 					<td>
@@ -118,6 +119,7 @@
 </div>
 
 <div class="push"></div>
+<div class="content-downpush"></div>
 
 <!-- フッター部分 -->
 <footer>

@@ -1,0 +1,13 @@
+/**
+ *
+ */
+$(function(){
+    $(".abc").bxSlider({
+        auto: true,
+        mode: "fade",
+        speed: 1000,
+        slideWidth: 600,
+        controls: false
+
+    });
+});

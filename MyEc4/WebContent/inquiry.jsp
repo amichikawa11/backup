@@ -36,7 +36,7 @@
 	<div class="right-list">
 		<ul>
 			<li><a href='<s:url action="LoginMovementAction"/>'>LOGIN</a></li>
-			<li><a href='<s:url action="MyPageAction"/>'>MYPAGE</a></li>
+			<li><a href='<s:url action="MyPageMovementAction"/>'>MYPAGE</a></li>
 			<li><a href='<s:url action="LogoutAction"/>'>LOGOUT</a></li>
 			<li><a href='<s:url action="InquiryAction"/>'>MAIL</a></li>
 		</ul>
@@ -46,7 +46,7 @@
 </header>
 
 <!-- メイン部分 -->
-<div class="top-push"></div>
+<div class="top-push content-push"></div>
 <div id="main">
 <div class="main-contents">
 	<div class="top">
@@ -82,6 +82,7 @@
 </div>
 
 <div class="push"></div>
+<div class="content-downpush"></div>
 
 <!-- フッター部分 -->
 <footer>

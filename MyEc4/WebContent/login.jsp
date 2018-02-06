@@ -46,7 +46,7 @@
 </header>
 
 <!-- メイン部分 -->
-<div class="top-push"></div>
+<div class="top-push content-push"></div>
 <div id="main">
 <div class="main-contents">
 	<div class="top">
@@ -54,7 +54,8 @@
 	</div><br>
 	<div>
 
-		<p>商品を購入する際はログインをお願いします。</p></div>
+		<p>商品の購入・マイページの確認をする際はログインをお願いします。</p></div>
+		<br>
 
 		<s:form action="LoginAction">
 		<table>
@@ -98,6 +99,7 @@
 </div>
 
 <div class="push"></div>
+<div class="content-downpush"></div>
 
 <!-- フッター部分 -->
 <footer>

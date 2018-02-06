@@ -10,9 +10,9 @@
 <meta http-equiv="imagetoolbar" content="no" />
 <meta name="description" content="" />
 <meta name="keywords" content="" />
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
 <link rel="stylesheet" type="text/css" href="./css/basis_style.css">
-
 
 	<script type="text/javascript">
 		function submitAction(url) {
@@ -54,7 +54,7 @@
 </header>
 
 <!-- メイン部分 -->
-<div class="top-push"></div>
+<div class="top-push content-push"></div>
 <div id="main">
 <div class="main-contents">
 	<div class="top">
@@ -122,7 +122,7 @@
 				</td>
 			</tr>
 			<tr>
-				<td><input type="button" class="button" value="戻る" onclick="submitAction('UserUpdateAction')" /></td>
+				<td><input type="button" class="button" value="戻る" onclick="submitAction('UserUpdateMovementAction')" /></td>
 				<td><input type="button" class="button" value="完了" onclick="submitAction('UserUpdateConfirmAction')" /></td>
 			</tr>
 			</s:form>
@@ -136,6 +136,7 @@
 </div>
 
 <div class="push"></div>
+<div class="content-downpush"></div>
 
 <!-- フッター部分 -->
 <footer>

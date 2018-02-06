@@ -46,14 +46,17 @@
 </header>
 
 <!-- メイン部分 -->
-<div class="top-push"></div>
+<div class="top-push content-push"></div>
 <div id="main">
 <div class="main-contents">
 	<div class="top">
 		<h3>USER CREATE</h3>
 	</div>
 	<div>
+	<br>
 		<p>はじめてご利用される方は新規登録をお願いします。</p></div>
+		<br>
+
 		<s:if test="errorMassage != ''">
 			<s:property value="errorMassage" escape="false"/>
 		</s:if>
@@ -128,8 +131,8 @@
 
 			<!-- GoHomeAction未作成 -->
 
-			<p>Homeへ戻る場合は
-				<a href='<s:url action="GoHomeAction"/>'>こちら</a>
+			<p>Homeへ戻る場合は<a href='<s:url action="GoHomeAction"/>'>こちら</a>
+			<p>すでにIDをお持ちの場合は<a href='<s:url action="LoginMovementAction"/>'>こちら</a>
 
 
 		</div>
@@ -137,6 +140,7 @@
 </div>
 
 <div class="push"></div>
+<div class="content-downpush"></div>
 
 <!-- フッター部分 -->
 <footer>

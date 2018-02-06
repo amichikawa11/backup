@@ -47,7 +47,7 @@
 </header>
 
 <!-- メイン部分 -->
-<div class="top-push"></div>
+<div class="top-push content-push"></div>
 <div id="main">
 <div class="main-contents">
 <div id="top">
@@ -71,15 +71,15 @@
 			<p><s:property value="searchMessage" escape="false"/></p>
 		</s:if>
 		</div>
-		<div>
+		<div class="item-table">
 
 		<table>
 				<s:form action="BuyItemAction">
 
-
 			<!-- BuyItemAction で作ったbuyItemDTOListをループ処理 -->
 
 			<s:iterator value="buyItemDTOList">
+
 
 			<dl class="dl-list">
 			<dd class="dd-list">
@@ -133,7 +133,8 @@
 
 				<!-- 繰り返し処理ここまで、以下は支払方法選択 -->
 
-				<div class="clear"></div>
+				<div class="clear"><br></div>
+
 
 				<tr>
 					<td>
@@ -153,7 +154,7 @@
 		</s:form>
 					</table>
 			<div>
-				<p>前画面に戻る場合は<a href='<s:url action="GoHomeAction" />'>こちら</a></p>
+				<p>Homeへ戻る場合は<a href='<s:url action="GoHomeAction" />'>こちら</a></p>
 				<p>マイぺージは<a href='<s:url action="MyPageMovementAction" />'>こちら</a></p>
 			</div>
 	</div>
@@ -164,6 +165,7 @@
 </div>
 
 <div class="push"></div>
+<div class="content-downpush"></div>
 
 <!-- フッター部分 -->
 <footer>

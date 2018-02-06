@@ -2,7 +2,7 @@
  *
  */
 $(function(){
-    $(".abc").bxSlider({
+    $(".slider").bxSlider({
         auto: true,
         mode: "fade",
         speed: 1000,

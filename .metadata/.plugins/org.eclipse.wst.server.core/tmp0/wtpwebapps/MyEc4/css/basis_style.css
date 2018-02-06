@@ -11,6 +11,8 @@ body {
 	color:#333;
 	background-image:url("../image/b074.jpg");
 
+
+
 /*スクロールバーの色*/
 	scrollbar-arrow-color:#c9825e;
 	scrollbar-face-color:#c9825e;
@@ -92,12 +94,10 @@ ul{
 	list-style:none;
 }
 
-li{
+li {
 	float:left;
 	margin-right:15px;
-
 }
-
 
 
 /*---------------------------------------------------------------------------------------*/
@@ -133,13 +133,27 @@ li{
 }
 
 /*ホームにあるスライドショーの写真*/
+
 .top-image{
+	display:block;
+	margin:0 auto;
 	height:450px;
 	margin-top:50px;
 	margin-bottom:30px;
 	z-index:5;
-
 }
+
+.bx-wrapper {
+  margin: 0 !important;
+  -moz-box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+  border: none !important;
+  background: none !important;
+}
+
+
+
 
 /*---------------------------------------------------------------------------------------*/
 
@@ -152,15 +166,29 @@ li{
 	text-align: center;
 	background-color:rgba(255,239,209,0.5);
 	margin:0 auto;
-	margin-bottom:200px;
-	padding-bottom:50px;
+	margin-top:50px;
+	margin-bottom:20px;
+	padding-bottom:150px;
 	padding-top:50px;
 }
 
 
 /*行間をあける用のCSS*/
 .top-push{
-	margin-top:200px;
+	margin-top:50px;
+}
+
+.content-push{
+	margin-top:10px;
+	margin-top:50px;
+	height:15px;
+}
+
+/*更新履歴のボックス*/
+.news {
+	background-color:rgba(201,186,161,0.5);
+	margin:0;
+	text-align:center;
 }
 
 /*---------------------------------------------------------------------------------------*/
@@ -172,7 +200,6 @@ footer {
 	height: 100px;
 	background-image:url("../image/renga.jpg");
 	clear:both;
-	margin-top:50px;
 	position: absolute;
 	bottom: 0;
 }
@@ -180,7 +207,12 @@ footer {
 
 /*行間をあける用のCSS*/
 .push{
-	height:50px;
+	height:100px;
+}
+
+.content-downpush{
+	height:80px;
+
 }
 
 .h{
