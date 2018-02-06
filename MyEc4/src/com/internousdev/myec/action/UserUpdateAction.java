@@ -33,41 +33,148 @@ public class UserUpdateAction extends ActionSupport implements SessionAware{
 	public String execute(){
 		String result = SUCCESS;
 
-		boolean dateCheck = false;
+		boolean idCheck = false;
 
 		if(!(loginUserId.length() == 0) && !(loginPassword.length() == 0)
-				&&!(userName.length() ==0) &&!(userAddress.length() ==0) &&!(userTell.length() ==0)
-				&&!(userMail.length() ==0)){
+				&&!(userName.length() ==0) &&!(userAddress.length() ==0)
+				&&!(userTell.length() ==0) &&!(userMail.length() ==0)){
 
 			String defaultLoginId = ((LoginDTO) session.get("loginUser")).getLoginId();
-			String defaultPassword = ((LoginDTO) session.get("loginUser")).getLoginPassword();
+			String defaultPassword =((LoginDTO) session.get("loginUser")).getLoginPassword();
 			session.put("defaultLoginId", defaultLoginId);
 
 			if(defaultLoginId.equals(loginUserId) || defaultPassword.equals(loginPassword)){
 
-				//パスワードの変更
+				//IDはそのままでPASSのみ変更する場合
+				//IDの重複確認は不要なのでtrueを返す
 				if(defaultLoginId.equals(loginUserId)){
-					dateCheck = true;
 
-				}else{
+				idCheck = true;
 
-					//IDの変更
-					dateCheck = dao.getUserInfo(loginUserId,loginPassword);
-				}
 			}else{
 
-				//両方を変更
-				dateCheck = dao.getUserInfo(loginUserId, loginPassword);
-			}
-
-			if(dateCheck){
+				//IDを変更する場合(IDが既存のものと重複していないか
+				//userCreateDAOで作ったメソッドで確認
+				idCheck = dao.getUserInfo(loginUserId, loginPassword);
 
 			}
+
+			}
+			else{
+
+				//IDとPASSの両方を変更する
+				idCheck = dao.getUserInfo(loginUserId, loginPassword);
+			}
+
+		if(idCheck){
+
+			session.put("loginUserId", loginUserId);
+			session.put("loginPassword", loginPassword);
+			session.put("userName", userName);
+			session.put("userAddress", userAddress);
+			session.put("userSex", userSex);
+			session.put("userTell", userTell);
+			session.put("userMail", userMail);
+
+		}else{
+			setErrorMassage("同じIDまたはパスワードが存在します。");
+			result = ERROR;
+		}
+		}
+
+			//一番最初のifに合致しなかった場合
+			//（（入力項目の長さが0の時）は下記の警告文を出す。
+			else{
+				setErrorMassage("未入力の項目があります。");
+				result = ERROR;
+			}
+
+		return result;
 
 		}
 
 
+	public String getLoginUserId() {
+		return loginUserId;
+	}
 
+
+	public void setLoginUserId(String loginUserId) {
+		this.loginUserId = loginUserId;
+	}
+
+
+	public String getLoginPassword() {
+		return loginPassword;
+	}
+
+
+	public void setLoginPassword(String loginPassword) {
+		this.loginPassword = loginPassword;
+	}
+
+
+	public String getUserName() {
+		return userName;
+	}
+
+
+	public void setUserName(String userName) {
+		this.userName = userName;
+	}
+
+
+	public String getUserAddress() {
+		return userAddress;
+	}
+
+
+	public void setUserAddress(String userAddress) {
+		this.userAddress = userAddress;
+	}
+
+
+	public String getUserSex() {
+		return userSex;
+	}
+
+
+	public void setUserSex(String userSex) {
+		this.userSex = userSex;
+	}
+
+
+	public String getUserTell() {
+		return userTell;
+	}
+
+
+	public void setUserTell(String userTell) {
+		this.userTell = userTell;
+	}
+
+
+	public String getUserMail() {
+		return userMail;
+	}
+
+
+	public void setUserMail(String userMail) {
+		this.userMail = userMail;
+	}
+
+
+	@Override
+	public void setSession(Map<String,Object> session){
+		this.session = session;
+	}
+
+	public String getErrorMassage() {
+		return errorMassage;
+	}
+
+	public void setErrorMassage(String errorMassage) {
+		this.errorMassage = errorMassage;
 	}
 
 }

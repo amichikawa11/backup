@@ -81,6 +81,24 @@
 		<result name="error">login.jsp</result>
 	</action>
 
+	<!-- ユーザー情報の変更 -->
+	<!-- UserUpdateMovementAction -->
+	<action name="UserUpdateMovementAction" class="com.internousdev.myec.action.UserUpdateMovementAction" method="execute">
+		<result name="success">userUpdate.jsp</result>
+	</action>
+
+	<!-- UserUpdateAction -->
+	<action name="UserUpdateAction" class="com.internousdev.myec.action.UserUpdateAction" method="execute">
+		<result name="success">userUpdateConfirm.jsp</result>
+		<result name="error">userUpdate.jsp</result>
+	</action>
+
+	<!-- UserUpdateConfirmAction -->
+	<action name="UserUpdateConfirmAction" class="com.internousdev.myec.action.UserUpdateConfirmAction" method="execute">
+		<result name="success">userUpdateComplete.jsp</result>
+		<result name="error">userUpdate.jsp</result>
+	</action>
+
 
 	<!-- 商品の購入 -->
 
@@ -135,6 +153,8 @@
 		<result name="success">master.jsp</result>
 	</action>
 
+
+	<!-- 商品の追加 -->
 	<!-- ItemInsertAction -->
 	<action name="ItemInsertAction" class="com.internousdev.myec.action.ItemInsertAction" method="execute">
 		<result name="success">itemInsertComplete.jsp</result>
@@ -146,6 +166,8 @@
 		<result name="success">itemInsert.jsp</result>
 	</action>
 
+
+	<!-- 商品在庫の追加 -->
 	<!-- ItemInvestoryMovementAction -->
 	<action name="ItemInvestoryMovementAction" class="com.internousdev.myec.action.ItemInvestoryMovementAction" method="execute">
 		<result name="success">itemInvestoryControl.jsp</result>
@@ -161,6 +183,8 @@
 		<result name="success">itemInvestoryComplete.jsp</result>
 	</action>
 
+
+	<!-- 商品の削除 -->
 		<!-- ItemDeleteMovementAction -->
 		<action name="ItemDeleteMovementAction" class="com.internousdev.myec.action.ItemDeleteMovementAction" method="execute">
 		<result name="success">itemDelete.jsp</result>

@@ -32,9 +32,12 @@ public class UserCreateConfirmDAO {
 
 				if(loginId.equals(loginUserId) || password.equals(loginPassword)){
 
+
+					//IDが重複していたらfalse
 					if(loginId.equals(loginUserId)){
 						result = false;
 						return result;
+
 					}else{
 						result = true;
 					}

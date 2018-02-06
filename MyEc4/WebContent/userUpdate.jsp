@@ -54,6 +54,8 @@
 	</div>
 	<div>
 		<p>変更情報を入力してください。</p></div>
+
+		<!-- errorMassageに文章が入っていれば警告文を表示 -->
 		<s:if test="errorMassage != ''">
 			<s:property value="errorMassage" escape="false"/>
 		</s:if>

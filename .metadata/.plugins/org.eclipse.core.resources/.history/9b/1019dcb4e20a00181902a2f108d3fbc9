@@ -1,0 +1,165 @@
+package com.internousdev.myec.action;
+
+import java.util.Map;
+
+import org.apache.struts2.interceptor.SessionAware;
+
+import com.internousdev.myec.dao.UserCreateConfirmDAO;
+import com.internousdev.myec.dto.LoginDTO;
+import com.opensymphony.xwork2.ActionSupport;
+
+public class UserUpdateAction extends ActionSupport implements SessionAware{
+
+	private String loginUserId;
+	private String loginPassword;
+	private String userName;
+	private String userAddress;
+	private String userSex;
+	private String userTell;
+	private String userMail;
+
+	public Map<String,Object> session;
+
+	private String errorMassage;
+
+	private LoginDTO loginDTO = new LoginDTO();
+
+	private UserCreateConfirmDAO dao = new UserCreateConfirmDAO();
+
+
+	/**
+	 * 実行メソッド
+	 */
+	public String execute(){
+		String result = SUCCESS;
+
+		boolean changeCheck = false;
+
+		if(!(loginUserId.length() == 0) && !(loginPassword.length() == 0)
+				&&!(userName.length() ==0) &&!(userAddress.length() ==0)
+				&&!(userTell.length() ==0) &&!(userMail.length() ==0)){
+
+
+			String defaultLoginId = ((LoginDTO) session.get("loginUser")).getLoginId();
+			session.put("defaultLoginId", defaultLoginId);
+
+			//入力された項目が元の値と違っているか確認
+			if(!(loginUserId == ((LoginDTO) session.get("loginUser")).getLoginId()) || !(loginPassword == ((LoginDTO) session.get("loginUser")).getLoginPassword())
+					||!(userName == ((LoginDTO) session.get("LoginUser")).getUserName()) ||!(userAddress ==((LoginDTO) session.get("LoginUser")).getUserAddress())
+					||!(userSex == ((LoginDTO) session.get("LoginUser")).getUserSex()) ||!(userTell == ((LoginDTO) session.get("LoginUser")).getUserTell())
+					||!(userMail == ((LoginDTO) session.get("LoginUser")).getUserMail()))
+
+				changeCheck = true;
+
+		}else{
+			setErrorMassage("変更する項目がありません。");
+
+		}
+
+		//変更する項目があればchangeCheckがtrueになるので以下を実行できる
+		if(changeCheck){
+
+			session.put("loginUserId", loginUserId);
+			session.put("loginPassword", loginPassword);
+			session.put("userName", userName);
+			session.put("userAddress", userAddress);
+			session.put("userSex", userSex);
+			session.put("userTell", userTell);
+			session.put("userMail", userMail);
+
+		}
+			//一番最初のifに合致しなかった場合
+			//（（入力項目の長さが0の時）は下記の警告文を出す。
+			else{
+				setErrorMassage("未入力の項目があります。");
+			}
+
+		return result;
+
+		}
+
+
+	public String getLoginUserId() {
+		return loginUserId;
+	}
+
+
+	public void setLoginUserId(String loginUserId) {
+		this.loginUserId = loginUserId;
+	}
+
+
+	public String getLoginPassword() {
+		return loginPassword;
+	}
+
+
+	public void setLoginPassword(String loginPassword) {
+		this.loginPassword = loginPassword;
+	}
+
+
+	public String getUserName() {
+		return userName;
+	}
+
+
+	public void setUserName(String userName) {
+		this.userName = userName;
+	}
+
+
+	public String getUserAddress() {
+		return userAddress;
+	}
+
+
+	public void setUserAddress(String userAddress) {
+		this.userAddress = userAddress;
+	}
+
+
+	public String getUserSex() {
+		return userSex;
+	}
+
+
+	public void setUserSex(String userSex) {
+		this.userSex = userSex;
+	}
+
+
+	public String getUserTell() {
+		return userTell;
+	}
+
+
+	public void setUserTell(String userTell) {
+		this.userTell = userTell;
+	}
+
+
+	public String getUserMail() {
+		return userMail;
+	}
+
+
+	public void setUserMail(String userMail) {
+		this.userMail = userMail;
+	}
+
+
+	@Override
+	public void setSession(Map<String,Object> session){
+		this.session = session;
+	}
+
+	public String getErrorMassage() {
+		return errorMassage;
+	}
+
+	public void setErrorMassage(String errorMassage) {
+		this.errorMassage = errorMassage;
+	}
+
+}

@@ -32,6 +32,7 @@ public class UserUpdateDAO {
 
 			int checkUpdate = ps.executeUpdate();
 
+			//更新(executeUpdate）する場合はtrueを返す
 			if(checkUpdate > 0){
 				result = true;
 
