@@ -14,6 +14,14 @@
 <link rel="stylesheet" type="text/css" href="./css/basis_style.css">
 
 <title>ユーザー登録 確認画面</title>
+
+	<script type="text/javascript">
+		function submitAction(url) {
+			$('form').attr('action', url);
+			$('form').submit();
+		}
+	</script>
+
 </head>
 <body>
 
@@ -114,20 +122,13 @@
 				</td>
 			</tr>
 			<tr>
-				<td>
-					<s:submit class="button" value="この情報で登録する"/>
-				</td>
+				<s:submit class="button" value="完了" />
 			</tr>
 			</s:form>
 
 		</table>
-
-
-	<p>Homeへ戻る場合は
-				<a href='<s:url action="GohomeAction"/>'>こちら</a>（入力した情報は保存されません）
-
-
 		</div>
+
 </div>
 </div>
 

@@ -143,7 +143,7 @@
 	<br>
 
 		<div id="text-link">
-			<p>ユーザー情報を変更する場合はこちら</p>
+			<p>ユーザー情報を変更する場合は<a href='<s:url action="UserUpdateMovementAction"/>'>こちら</a></p>
 			<p>Homeへ戻る場合は<a href='<s:url action="GoHomeAction"/>'>こちら</a></p>
 			<p>ログアウトする場合は<a href='<s:url action="LogoutAction"/>'>こちら</a></p>
 		</div>

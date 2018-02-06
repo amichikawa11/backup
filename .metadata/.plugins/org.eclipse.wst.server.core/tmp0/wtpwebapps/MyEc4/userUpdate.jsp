@@ -56,9 +56,12 @@
 		<p>変更情報を入力してください。</p></div>
 
 		<!-- errorMassageに文章が入っていれば警告文を表示 -->
+		<div class="error-message">
 		<s:if test="errorMassage != ''">
 			<s:property value="errorMassage" escape="false"/>
 		</s:if>
+		</div>
+		<br>
 
 		<table>
 		<s:form action="UserUpdateAction">
@@ -67,7 +70,7 @@
 				<label>ログインID:</label>
 			</td>
 			<td>
-				<input type="text" name="loginUserId" value="<s:property value='session.loginUserId'/>"/>
+				<input type="text" name="loginUserId" value="<s:property value="session.loginUserId"/>"/>
 			</td>
 		</tr>
 		<tr>
@@ -75,7 +78,7 @@
 				<label>ログインPASS:</label>
 			</td>
 			<td>
-				<input type="text" name="loginPassword" value="<s:property value='session.loginPassword'/>"/>
+				<input type="password" name="loginPassword" value="<s:property value='session.loginPassword'/>"/>
 			</td>
 		</tr>
 		<tr>
@@ -91,7 +94,7 @@
 				<label>性別:</label>
 			</td>
 			<td>
-			<s:if test="session.loginUser.userSex == '男'">
+			<s:if test='session.userSex == "男"'>
 				<input type="radio" name="userSex" value="男" checked="checked">男
 				<input type="radio" name="userSex" value="女">女
 			</s:if>
@@ -137,9 +140,8 @@
 
 			<!-- GoHomeAction未作成 -->
 
-			<p>Homeへ戻る場合は
-				<a href='<s:url action="GoHomeAction"/>'>こちら</a>
-
+			<p>マイページへ戻る場合は<a href='<s:url action="MyPageMovementAction"/>'>こちら</a>
+			<p>Homeへ戻る場合は<a href='<s:url action="GoHomeAction"/>'>こちら</a>
 
 		</div>
 

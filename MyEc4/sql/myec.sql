@@ -21,7 +21,7 @@ user_sex varchar(10),
 user_tell varchar(13),
 user_mail varchar(50),
 insert_date datetime,
-updated_date datetime
+update_date datetime
 );
 
 

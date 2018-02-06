@@ -13,6 +13,14 @@
 
 <link rel="stylesheet" type="text/css" href="./css/basis_style.css">
 
+
+	<script type="text/javascript">
+		function submitAction(url) {
+			$('form').attr('action', url);
+			$('form').submit();
+		}
+	</script>
+
 <title>UserUpdateConfirm画面</title>
 </head>
 <body>
@@ -56,7 +64,7 @@
 	<div>
 		<p>登録する内容は以下でよろしいですか。</p>
 		<table>
-			<s:form action="UserUpdateCompleteAction">
+			<s:form action="UserUpdateConfirmAction">
 			<tr id="box">
 				<td>
 					<label>ログインID:</label>
@@ -114,17 +122,13 @@
 				</td>
 			</tr>
 			<tr>
-				<td>
-					<s:submit class="button" value="この情報で登録する"/>
-				</td>
+				<td><input type="button" class="button" value="戻る" onclick="submitAction('UserUpdateAction')" /></td>
+				<td><input type="button" class="button" value="完了" onclick="submitAction('UserUpdateConfirmAction')" /></td>
 			</tr>
 			</s:form>
 
 		</table>
 
-
-	<p>Homeへ戻る場合は
-				<a href='<s:url action="GohomeAction"/>'>こちら</a>（入力した情報は保存されません）
 
 
 		</div>

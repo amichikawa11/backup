@@ -26,9 +26,14 @@ public class UserUpdateConfirmAction extends ActionSupport implements SessionAwa
 
 		//UserUpdateActionでsessionに保管した値を取得して
 		//Object→Stringに変換
-		boolean checkUpdate = userUpdateDAO.userUpdateInfo(session.get("loginUserId").toString(), session.get("loginPassword").toString(),
-				session.get("userName").toString(), session.get("userAddress").toString(), session.get("userSex").toString(),
-				session.get("userTell").toString(), session.get("userMail").toString(), ((LoginDTO) session.get("loginUser")).getUserNumber().toString());
+		boolean checkUpdate = userUpdateDAO.userUpdateInfo(session.get("loginUserId").toString(),
+				session.get("loginPassword").toString(),
+				session.get("userName").toString(),
+				session.get("userAddress").toString(),
+				session.get("userSex").toString(),
+				session.get("userTell").toString(),
+				session.get("userMail").toString(),
+				((LoginDTO) session.get("loginUser")).getUserNumber().toString());
 
 		if(checkUpdate){
 			result = SUCCESS;
