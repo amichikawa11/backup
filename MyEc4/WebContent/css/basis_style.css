@@ -152,6 +152,9 @@ li {
   background: none !important;
 }
 
+.top-image img{
+	border-radius: 10px;
+}
 
 
 

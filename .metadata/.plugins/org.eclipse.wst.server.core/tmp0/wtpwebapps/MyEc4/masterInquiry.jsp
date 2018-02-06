@@ -54,6 +54,20 @@
 		<h3>MASTER INQUIRY</h3>
 	</div>
 
+	<!-- 問合せがない場合 -->
+	<div>
+	<s:if test="inquiryList == null">
+		<br><br>
+		<span>INQUIRY MESSAGE</span>
+		<div>お問合せメッセージはありません。</div>
+		<br>
+	</s:if>
+
+	<!-- 問合せがある場合 -->
+	<s:elseif test="message == null">
+		<br><br>
+		<span>INQUIRY MESSAGE</span>
+
 	<table class="inquiry-table">
 	<tbody>
 		<tr>
@@ -99,6 +113,13 @@
 		</td>
 	</tr>
 	</s:iterator>
+
+
+
+
+
+	</div>
+
 
 	</tbody>
 	</table>
