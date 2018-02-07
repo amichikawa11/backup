@@ -43,6 +43,7 @@ public class InquiryCompleteDAO {
 			inquiryDTO.setInquiry_mail(resultSet.getString("inquiry_mail"));
 			inquiryDTO.setQtype(resultSet.getString("qtype"));
 			inquiryDTO.setBody(resultSet.getString("body"));
+			inquiryDTO.setMaster_id(resultSet.getString("master_id"));
 			inquiryDTOList.add(inquiryDTO);
 		}
 
@@ -67,13 +68,13 @@ public class InquiryCompleteDAO {
 	 */
 
 
-public int insert(String inquiry_name, String inquiry_mail, String qtype, String body){
+public int insert(String inquiry_name, String inquiry_mail, String qtype, String body, String master_id){
 	int ret = 0;
 	DBConnector dbConnector = new DBConnector();
 	Connection connection = dbConnector.getConnection();
 
 	//どこにinsertするかを指定
-	String sql = "insert into inquiry values(?,?,?,?)";
+	String sql = "insert into inquiry values(?,?,?,?,?)";
 
 	try{
 		PreparedStatement preparedStatement = connection.prepareStatement(sql);
@@ -81,6 +82,7 @@ public int insert(String inquiry_name, String inquiry_mail, String qtype, String
 		preparedStatement.setString(2, inquiry_mail);
 		preparedStatement.setString(3, qtype);
 		preparedStatement.setString(4, body);
+		preparedStatement.setString(5, master_id);
 
 		//DBへ値を追加した回数をiに代入
 		int i = preparedStatement.executeUpdate();
@@ -105,4 +107,36 @@ public int insert(String inquiry_name, String inquiry_mail, String qtype, String
 
 	return ret;
 }
+
+
+/**
+ * 問合せ履歴の一括削除メソッド
+ */
+public int inquiryAllDelete(String master_id) throws SQLException{
+
+String sql = "DELETE FROM inquiry WHERE master_id=?";
+
+DBConnector dbConnector = new DBConnector();
+Connection connection = dbConnector.getConnection();
+PreparedStatement preparedStatement;
+
+int result = 0;
+
+try{
+	preparedStatement = connection.prepareStatement(sql);
+	preparedStatement.setString(1,master_id);
+
+	result = preparedStatement.executeUpdate();
+
+}catch(SQLException e){
+	e.printStackTrace();
+
+}finally{
+	connection.close();
+}
+
+return result;
+
+}
+
 }

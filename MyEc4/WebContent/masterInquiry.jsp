@@ -56,15 +56,17 @@
 
 	<!-- 問合せがない場合 -->
 	<div>
-	<s:if test="inquiryList == null">
+	<s:if test="inquiryDTOList == null">
 		<br><br>
 		<span>INQUIRY MESSAGE</span>
-		<div>お問合せメッセージはありません。</div>
+		<br><br><br>
+		<div class="error-message">お問合せメッセージはありません。</div>
 		<br>
 	</s:if>
 
+
 	<!-- 問合せがある場合 -->
-	<s:elseif test="message == null">
+	<s:elseif test="inquiryDTOList != null">
 		<br><br>
 		<span>INQUIRY MESSAGE</span>
 
@@ -114,18 +116,30 @@
 	</tr>
 	</s:iterator>
 
-
-
-
-
-	</div>
-
-
 	</tbody>
 	</table>
-	<br><br>
+	<br>
+
+	<!-- 履歴の削除機能 -->
+
+	<s:form action="InquiryAllDeleteAction">
+		<input type="hidden" name="deleteFlg" value="1">
+		<s:submit class="button" value="一覧の削除" method="delete"/>
+	</s:form>
+	</s:elseif>
+
 	<div>
+
+	<!-- messageに値が入っている場合は表示 -->
+	<s:if test="message != null">
+	<br><br>
+		<p class="error-message"><s:property value="message"/></p>
+	</s:if>
+
+	<br><br>
+	<div id="text-link">
 		<p>Homeへ戻る場合は<a href='<s:url action="HomeAction"/>'>こちら</a></p>
+		<p>ログアウトする場合は<a href='<s:url action="LogoutAction"/>'>こちら</a></p>
 	</div>
 
 

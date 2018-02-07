@@ -65,7 +65,7 @@
 		<p><a href='<s:url action="ItemInvestoryMovementAction"/>'>在庫管理</a></p>
 		<p><a href='<s:url action="ItemInsertMovementAction"/>'>商品追加</a></p>
 		<p><a href='<s:url action="ItemDeleteMovementAction"/>'>商品削除</a></p>
-		<p><a href='<s:url action="InquiryAction"/>'>問合せ一覧</a></p>
+		<p><a href='<s:url action="InquiryAllDeleteAction"/>'>問合せ一覧</a></p>
 		<br>
 		<p><a href='<s:url action="LogoutAction"/>'>ログアウト</a></p>
 

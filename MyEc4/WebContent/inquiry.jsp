@@ -74,6 +74,7 @@
 		お問い合わせ内容<br>
 		<s:textarea cols="30" rows="5" name="body"/>
 		<br>
+		<input type="hidden" name="master_id" value="kanri"/>
 		<s:submit class="button" value="送信"/>
 	</s:form>
 	</table>

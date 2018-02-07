@@ -16,6 +16,7 @@ public class InquiryCompleteAction extends ActionSupport implements SessionAware
 	private String inquiry_mail;
 	private String qtype;
 	private String body;
+	private String master_id;
 
 	List<InquiryDTO> inquiryDTOList = new ArrayList<InquiryDTO>();
 	private Map<String,Object> session;
@@ -30,7 +31,7 @@ public class InquiryCompleteAction extends ActionSupport implements SessionAware
 		//InquiryCompleteDAOで定義したinsertメソッドを実行
 		//実行して得られた更新数をcountに代入
 		//（実行するためにインスタンスinquiryCompleteDAOを生み出している
-		int count = inquiryCompleteDAO.insert(inquiry_name, inquiry_mail, qtype, body);
+		int count = inquiryCompleteDAO.insert(inquiry_name, inquiry_mail, qtype, body, master_id);
 
 		//1件でも更新していれば、InquiryCompleteDAOで定義した
 		//selectメソッドを実行→問い合わせ内容をinquiryDTOListに格納
@@ -82,6 +83,16 @@ public class InquiryCompleteAction extends ActionSupport implements SessionAware
 	public void setBody(String body) {
 		this.body = body;
 	}
+
+	public String getMaster_id() {
+		return master_id;
+	}
+
+
+	public void setMaster_id(String master_id) {
+		this.master_id = master_id;
+	}
+
 
 	public void setSession(Map<String,Object> session){
 		this.session = session;

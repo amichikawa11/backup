@@ -64,7 +64,8 @@ create table inquiry(
 inquiry_name varchar(50),
 inquiry_mail varchar(50),
 qtype varchar(50),
-body varchar(255)
+body varchar(255),
+master_id varchar(50)
 );
 
 
