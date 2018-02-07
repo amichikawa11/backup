@@ -14,6 +14,7 @@ import com.opensymphony.xwork2.ActionSupport;
 public class ProductPageAction extends ActionSupport implements SessionAware {
 
 	List<BuyItemDTO> buyItemDTOList = new ArrayList<BuyItemDTO>();
+	List<BuyItemDTO> buyItemDTOList2 = new ArrayList<BuyItemDTO>();
 	public Map<String, Object> session;
 	private BuyItemDTO buyItemDTO = new BuyItemDTO();
 	private BuyItemDAO buyItemDAO = new BuyItemDAO();
@@ -21,6 +22,7 @@ public class ProductPageAction extends ActionSupport implements SessionAware {
 
 
 	public String execute() {
+
 		String ret = ERROR;
 
 		if(session.containsKey("id")){
@@ -31,6 +33,7 @@ public class ProductPageAction extends ActionSupport implements SessionAware {
 			session.put("userName",loginDTO.getUserName());
 			session.put("userAddress",loginDTO.getUserAddress());
 			ret = SUCCESS;
+
 		}
 
 		return ret;

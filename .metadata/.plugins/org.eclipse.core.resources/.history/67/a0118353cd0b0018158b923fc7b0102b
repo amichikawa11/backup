@@ -23,7 +23,7 @@
     });
   </script>
 
-<title>Home画面</title>
+<title>管理者画面</title>
 </head>
 <body>
 
@@ -56,35 +56,25 @@
 </header>
 
 <!-- メイン部分 -->
+<div class="top-push  content-push"></div>
 <div id="main">
-
-  <div class="abc top-image">
-    <div><img src="./image/donut.jpg"></div>
-    <div><img src="./image/top2.jpg"></div>
-    <div><img src="./image/top3.jpg"></div>
-    <div><img src="./image/top4.jpg"></div>
-  </div>
-
 <div class="main-contents">
 	<div class="top"></div>
 
+	<h3>MASTER PAGE</h3>
+		<p><a href='<s:url action="ItemInvestoryMovementAction"/>'>在庫管理</a></p>
+		<p><a href='<s:url action="ItemInsertMovementAction"/>'>商品追加</a></p>
+		<p><a href='<s:url action="ItemDeleteMovementAction"/>'>商品削除</a></p>
+		<p><a href='<s:url action="InquiryAction"/>'>問合せ一覧</a></p>
+		<br>
+		<p><a href='<s:url action="LogoutAction"/>'>ログアウト</a></p>
 
-	<div class="feature-pickUpItem">
-		<p>おすすめの商品</p>
-
-	</div>
-
-	<div class="feature-seasonItem">
-		<p>季節の商品</p>
-	</div>
-	<div class="news">
-		<p>更新情報</p>
-	</div>
 
 </div>
 </div>
 
 <div class="push"></div>
+<div class="content-downpush"></div>
 
 <!-- フッター部分 -->
 <footer>

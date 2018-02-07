@@ -45,6 +45,7 @@ public class InquiryCompleteDAO {
 			inquiryDTO.setBody(resultSet.getString("body"));
 			inquiryDTO.setMaster_id(resultSet.getString("master_id"));
 			inquiryDTOList.add(inquiryDTO);
+
 		}
 
 	}catch(SQLException e){

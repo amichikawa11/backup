@@ -33,6 +33,10 @@ public class InquiryCompleteAction extends ActionSupport implements SessionAware
 		//（実行するためにインスタンスinquiryCompleteDAOを生み出している
 		int count = inquiryCompleteDAO.insert(inquiry_name, inquiry_mail, qtype, body, master_id);
 
+		//↓追加分（動作がおかしくなったら消す）
+		session.put("master_id", master_id);
+		//↑追加分
+
 		//1件でも更新していれば、InquiryCompleteDAOで定義した
 		//selectメソッドを実行→問い合わせ内容をinquiryDTOListに格納
 		//入力された内容を他クラスで使用できるように、
@@ -42,6 +46,7 @@ public class InquiryCompleteAction extends ActionSupport implements SessionAware
 		if(count > 0){
 			inquiryDTOList = inquiryCompleteDAO.select();
 			session.put("inquiryDTOList", inquiryDTOList);
+			session.put("master_id", master_id);
 
 			ret = SUCCESS;
 		}

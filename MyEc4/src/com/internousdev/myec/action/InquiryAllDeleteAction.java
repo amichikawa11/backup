@@ -40,6 +40,8 @@ public class InquiryAllDeleteAction extends ActionSupport implements SessionAwar
 
 		List<InquiryDTO> inquiryDTOList = (List<InquiryDTO>) session.get("list");
 
+
+
 		//問合せを削除しない場合
 		if(deleteFlg == null){
 
@@ -73,10 +75,10 @@ public class InquiryAllDeleteAction extends ActionSupport implements SessionAwar
 
 	public void delete() throws SQLException{
 
-		String master_id = session.get("master_id").toString();
+		String masterId = session.get("master_id").toString();
 
 		InquiryCompleteDAO dao = new InquiryCompleteDAO();
-		int res = dao.inquiryAllDelete(master_id);
+		int res = dao.inquiryAllDelete(masterId);
 
 		if(res > 0){
 
@@ -88,7 +90,6 @@ public class InquiryAllDeleteAction extends ActionSupport implements SessionAwar
 		}
 
 	}
-
 
 	public ArrayList<InquiryDTO> getInquiryDTOList() {
 		return inquiryDTOList;
