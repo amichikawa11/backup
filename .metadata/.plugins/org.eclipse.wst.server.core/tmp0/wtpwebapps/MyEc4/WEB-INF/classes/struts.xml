@@ -129,6 +129,14 @@
 	</action>
 
 
+	<!-- カテゴリ検索 -->
+	<!-- CategorySearchAction -->
+	<action name="CategorySearchAction" class="com.internousdev.myec.action.CategorySearchAction" method="execute">
+		<result name="success">buyItem.jsp</result>
+		<result name="error">buyItemNotLogin.jsp</result>
+	</action>
+
+
 	<!-- 商品検索 -->
 	<!-- SearchAction -->
 	<action name="SearchAction" class="com.internousdev.myec.action.SearchAction" method="execute">

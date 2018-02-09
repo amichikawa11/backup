@@ -34,4 +34,5 @@
 <fullyQualifiedTypeName name="com.mysql.jdbc.PreparedStatement"/>
 <fullyQualifiedTypeName name="java.sql.Connection"/>
 <fullyQualifiedTypeName name="java.util.Iterator"/>
+<fullyQualifiedTypeName name="com.internousdev.myec.dao.CategorySearchDAO"/>
 </qualifiedTypeNameHistroy>
