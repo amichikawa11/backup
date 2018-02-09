@@ -29,7 +29,7 @@
 	<div class="left-list">
 		<ul>
 			<li><a href='<s:url action="GoHomeAction"/>'>TOP</a></li>
-			<li><a href='<s:url action="HomeAction"/>'>PRODUCT</a></li>
+			<li><a href='<s:url action="ProductPageAction"/>'>PRODUCT</a></li>
 			<li><a href='<s:url action="UserCreateAction"/>'>SIGNUP</a></li>
 		</ul>
 	</div>
@@ -56,6 +56,8 @@
 
 		<!-- カテゴリ表示機能 -->
 
+		<p>商品を購入する場合は<a href='<s:url action="LoginMovementAction" />'>こちら</a>からログインしてください。</p>
+
 		<!-- 商品検索機能 -->
 		<div>
 		<s:form action="SearchAction">
@@ -78,7 +80,7 @@
 
 			<!-- BuyItemAction で作ったbuyItemDTOListをループ処理 -->
 
-			<s:iterator value="buyItemDTOList">
+			<s:iterator value="#session.buyItemDTOList">
 
 
 			<dl class="dl-list">
@@ -120,7 +122,7 @@
 					</table>
 			<div>
 				<p>Homeへ戻る場合は<a href='<s:url action="GoHomeAction" />'>こちら</a></p>
-				<p>マイぺージは<a href='<s:url action="MyPageMovementAction" />'>こちら</a></p>
+				<p>ログインは<a href='<s:url action="LoginMovementAction" />'>こちら</a></p>
 			</div>
 	</div>
 

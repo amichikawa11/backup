@@ -13,7 +13,7 @@
 
 <link rel="stylesheet" type="text/css" href="./css/basis_style.css">
 
-<title>ログイン画面</title>
+<title>Login画面</title>
 </head>
 <body>
 
@@ -28,7 +28,7 @@
 	<div class="left-list">
 		<ul>
 			<li><a href='<s:url action="GoHomeAction"/>'>TOP</a></li>
-			<li><a href='<s:url action="HomeAction"/>'>PRODUCT</a></li>
+			<li><a href='<s:url action="ProductPageAction"/>'>PRODUCT</a></li>
 			<li><a href='<s:url action="UserCreateAction"/>'>SIGNUP</a></li>
 		</ul>
 	</div>

@@ -14,7 +14,7 @@
 <link rel="stylesheet" type="text/css" href="./css/basis_style.css">
 <link rel="stylesheet" type="text/css" href="./css/table_style.css">
 
-<title>InquiryComplete画面</title>
+<title>MasterInquiry画面</title>
 </head>
 <body>
 
@@ -29,7 +29,7 @@
 	<div class="left-list">
 		<ul>
 			<li><a href='<s:url action="GoHomeAction"/>'>TOP</a></li>
-			<li><a href='<s:url action="HomeAction"/>'>PRODUCT</a></li>
+			<li><a href='<s:url action="ProductPageAction"/>'>PRODUCT</a></li>
 			<li><a href='<s:url action="UserCreateAction"/>'>SIGNUP</a></li>
 		</ul>
 	</div>
@@ -56,7 +56,7 @@
 
 	<!-- 問合せがない場合 -->
 	<div>
-	<s:if test="inquiryDTOList == null">
+	<s:if test="#session.inquiryDTOList == null">
 		<br><br>
 		<span>INQUIRY MESSAGE</span>
 		<br><br><br>
@@ -66,7 +66,7 @@
 
 
 	<!-- 問合せがある場合 -->
-	<s:elseif test="inquiryDTOList != null">
+	<s:elseif test="#session.inquiryDTOList != null">
 		<br><br>
 		<span>INQUIRY MESSAGE</span>
 
@@ -81,7 +81,7 @@
 
 	<!-- InquiryCompleteActionで定義したsessionの
 		"inquiryDTOList"を使用して値を取得 -->
-	<s:iterator value="inquiryDTOList">
+	<s:iterator value="#session.inquiryDTOList">
 	<tr>
 		<td class="inquiry-td"><s:property value="inquiry_name"/></td>
 
@@ -128,7 +128,7 @@
 	</s:form>
 	</s:elseif>
 
-	<div>
+
 
 	<!-- messageに値が入っている場合は表示 -->
 	<s:if test="message != null">
@@ -142,7 +142,7 @@
 		<p>ログアウトする場合は<a href='<s:url action="LogoutAction"/>'>こちら</a></p>
 	</div>
 
-
+</div>
 </div>
 </div>
 

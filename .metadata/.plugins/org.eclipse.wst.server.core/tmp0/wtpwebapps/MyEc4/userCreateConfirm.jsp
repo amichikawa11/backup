@@ -13,7 +13,7 @@
 
 <link rel="stylesheet" type="text/css" href="./css/basis_style.css">
 
-<title>ユーザー登録 確認画面</title>
+<title>UserCreateConfirm画面</title>
 
 	<script type="text/javascript">
 		function submitAction(url) {
@@ -36,7 +36,7 @@
 	<div class="left-list">
 		<ul>
 			<li><a href='<s:url action="GoHomeAction"/>'>TOP</a></li>
-			<li><a href='<s:url action="HomeAction"/>'>PRODUCT</a></li>
+			<li><a href='<s:url action="ProductPageAction"/>'>PRODUCT</a></li>
 			<li><a href='<s:url action="UserCreateAction"/>'>SIGNUP</a></li>
 		</ul>
 	</div>

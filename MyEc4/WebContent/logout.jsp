@@ -28,7 +28,7 @@
 	<div class="left-list">
 		<ul>
 			<li><a href='<s:url action="GoHomeAction"/>'>TOP</a></li>
-			<li><a href='<s:url action="HomeAction"/>'>PRODUCT</a></li>
+			<li><a href='<s:url action="ProductPageAction"/>'>PRODUCT</a></li>
 			<li><a href='<s:url action="UserCreateAction"/>'>SIGNUP</a></li>
 		</ul>
 	</div>
@@ -58,6 +58,7 @@
 	<div>
 		<p>もう一度ログインする場合は<a href='<s:url action="LoginMovementAction"/>'>こちら</a></p>
 		<p>Homeへ戻る場合は<a href='<s:url action="GoHomeAction"/>'>こちら</a></p>
+	<div class="content-downpush"></div>
 	</div>
 
 
