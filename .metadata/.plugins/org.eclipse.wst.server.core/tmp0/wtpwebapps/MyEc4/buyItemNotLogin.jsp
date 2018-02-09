@@ -20,6 +20,18 @@
 <!-- end of iconj.com favicon code -->
 
 <title>BuyItem画面</title>
+
+
+<!-- selectで選んだカテゴリをsubmitなしで表示させるjavascript
+<script type="text/javascript">
+    function goCategorySearchAction(){
+        document.getElementById('form').action="CategorySearchAction";
+    }
+
+</script>
+  -->
+
+
 </head>
 <body>
 
@@ -64,18 +76,25 @@
 
 		<!-- カテゴリ表示機能 -->
 		<div>
-		<s:form action="CategorySearchAction">
+		<s:form action="CategorySearchAction" id="form" name="form">
 		<tr>
 		<td>
-			<select name="sortCategory">
-				<option value="0" selected="selected">すべて表示</option>
+			<select name="sortCategory" onchange="submit(this.form)">
+				<option value="0" selected="selected">カテゴリ選択</option>
+				<option value="cake,bake,wagashi">すべて表示</option>
 				<option value="cake">ケーキ</option>
 				<option value="bake">焼き菓子</option>
 				<option value="wagashi">和菓子</option>
 			</select>
 
 		</td>
+
+
+		<!--
 		<td><s:submit class="button" value="検索"/></td>
+		 -->
+
+
 		</tr>
 		</s:form>
 		</div>
