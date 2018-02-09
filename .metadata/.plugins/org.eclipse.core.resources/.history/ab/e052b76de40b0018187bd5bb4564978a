@@ -37,7 +37,7 @@
 	<div class="right-list">
 		<ul>
 			<li><a href='<s:url action="LoginMovementAction"/>'>LOGIN</a></li>
-			<li><a href='<s:url action="MyPageMovementAction"/>'>MYPAGE</a></li>
+			<li><a href='<s:url action="MyPageAction"/>'>MYPAGE</a></li>
 			<li><a href='<s:url action="LogoutAction"/>'>LOGOUT</a></li>
 			<li><a href='<s:url action="InquiryAction"/>'>MAIL</a></li>
 		</ul>
@@ -47,12 +47,28 @@
 </header>
 
 <!-- メイン部分 -->
-<div class="top-push"></div>
+<div class="top-push content-push"></div>
 <div id="main">
 <div class="main-contents">
 	<div class="top">
 		<h3>MASTER INQUIRY</h3>
 	</div>
+
+	<!-- 問合せがない場合 -->
+	<div>
+	<s:if test="inquiryDTOList == null">
+		<br><br>
+		<span>INQUIRY MESSAGE</span>
+		<br><br><br>
+		<div class="error-message">お問合せメッセージはありません。</div>
+		<br>
+	</s:if>
+
+
+	<!-- 問合せがある場合 -->
+	<s:elseif test="inquiryDTOList != null">
+		<br><br>
+		<span>INQUIRY MESSAGE</span>
 
 	<table class="inquiry-table">
 	<tbody>
@@ -102,9 +118,28 @@
 
 	</tbody>
 	</table>
-	<br><br>
+	<br>
+
+	<!-- 履歴の削除機能 -->
+
+	<s:form action="InquiryAllDeleteAction">
+		<input type="hidden" name="deleteFlg" value="1">
+		<s:submit class="button" value="一覧の削除" method="delete"/>
+	</s:form>
+	</s:elseif>
+
 	<div>
+
+	<!-- messageに値が入っている場合は表示 -->
+	<s:if test="message != null">
+	<br><br>
+		<p class="error-message"><s:property value="message"/></p>
+	</s:if>
+
+	<br><br>
+	<div id="text-link">
 		<p>Homeへ戻る場合は<a href='<s:url action="HomeAction"/>'>こちら</a></p>
+		<p>ログアウトする場合は<a href='<s:url action="LogoutAction"/>'>こちら</a></p>
 	</div>
 
 
@@ -112,6 +147,7 @@
 </div>
 
 <div class="push"></div>
+<div class="content-downpush"></div>
 
 <!-- フッター部分 -->
 <footer>

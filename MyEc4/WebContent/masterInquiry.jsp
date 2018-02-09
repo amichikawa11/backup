@@ -81,7 +81,7 @@
 
 	<!-- InquiryCompleteActionで定義したsessionの
 		"inquiryDTOList"を使用して値を取得 -->
-	<s:iterator value="#session.inquiryDTOList">
+	<s:iterator value="inquiryDTOList">
 	<tr>
 		<td class="inquiry-td"><s:property value="inquiry_name"/></td>
 
