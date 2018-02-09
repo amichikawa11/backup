@@ -13,17 +13,7 @@
 
 <link rel="stylesheet" type="text/css" href="./css/basis_style.css">
 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
-
-  <script>
-    $(document).ready(function(){
-      $('abc').bxSlider();
-    });
-  </script>
-
-<title>Home画面</title>
+<title>Inquiry画面</title>
 </head>
 <body>
 
@@ -38,7 +28,7 @@
 	<div class="left-list">
 		<ul>
 			<li><a href='<s:url action="GoHomeAction"/>'>TOP</a></li>
-			<li><a href='<s:url action="HomeAction"/>'>PRODUCT</a></li>
+			<li><a href='<s:url action="ProductPageAction"/>'>PRODUCT</a></li>
 			<li><a href='<s:url action="UserCreateAction"/>'>SIGNUP</a></li>
 		</ul>
 	</div>
@@ -56,35 +46,44 @@
 </header>
 
 <!-- メイン部分 -->
+<div class="top-push content-push"></div>
 <div id="main">
-
-  <ul class="slider top-image">
-    <li><img src="./image/donut.jpg"></li>
-    <li><img src="./image/top2.jpg"></li>
-    <li><img src="./image/top3.jpg"></li>
-    <li><img src="./image/top4.jpg"></li>
-  </ul>
-
 <div class="main-contents">
-	<div class="top"></div>
-
-
-	<div class="feature-pickUpItem">
-		<p>おすすめの商品</p>
+	<div class="top">
+		<h3>INQUIRY</h3>
+		<p>お問い合わせがある方は、下記よりご連絡をお願いいたします。</p>
 	</div>
+	<br>
 
-	<div class="feature-seasonItem">
-		<p>季節の商品</p>
-	</div>
+	<table>
+	<s:form method="post" action="InquiryCompleteAction">
+		名前<br>
+		<input type="text" name="inquiry_name"/><br><br>
+		メールアドレス<br>
+		<input type="text" name="inquiry_mail"/><br><br>
+		お問い合わせの種類<br>
+		<select name="qtype">
+			<option value="company">会社について</option>
+			<option value="product">商品について</option>
+			<option value="order">注文について</option>
+			<option value="support">アフターサポートについて</option>
+			<option value="another">その他のお問い合わせ</option>
+		</select>
+		<br><br>
 
-	<div class="news">
-		<p>更新情報</p>
-	</div>
+		お問い合わせ内容<br>
+		<s:textarea cols="30" rows="5" name="body"/>
+		<br>
+		<input type="hidden" name="master_id" value="kanri"/>
+		<s:submit class="button" value="送信"/>
+	</s:form>
+	</table>
 
 </div>
 </div>
 
 <div class="push"></div>
+<div class="content-downpush"></div>
 
 <!-- フッター部分 -->
 <footer>
@@ -98,6 +97,7 @@
 </footer>
 </div>
 
-<script type="text/javascript" src="./script/script.js"></script>
+
+
 </body>
 </html>

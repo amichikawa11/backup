@@ -13,6 +13,10 @@
 
 <link rel="stylesheet" type="text/css" href="./css/basis_style.css">
 
+<!-- ファビコン -->
+<link rel="shortcut icon" href="http://www.iconj.com/icon.php?pid=eh53o8d8gl" type="image/x-icon" />
+<link rel="shortcut icon" href="http://www.iconj.com/gif_icon.php?pid=eh53o8d8gl" type="image/gif" />
+<!-- end of iconj.com favicon code -->
 
 <title>ItemInsert画面</title>
 </head>
@@ -82,6 +86,7 @@
 	</tr>
 	<tr>
 		<td>管理ページに戻る場合は<a href='<s:url action="MasterMovementAction"/>'>こちら</a></td>
+		<p>ログアウトする場合は<a href='<s:url action="LogoutAction"/>'>こちら</a></p>
 	</tr>
 	</table>
 </div>

@@ -13,17 +13,7 @@
 
 <link rel="stylesheet" type="text/css" href="./css/basis_style.css">
 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
-
-  <script>
-    $(document).ready(function(){
-      $('abc').bxSlider();
-    });
-  </script>
-
-<title>Home画面</title>
+<title>InquiryComplete画面</title>
 </head>
 <body>
 
@@ -38,7 +28,7 @@
 	<div class="left-list">
 		<ul>
 			<li><a href='<s:url action="GoHomeAction"/>'>TOP</a></li>
-			<li><a href='<s:url action="HomeAction"/>'>PRODUCT</a></li>
+			<li><a href='<s:url action="ProductPageAction"/>'>PRODUCT</a></li>
 			<li><a href='<s:url action="UserCreateAction"/>'>SIGNUP</a></li>
 		</ul>
 	</div>
@@ -56,58 +46,76 @@
 </header>
 
 <!-- メイン部分 -->
+<div class="top-push content-push"></div>
 <div id="main">
-
-  <ul class="slider top-image">
-    <li><img src="./image/donut.jpg"></li>
-    <li><img src="./image/top2.jpg"></li>
-    <li><img src="./image/top3.jpg"></li>
-    <li><img src="./image/top4.jpg"></li>
-  </ul>
-
 <div class="main-contents">
-	<div class="top"></div>
-
-
-	<div class="feature-pickUpItem">
-		<p>おすすめの商品</p>
-
-		<s:form action="BuyItemAction">
-
-			<s:iterator value="buyItemDTOList">
-
-			<dl class="dl-list">
-			<dd class="dd-list">
-			<s:if test="item_stock>0">
-
-			<img class="image" style="width:150px; height:100px;" src="<s:property value='image_file_path'/>" >
-
-			<br><br>
-
-			<s:property value="itemName" /><br>
-
-			</s:if>
-					</dd>
-					</dl>
-
-				</s:iterator>
-		</s:form>
-
-
-
+	<div class="top">
+		<h3>INQUIRY COMPLETE</h3>
+		<p>お問い合わせを受け付けました。</p>
 	</div>
 
-	<div class="feature-seasonItem">
-		<p>季節の商品</p>
+	<table>
+
+	<!-- InquiryCompleteActionで定義したsessionの
+		"inquiryDTOList"を使用して値を取得 -->
+	<tr>
+		<td>
+			<span>名前:</span>
+		</td>
+		<td><s:property value="inquiry_name"/></td>
+	</tr>
+	<tr>
+		<td>
+			<span>メールアドレス:</span>
+		</td>
+		<td>
+			<s:property value="inquiry_mail"/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<span>問い合わせの種類:</span>
+		<s:if test='qtype=="company"'>
+		<td>会社について</td>
+		</s:if>
+
+		<s:if test='qtype=="product"'>
+		<td>商品について</td>
+		</s:if>
+
+		<s:if test='qtype=="order"'>
+		<td>注文について</td>
+		</s:if>
+
+		<s:if test='qtype=="support"'>
+		<td>アフターサポートについて</td>
+		</s:if>
+
+		<s:if test='qtype=="another"'>
+		<td>その他のお問い合わせ</td>
+		</s:if>
+	</tr>
+	<tr>
+		<td>
+			<span>問い合わせ内容:</span>
+		</td>
+		<td>
+			<s:property value="body"/>
+		</td>
+	</tr>
+
+	</table>
+	<br><br>
+	<div>
+		<p>Homeへ戻る場合は<a href='<s:url action="GoHomeAction"/>'>こちら</a></p>
 	</div>
-	<div class="news">
-		<p>更新情報</p>
-	</div>
+
 
 </div>
 </div>
 
 <div class="push"></div>
+<div class="content-downpush"></div>
 
 <!-- フッター部分 -->
 <footer>
@@ -121,6 +129,7 @@
 </footer>
 </div>
 
-<script type="text/javascript" src="./script/script.js"></script>
+
+
 </body>
 </html>

@@ -13,6 +13,11 @@
 
 <link rel="stylesheet" type="text/css" href="./css/basis_style.css">
 
+<!-- ファビコン -->
+<link rel="shortcut icon" href="http://www.iconj.com/icon.php?pid=eh53o8d8gl" type="image/x-icon" />
+<link rel="shortcut icon" href="http://www.iconj.com/gif_icon.php?pid=eh53o8d8gl" type="image/gif" />
+<!-- end of iconj.com favicon code -->
+
 <title>MyPageLogin画面</title>
 </head>
 <body>
@@ -54,7 +59,7 @@
 	</div><br>
 	<div>
 
-		<p>商品の購入・マイページの確認をする際はログインをお願いします。</p></div>
+		<p>マイページの確認をする際はログインをお願いします。</p></div>
 		<br>
 
 		<s:form action="MyPageLoginAction">

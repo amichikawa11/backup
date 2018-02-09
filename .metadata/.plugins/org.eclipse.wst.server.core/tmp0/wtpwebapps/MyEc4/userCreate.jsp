@@ -13,6 +13,11 @@
 
 <link rel="stylesheet" type="text/css" href="./css/basis_style.css">
 
+<!-- ファビコン -->
+<link rel="shortcut icon" href="http://www.iconj.com/icon.php?pid=eh53o8d8gl" type="image/x-icon" />
+<link rel="shortcut icon" href="http://www.iconj.com/gif_icon.php?pid=eh53o8d8gl" type="image/gif" />
+<!-- end of iconj.com favicon code -->
+
 <title>UserCreate画面</title>
 </head>
 <body>
@@ -54,11 +59,16 @@
 	</div>
 	<div>
 	<br>
-		<p>はじめてご利用される方は新規登録をお願いします。</p></div>
+		<p>はじめてご利用される方は新規登録をお願いします。</p>
 		<br>
 
-		<s:if test="errorMassage != ''">
-			<s:property value="errorMassage" escape="false"/>
+		<s:if test="errorMessage != ''">
+
+		<div  class="error-message">
+			<s:property value="errorMessage" escape="false"/>
+		</div>
+		<br><br>
+
 		</s:if>
 		<table>
 		<s:form action="UserCreateConfirmAction">

@@ -14,6 +14,11 @@
 <link rel="stylesheet" type="text/css" href="./css/basis_style.css">
 <link rel="stylesheet" type="text/css" href="./css/table_style.css">
 
+<!-- ファビコン -->
+<link rel="shortcut icon" href="http://www.iconj.com/icon.php?pid=eh53o8d8gl" type="image/x-icon" />
+<link rel="shortcut icon" href="http://www.iconj.com/gif_icon.php?pid=eh53o8d8gl" type="image/gif" />
+<!-- end of iconj.com favicon code -->
+
 <title>BuyItem画面</title>
 </head>
 <body>
@@ -68,7 +73,7 @@
 
 		<div>
 			<s:if test="searchMessage != null ">
-			<p><s:property value="searchMessage" escape="false"/></p>
+			<p class="error-message"><s:property value="searchMessage" escape="false"/></p>
 		</s:if>
 		</div>
 		<div class="item-table">
@@ -134,6 +139,7 @@
 				<!-- 繰り返し処理ここまで、以下は支払方法選択 -->
 
 				<div class="clear"><br></div>
+				<br><br>
 
 
 				<tr>
@@ -154,8 +160,8 @@
 		</s:form>
 					</table>
 			<div>
+				<p>マイぺージは<a href='<s:url action="MyPageAction" />'>こちら</a></p>
 				<p>Homeへ戻る場合は<a href='<s:url action="GoHomeAction" />'>こちら</a></p>
-				<p>マイぺージは<a href='<s:url action="MyPageMovementAction" />'>こちら</a></p>
 			</div>
 	</div>
 
@@ -165,7 +171,7 @@
 </div>
 
 <div class="push"></div>
-<div class="content-downpush"></div>
+
 
 <!-- フッター部分 -->
 <footer>

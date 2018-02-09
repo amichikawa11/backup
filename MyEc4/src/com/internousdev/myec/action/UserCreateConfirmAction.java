@@ -3,6 +3,7 @@ import java.util.Map;
 
 import org.apache.struts2.interceptor.SessionAware;
 
+import com.internousdev.myec.dao.UserCreateConfirmDAO;
 import com.opensymphony.xwork2.ActionSupport;
 
 public class UserCreateConfirmAction extends ActionSupport implements SessionAware {
@@ -14,7 +15,7 @@ public class UserCreateConfirmAction extends ActionSupport implements SessionAwa
 	private String userTell;
 	private String userMail;
 	public Map<String,Object> session;
-	private String errorMassage;
+	private String errorMessage;
 
 	public String execute() {
 
@@ -22,7 +23,15 @@ public class UserCreateConfirmAction extends ActionSupport implements SessionAwa
 
 		if(!(loginUserId.equals(""))
 				&& !(loginPassword.equals(""))
-				&& !(userName.equals(""))) {
+				&& !(userName.equals(""))
+				&& !(userAddress.equals(""))
+				&& !(userTell.equals(""))
+				&& !(userMail.equals(""))) {
+
+			UserCreateConfirmDAO userCreateConfirmDAO = new UserCreateConfirmDAO();
+			boolean checkId = userCreateConfirmDAO.getUserInfo(loginUserId,loginPassword);
+
+			if(checkId){
 				session.put("loginUserId", loginUserId);
 				session.put("loginPassword", loginPassword);
 				session.put("userName", userName);
@@ -31,8 +40,14 @@ public class UserCreateConfirmAction extends ActionSupport implements SessionAwa
 				session.put("userTell", userTell);
 				session.put("userMail", userMail);
 				} else {
-				setErrorMassage("未入力の項目があります。");
+
+					setErrorMessage("同じID、もしくはパスワードが存在します。");
+					result = ERROR;
+				}
+		}else{
+				setErrorMessage("未入力の項目があります。");
 				result = ERROR;
+
 				}return result;
 
 	}
@@ -101,11 +116,11 @@ public class UserCreateConfirmAction extends ActionSupport implements SessionAwa
 		this.session = session;
 	}
 
-	public String getErrorMassage() {
-		return errorMassage;
+	public String getErrorMessage() {
+		return errorMessage;
 	}
 
-	public void setErrorMassage(String errorMassage) {
-		this.errorMassage = errorMassage;
+	public void setErrorMessage(String errorMessage) {
+		this.errorMessage = errorMessage;
 	}
 			}

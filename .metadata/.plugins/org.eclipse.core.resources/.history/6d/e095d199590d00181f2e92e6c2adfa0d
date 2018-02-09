@@ -10,20 +10,19 @@
 <meta http-equiv="imagetoolbar" content="no" />
 <meta name="description" content="" />
 <meta name="keywords" content="" />
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
 <link rel="stylesheet" type="text/css" href="./css/basis_style.css">
+<link rel="stylesheet" type="text/css" href="./css/table_style.css">
 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+	<script type="text/javascript">
+		function submitAction(url) {
+			$('form').attr('action', url);
+			$('form').submit();
+		}
+	</script>
 
-  <script>
-    $(document).ready(function(){
-      $('abc').bxSlider();
-    });
-  </script>
-
-<title>Home画面</title>
+<title>ItemInvestoryComplete画面</title>
 </head>
 <body>
 
@@ -38,7 +37,7 @@
 	<div class="left-list">
 		<ul>
 			<li><a href='<s:url action="GoHomeAction"/>'>TOP</a></li>
-			<li><a href='<s:url action="HomeAction"/>'>PRODUCT</a></li>
+			<li><a href='<s:url action="ProductPageAction"/>'>PRODUCT</a></li>
 			<li><a href='<s:url action="UserCreateAction"/>'>SIGNUP</a></li>
 		</ul>
 	</div>
@@ -56,36 +55,61 @@
 </header>
 
 <!-- メイン部分 -->
+<div class="top-push content-push"></div>
 <div id="main">
-
-  <ul class="slider top-image">
-    <li><img src="./image/donut.jpg"></li>
-    <li><img src="./image/top2.jpg"></li>
-    <li><img src="./image/top3.jpg"></li>
-    <li><img src="./image/top4.jpg"></li>
-  </ul>
-
 <div class="main-contents">
-	<div class="top"></div>
-
-
-	<div class="feature-pickUpItem">
-		<p>おすすめの商品</p>
-
-
+	<div class="top">
+		<h3>ITEM INVESTORY COMPLETE</h3>
 	</div>
+	<div>
+	<table>
+					<s:form>
 
-	<div class="feature-seasonItem">
-		<p>季節の商品</p>
-	</div>
-	<div class="news">
-		<p>更新情報</p>
+					<dl>
+
+					<dd>
+					<p>■下記の商品在庫を変更しました■</p>
+					<br>
+
+					<s:iterator value="buyItemDTOList">
+
+					<img class="image" style="width:150px; height:100px;" src="<s:property value='image_file_path'/>" ><br><br>
+
+					商品名:
+					<s:property value="itemName" /><br><br>
+
+					追加個数:
+					<s:property value="count"/><span>個</span><br><br>
+
+					在庫:
+					<s:property value="total_count" /><span>個</span><br><br>
+
+					</s:iterator>
+
+					</dd>
+					</dl>
+
+
+				<tr>
+					<td>
+						<br>
+					</td>
+				</tr>
+
+				<tr>
+					<td><input type="button" class="button" value="管理ページに戻る" onclick="submitAction('MasterMovementAction')" /></td>
+				</tr>
+			</s:form>
+			</table>
+
 	</div>
 
 </div>
+
 </div>
 
 <div class="push"></div>
+<div class="content-downpush"></div>
 
 <!-- フッター部分 -->
 <footer>
@@ -99,6 +123,7 @@
 </footer>
 </div>
 
-<script type="text/javascript" src="./script/script.js"></script>
+
+
 </body>
 </html>

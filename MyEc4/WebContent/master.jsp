@@ -11,11 +11,16 @@
 <meta name="description" content="" />
 <meta name="keywords" content="" />
 
-<link rel="stylesheet" type="text/css" href="./css/basis_style.css">
+  <link rel="stylesheet" type="text/css" href="./css/basis_style.css">
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+
+<!-- ファビコン -->
+<link rel="shortcut icon" href="http://www.iconj.com/icon.php?pid=eh53o8d8gl" type="image/x-icon" />
+<link rel="shortcut icon" href="http://www.iconj.com/gif_icon.php?pid=eh53o8d8gl" type="image/gif" />
+<!-- end of iconj.com favicon code -->
 
   <script>
     $(document).ready(function(){
