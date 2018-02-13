@@ -5,6 +5,7 @@ import java.util.Map;
 
 import org.apache.struts2.interceptor.SessionAware;
 
+import com.internousdev.myec.dao.BuyItemDAO;
 import com.internousdev.myec.dao.CategorySearchDAO;
 import com.internousdev.myec.dto.BuyItemDTO;
 import com.opensymphony.xwork2.ActionSupport;
@@ -21,7 +22,10 @@ public class CategorySearchAction extends ActionSupport implements SessionAware{
 
 	public String execute(){
 
-		String result;
+		String result = ERROR;
+
+
+
 
 		if (session.containsKey("id")) {
 
@@ -31,41 +35,63 @@ public class CategorySearchAction extends ActionSupport implements SessionAware{
 
 			buyItemDTOList = categorySearchDAO.getBuyItemInfo(sortCategory);
 
-			session.put("list",  buyItemDTOList);
+			session.put("buyItemDTOList",  buyItemDTOList);
+
+
+			if(sortCategory == "all"){
+
+				BuyItemDAO buyItemDAO = new BuyItemDAO();
+				buyItemDTOList = buyItemDAO.getBuyItemInfo();
+				session.put("buyItemDTOList", buyItemDTOList);
+			}
+
 
 			result = SUCCESS;
 
-		}else if(session.containsKey("masterId")){
+
+		  if(session.containsKey("masterId")){
+
+			session.put("sortCategory", sortCategory);
+
+			 buyItemDTOList = categorySearchDAO.getBuyItemInfo(sortCategory);
+
+			session.put("buyItemDTOList",  buyItemDTOList);
+
+			if(sortCategory == "all"){
+
+				BuyItemDAO buyItemDAO = new BuyItemDAO();
+				buyItemDTOList = buyItemDAO.getBuyItemInfo();
+				session.put("buyItemDTOList", buyItemDTOList);
+			}
+
+
+			result = SUCCESS;
+		}
+
+	}else{
+
 			session.put("sortCategory", sortCategory);
 
 			CategorySearchDAO categorySearchDAO = new CategorySearchDAO();
 
 			 buyItemDTOList = categorySearchDAO.getBuyItemInfo(sortCategory);
 
-			session.put("list",  buyItemDTOList);
+			session.put("buyItemDTOList",  buyItemDTOList);
 
-			result = SUCCESS;
+			if(sortCategory == "all"){
 
-		}else{
+				BuyItemDAO buyItemDAO = new BuyItemDAO();
+				buyItemDTOList = buyItemDAO.getBuyItemInfo();
+				session.put("buyItemDTOList", buyItemDTOList);
+			}
 
-			session.put("sortCategory", sortCategory);
-
-			CategorySearchDAO categorySearchDAO = new CategorySearchDAO();
-
-			 buyItemDTOList = categorySearchDAO.getBuyItemInfo(sortCategory);
-
-			session.put("list",  buyItemDTOList);
 
 			result = ERROR;
 		}
 
-
-	return result;
+		return result;
 
 	}
-
-
-
 
 	public String getSortCategory() {
 		return sortCategory;

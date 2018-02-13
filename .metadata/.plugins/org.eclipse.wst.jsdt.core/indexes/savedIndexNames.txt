@@ -1,10 +1,6 @@
 INDEX VERSION 1.3+C:\Users\internousdev\Desktop\workspace2\amichikawa\backup\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
-231373074.index
-1710201147.index
-3452285574.index
 3995814873.index
-1279828666.index
-1714797734.index
+988082561.index
+2287453796.index
 3082098993.index
-10199837.index
-565467590.index
+1770323924.index
