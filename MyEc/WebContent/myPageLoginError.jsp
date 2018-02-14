@@ -56,6 +56,11 @@
 <div class="main-contents">
 	<div class="top">
 		<h3>LOGIN ERROR</h3>
+	<br>
+
+	<img src="./image/donut.png" style="width:40px;">
+
+	<br>
 		<br>
 
 		<p class="error-message">ログインに失敗しました。</p>

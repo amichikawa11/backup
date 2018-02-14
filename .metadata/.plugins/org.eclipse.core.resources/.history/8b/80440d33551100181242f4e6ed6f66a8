@@ -1,0 +1,137 @@
+@CHARSET "UTF-8";
+@CHARSET "UTF-8";
+
+
+/*floatの解除*/
+
+.clear{
+	clear:both;
+}
+
+
+/*---------------------------------------------------------------------------------------*/
+/*商品一覧のCSS*/
+
+
+.dl-list{
+	margin:0px;
+	padding:0px;
+	width:100%;
+}
+
+.dd-list:hover{
+	background-color:rgba(214,126,126,0.4);
+}
+
+.remark{
+	display:none;
+}
+
+.item_description{
+	position: relative;
+}
+
+.item_description a:hover span.remark {
+    background: none repeat scroll 0 0 rgba(238,255,238,0.8);;
+    border: 1px solid #CCCCCC;
+    color: #000000;
+    display: block;
+    line-height: 1.2em;
+    margin: 0.5em;
+    padding: 0.5em;
+    position: absolute;
+    width: 12em;
+
+}
+
+.dd-list{
+	width:25%;
+	display:table-cell;
+	background-color:rgba(255,255,255,0.4);
+ 	font-size: 12px;
+ 	float:left;
+	padding:0;
+	margin-left:10px;
+	margin-right:0px;
+	margin-bottom:20px;
+}
+
+.dd-list:
+
+
+/*---------------------------------------------------------------------------------------*/
+
+/*購入確定ページのCSS*/
+
+.buy_item{
+	background-color:rgba(255,255,255,0.4);
+	display: inline-block;
+	width:400px;
+	margin:0 auto;
+	padding-bottom:15px;
+	padding-top:15px;
+	margin-bottom:15px;
+
+}
+
+
+.final{
+	background-color:rgba(216, 191, 191, 0.5);
+	display: inline-block;
+	margin-top:30px;
+	padding:15px 20px;
+	padding-right:50px;
+
+}
+
+
+/*---------------------------------------------------------------------------------------*/
+
+/*マイページのCSS*/
+
+/*ユーザー情報リスト*/
+.user-table{
+	background-color:rgba(222,78,42,0.2);
+	width:70%;
+	margin:0 auto;
+}
+.mypage-table {
+	border:solid 1px #996f31;
+}
+
+.mypage-th{
+	background-color:rgba(230,191,133,0.5);
+
+}
+
+.mypage-td{
+	border:dashed 1px #bf8939;
+}
+
+
+/*購入履歴がなかった時のテキストCSS*/
+.no-purchase{
+	background-color:rgba(222,78,42,0.2);
+	width:70%;
+	height:20px;
+	margin:0 auto;
+	padding-top:15px;
+	padding-bottom:15px;
+}
+
+
+/*---------------------------------------------------------------------------------------*/
+/*お問合せ一覧のテーブルCSS*/
+
+.inquiry-table{
+	border:solid 1px #996f31;
+}
+
+.inquiry-th{
+	background-color:rgba(230,191,133,0.5);
+}
+
+.inquiry-td{
+	border:dashed 1px #bf8939;
+}
+

@@ -68,6 +68,12 @@
 <div class="main-contents">
 <div id="top">
 			<h3>BUY ITEM</h3>
+
+	<br>
+
+	<img src="./image/cart.png" style="width:40px;">
+
+	<br><br>
 		</div>
 
 		<!-- カテゴリ表示機能 -->

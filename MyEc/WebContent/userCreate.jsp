@@ -56,6 +56,12 @@
 <div class="main-contents">
 	<div class="top">
 		<h3>USER CREATE</h3>
+
+	<br>
+
+	<img src="./image/cup1.png" style="width:40px;">
+
+	<br>
 	</div>
 	<div>
 	<br>

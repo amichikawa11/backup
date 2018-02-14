@@ -65,6 +65,7 @@
 <div class="main-contents">
 	<div class="top">
 		<h3>BUY ITEM CONFIRM</h3>
+
 	</div>
 	<div>
 	<table>

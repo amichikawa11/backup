@@ -57,19 +57,25 @@
 <div class="main-contents">
 	<div class="top">
 		<h3>USER UPDATE COMPLETE</h3>
-	</div>
-	<div>
-		<p>ユーザー情報の変更が完了いたしました。</p>
+
+		<br><br>
+
+		<p>登録情報を変更しました。</p>
+
+		<br><br><br>
+
+		<img src="./image/pudding2.png" style="width:150px;">
+		</div>
+		<br><br>
+
 		<div>
 			<a href='<s:url action="MyPageAction"/>'>マイページへ</a>
 		</div>
 
-		</div>
 </div>
 </div>
 
 <div class="push"></div>
-<div class="content-downpush"></div>
 
 <!-- フッター部分 -->
 <footer>

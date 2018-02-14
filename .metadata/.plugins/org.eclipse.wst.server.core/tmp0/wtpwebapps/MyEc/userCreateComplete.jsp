@@ -57,19 +57,24 @@
 <div class="main-contents">
 	<div class="top">
 		<h3>USER CREATE COMPLETE</h3>
+		<br><br>
+
+		<p>ユーザーの登録が完了しました。</p>
+
+		<br><br><br>
+
+		<img src="./image/hot.png" style="width:150px;">
 	</div>
-	<div>
-		<p>ユーザーの登録が完了いたしました。</p>
+	<br><br>
+
 		<div>
 			<a href='<s:url action="LoginMovementAction"/>'>ログインはこちら</a>
-		</div>
-
 		</div>
 </div>
 </div>
 
 <div class="push"></div>
-<div class="content-downpush"></div>
+
 
 <!-- フッター部分 -->
 <footer>

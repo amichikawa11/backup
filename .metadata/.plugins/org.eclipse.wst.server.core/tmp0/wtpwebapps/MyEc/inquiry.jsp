@@ -56,6 +56,12 @@
 <div class="main-contents">
 	<div class="top">
 		<h3>INQUIRY</h3>
+
+	<br>
+
+	<img src="./image/letter.png" style="width:40px;">
+
+	<br>
 		<p>お問い合わせがある方は、下記よりご連絡をお願いいたします。</p>
 	</div>
 	<br>

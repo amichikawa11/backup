@@ -79,7 +79,7 @@
 </div>
 
 <div class="push"></div>
-<div class="content-downpush"></div>
+
 
 <!-- フッター部分 -->
 <footer>

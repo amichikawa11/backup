@@ -18,15 +18,7 @@
 <link rel="shortcut icon" href="http://www.iconj.com/gif_icon.php?pid=eh53o8d8gl" type="image/gif" />
 <!-- end of iconj.com favicon code -->
 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
 
-  <script>
-    $(document).ready(function(){
-      $('abc').bxSlider();
-    });
-  </script>
 
 <title>MyPage画面</title>
 </head>

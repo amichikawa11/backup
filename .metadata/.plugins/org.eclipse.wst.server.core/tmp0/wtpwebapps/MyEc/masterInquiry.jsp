@@ -57,6 +57,7 @@
 <div class="main-contents">
 	<div class="top">
 		<h3>MASTER INQUIRY</h3>
+
 	</div>
 
 	<!-- 問合せがない場合 -->

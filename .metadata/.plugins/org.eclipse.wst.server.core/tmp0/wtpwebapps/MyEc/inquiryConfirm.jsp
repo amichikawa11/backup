@@ -10,6 +10,8 @@
 <meta http-equiv="imagetoolbar" content="no" />
 <meta name="description" content="" />
 <meta name="keywords" content="" />
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
 
 <link rel="stylesheet" type="text/css" href="./css/basis_style.css">
 
@@ -17,6 +19,13 @@
 <link rel="shortcut icon" href="http://www.iconj.com/icon.php?pid=eh53o8d8gl" type="image/x-icon" />
 <link rel="shortcut icon" href="http://www.iconj.com/gif_icon.php?pid=eh53o8d8gl" type="image/gif" />
 <!-- end of iconj.com favicon code -->
+
+	<script type="text/javascript">
+		function submitAction(url) {
+			$('form').attr('action', url);
+			$('form').submit();
+		}
+	</script>
 
 <title>InquiryConfirm画面</title>
 
@@ -64,10 +73,19 @@
 <div class="main-contents">
 	<div class="top">
 		<h3>INQUIRY CONFIRM</h3>
+
+	<br>
+
+	<img src="./image/letter.png" style="width:40px;">
+
+	<br>
 	</div>
 
 	<div>
 		<p>登録する内容は以下でよろしいですか。</p>
+		<p class="error-message">※「戻る」を選択すると記入した情報は消去されます。</p>
+	<br><br>
+
 		<table>
 			<s:form action="InquiryCompleteAction">
 			<tr id="box">
@@ -115,9 +133,15 @@
 			<s:property value="body"/>
 		</td>
 	</tr>
+
+	<tr><td>
+			<br><br><br>
+	</td></tr>
+
 			<tr>
 				<input type="hidden" name="master_id" value="kanri"/>
-				<s:submit class="button" value="完了" />
+					<td><input type="button" class="button" value="戻る" onclick="submitAction('InquiryAction')" /></td>
+					<td><input type="button" class="button" value="完了" onclick="submitAction('InquiryCompleteAction')" /></td>
 			</tr>
 			</s:form>
 
@@ -128,7 +152,7 @@
 </div>
 
 <div class="push"></div>
-<div class="content-downpush"></div>
+
 
 <!-- フッター部分 -->
 <footer>

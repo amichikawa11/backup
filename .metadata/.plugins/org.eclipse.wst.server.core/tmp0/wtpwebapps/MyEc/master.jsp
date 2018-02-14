@@ -67,6 +67,14 @@
 	<div class="top"></div>
 
 	<h3>MASTER PAGE</h3>
+
+
+	<br>
+
+	<img src="./image/master.png" style="width:40px;">
+
+	<br><br>
+
 		<p><a href='<s:url action="ItemInvestoryMovementAction"/>'>在庫管理</a></p>
 		<p><a href='<s:url action="ItemInsertMovementAction"/>'>商品追加</a></p>
 		<p><a href='<s:url action="ItemDeleteMovementAction"/>'>商品削除</a></p>

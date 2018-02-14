@@ -73,12 +73,20 @@
 <div class="main-contents">
 	<div class="top">
 		<h3>USER CREATE CONFIRM</h3>
+
+	<br>
+
+	<img src="./image/cup1.png" style="width:40px;">
+
+	<br>
 	</div>
 
-<div><br><br></div>
+<div><br></div>
 
 	<div>
 		<p>登録する内容は以下でよろしいですか。</p>
+		<p class="error-message">※「戻る」を選択すると入力した情報は消去されます。</p>
+
 		<br>
 
 		<table>
@@ -142,12 +150,14 @@
 
 				<tr>
 					<td>
-						<br>
+						<br><br>
 					</td>
 				</tr>
 
 			<tr>
-				<s:submit class="button" value="完了" />
+					<td><input type="button" class="button" value="戻る" onclick="submitAction('UserCreateAction')" /></td>
+					<td><input type="button" class="button" value="完了" onclick="submitAction('UserCreateCompleteAction')" /></td>
+
 			</tr>
 			</s:form>
 

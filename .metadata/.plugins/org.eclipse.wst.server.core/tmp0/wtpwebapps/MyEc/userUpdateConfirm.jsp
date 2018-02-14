@@ -64,10 +64,16 @@
 <div class="main-contents">
 	<div class="top">
 		<h3>USER UPDATE CONFIRM</h3>
+
+	<br>
+
+	<img src="./image/pudding.png" style="width:40px;">
+
+	<br><br>
 	</div>
 
 	<div>
-		<p>登録する内容は以下でよろしいですか。</p>
+		<p>登録する内容は以下でよろしいですか。</p><br>
 		<table>
 			<s:form action="UserUpdateConfirmAction">
 			<tr id="box">
@@ -141,7 +147,7 @@
 </div>
 
 <div class="push"></div>
-<div class="content-downpush"></div>
+
 
 <!-- フッター部分 -->
 <footer>

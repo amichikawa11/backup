@@ -12,16 +12,14 @@
 /*---------------------------------------------------------------------------------------*/
 /*商品一覧のCSS*/
 
-.dd-list{
-	background-color:rgba(255,255,255,0.4);
- 	display: inline-block;
- 	font-size: 12px;
- 	width: 25%;
- 	float:left;
-	padding-bottom:15px;
-	padding-top:15px;
-	margin-bottom:15px;
+.item-table{
+	text-align:center;
+}
 
+.dl-list{
+	margin:0px;
+	padding:0px;
+	width:100%;
 }
 
 .dd-list:hover{
@@ -47,6 +45,23 @@
     position: absolute;
     width: 12em;
 
+}
+
+
+.dd-list{
+	width:31%;
+	display:inline-block;
+	background-color:rgba(255,255,255,0.4);
+ 	font-size: 12px;
+ 	float:left;
+	margin:0;
+	padding:15px 0px;
+	margin-left:2%;
+	margin-bottom:20px;
+}
+
+.dd-list:last-child {
+	margin-right: 0;
 }
 
 

@@ -56,6 +56,13 @@
 <div class="main-contents">
 	<div class="top">
 		<h3>LOGIN</h3>
+
+		<br>
+
+		<img src="./image/candy.png" style="width:50px;">
+
+		<br>
+
 	</div><br>
 	<div>
 

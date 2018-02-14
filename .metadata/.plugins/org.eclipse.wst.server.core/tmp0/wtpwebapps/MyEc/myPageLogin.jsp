@@ -56,6 +56,12 @@
 <div class="main-contents">
 	<div class="top">
 		<h3>MYPAGE LOGIN</h3>
+
+	<br>
+
+	<img src="./image/donut.png" style="width:40px;">
+
+	<br>
 	</div><br>
 	<div>
 

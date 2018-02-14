@@ -56,6 +56,13 @@
 <div class="main-contents">
 	<div class="top">
 		<h3>USER UPDATE</h3>
+
+	<br>
+
+	<img src="./image/pudding.png" style="width:40px;">
+
+	<br>
+
 	</div>
 	<div>
 		<p>変更情報を入力してください。</p></div>
