@@ -59,7 +59,7 @@
 			<h3>ITEM INVESTORY CONTROL</h3>
 		</div>
 
-		<p>追加したい数をプルダウンから選択してください。</p>
+		<p>変更したい数をプルダウンから選択してください。</p>
 
 		<div>
 
@@ -77,10 +77,10 @@
 			<s:property value="itemName" /><br>
 			<span>値段:</span>
 			<s:property value="itemPrice" /><span>円</span><br>
-			<span>追加する個数:</span>
+			<span>在庫:</span>
 			<s:property value="item_stock"/><span>個</span><br>
 
-			<span>変更後の在庫数:</span>
+			<span>変更する数:</span>
 
 								<select name="count">
 									<option value="0" selected="selected">-</option>
@@ -94,6 +94,16 @@
 									<option value="8">8</option>
 									<option value="9">9</option>
 									<option value="10">10</option>
+									<option value="-1">-1</option>
+									<option value="-2">-2</option>
+									<option value="-3">-3</option>
+									<option value="-4">-4</option>
+									<option value="-5">-5</option>
+									<option value="-6">-6</option>
+									<option value="-7">-7</option>
+									<option value="-8">-8</option>
+									<option value="-9">-9</option>
+									<option value="-10">-10</option>
 								</select>
 
 					</dd>
@@ -124,7 +134,7 @@
 </div>
 
 <div class="push"></div>
-<div class="content-downpush"></div>
+
 
 <!-- フッター部分 -->
 <footer>

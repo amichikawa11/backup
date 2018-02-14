@@ -63,7 +63,7 @@
 
 		<br><br>
 
-		<img src="./image/inquiry.png" style="width:150px;">
+		<img src="./image/inquiry.png" style="width:100px;">
 
 		<br><br>
 

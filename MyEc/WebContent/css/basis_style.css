@@ -14,6 +14,8 @@ body {
 
 
 /*スクロールバーの色*/
+
+/*
 	scrollbar-arrow-color:#c9825e;
 	scrollbar-face-color:#c9825e;
 	scrollbar-3dlight-color:#f7f2e9;
@@ -21,6 +23,9 @@ body {
 	scrollbar-highlight-color:#f7f2e9;
 	scrollbar-shadow-color:#f7f2e9;
 	scrollbar-track-color:#f1deac;
+*/
+
+
 }
 
 
@@ -154,8 +159,14 @@ li {
 
 .top-image img{
 	border-radius: 10px;
+	width:100%;
+	margin:0 auto;
 }
 
+#home-main{
+	width:70%;
+	margin:0 auto;
+}
 
 
 /*---------------------------------------------------------------------------------------*/
@@ -171,7 +182,7 @@ li {
 	margin-top:50px;
 	margin-bottom:20px;
 	padding-bottom:150px;
-	padding-top:50px;
+	padding-top:40px;
 }
 
 

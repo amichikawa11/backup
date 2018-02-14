@@ -6,7 +6,7 @@ $(function(){
         auto: true,
         mode: "fade",
         speed: 1000,
-        slideHeight: 500,
+        slideHeight: 300,
         controls: false
 
     });

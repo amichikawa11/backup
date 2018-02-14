@@ -64,7 +64,7 @@
 
 		<br><br>
 
-		<img src="./image/apple.png" style="width:150px;">
+		<img src="./image/apple.png" style="width:100px;">
 
 		<br><br>
 		<br><br>

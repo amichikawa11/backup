@@ -22,6 +22,9 @@ public class BuyItemConfirmAction extends ActionSupport implements SessionAware{
 	@SuppressWarnings("unchecked")
 	public String execute() throws SQLException {
 
+		String result = ERROR;
+
+
 		//BuyItemActionの"list"の値を取得
 		buyItemDTOList = (ArrayList<BuyItemDTO>) session.get("list");
 
@@ -39,9 +42,11 @@ public class BuyItemConfirmAction extends ActionSupport implements SessionAware{
 			System.out.println(item_stock);
 
 			if(item_stock<0){
-				String result = ERROR;
-				return result;
-			}
+				result = ERROR;
+
+
+			}else{
+
 
 
 			//BuyItemCompleteDAOで定義したメソッドを使用
@@ -53,11 +58,15 @@ public class BuyItemConfirmAction extends ActionSupport implements SessionAware{
 				count,
 				buyItemDTOList.get(i).getPay(),
 				item_stock);
-		}
 
-		String result = SUCCESS;
+
+			result = SUCCESS;
+
+			}
+		}
 		return result;
 	}
+
 
 	@Override
 	public void setSession(Map<String, Object> session) {

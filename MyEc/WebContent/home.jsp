@@ -62,6 +62,7 @@
 
 <!-- メイン部分 -->
 <div id="main">
+<div id="home-main">
 
   <div class="slider top-image">
     <div><img src="./image/donut.jpg"></div>
@@ -83,7 +84,7 @@
 
 </div>
 </div>
-
+</div>
 <div class="push"></div>
 
 <!-- フッター部分 -->
