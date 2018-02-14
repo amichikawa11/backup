@@ -56,9 +56,19 @@
 	<div class="top">
 		<h3>BUY ITEM COMPLETE</h3>
 	</div>
-		<div class="content-downpush"></div>
+
+	<br><br>
+
 	<div>
 		<p>購入手続きが完了いたしました。</p>
+
+		<br><br>
+
+		<img src="./image/apple.png" style="width:150px;">
+
+		<br><br>
+		<br><br>
+
 		<div>
 			<p><a href='<s:url action="MyPageAction"/>'>マイページから購入履歴の確認ができます。</a></p>
 			<br>

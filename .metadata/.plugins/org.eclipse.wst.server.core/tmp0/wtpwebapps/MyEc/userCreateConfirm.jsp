@@ -10,6 +10,8 @@
 <meta http-equiv="imagetoolbar" content="no" />
 <meta name="description" content="" />
 <meta name="keywords" content="" />
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
 
 <link rel="stylesheet" type="text/css" href="./css/basis_style.css">
 
@@ -17,6 +19,13 @@
 <link rel="shortcut icon" href="http://www.iconj.com/icon.php?pid=eh53o8d8gl" type="image/x-icon" />
 <link rel="shortcut icon" href="http://www.iconj.com/gif_icon.php?pid=eh53o8d8gl" type="image/gif" />
 <!-- end of iconj.com favicon code -->
+
+	<script type="text/javascript">
+		function submitAction(url) {
+			$('form').attr('action', url);
+			$('form').submit();
+		}
+	</script>
 
 <title>UserCreateConfirm画面</title>
 
@@ -66,8 +75,12 @@
 		<h3>USER CREATE CONFIRM</h3>
 	</div>
 
+<div><br><br></div>
+
 	<div>
 		<p>登録する内容は以下でよろしいですか。</p>
+		<br>
+
 		<table>
 			<s:form action="UserCreateCompleteAction">
 			<tr id="box">
@@ -126,19 +139,38 @@
 					<s:property value="userMail" escape="false"/>
 				</td>
 			</tr>
+
+				<tr>
+					<td>
+						<br>
+					</td>
+				</tr>
+
 			<tr>
 				<s:submit class="button" value="完了" />
 			</tr>
 			</s:form>
 
 		</table>
+
+		<div class="push"></div>
+		<div>
+
+			<p><a href='<s:url action="GoHomeAction"/>'>Homeへ戻る場合はこちら</a>
+			<p><a href='<s:url action="LoginMovementAction"/>'>すでにIDをお持ちの場合はこちら</a></p>
+
 		</div>
+
+
+		</div>
+
+
 
 </div>
 </div>
 
 <div class="push"></div>
-<div class="content-downpush"></div>
+
 
 <!-- フッター部分 -->
 <footer>

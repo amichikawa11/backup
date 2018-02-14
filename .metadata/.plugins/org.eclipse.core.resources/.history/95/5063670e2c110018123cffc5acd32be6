@@ -1,0 +1,45 @@
+package com.internousdev.myec.action;
+
+import java.util.Map;
+
+import org.apache.struts2.interceptor.SessionAware;
+
+import com.internousdev.myec.dao.InquiryConfirmDAO;
+import com.opensymphony.xwork2.ActionSupport;
+
+
+public class InquiryConfirmAction extends ActionSupport implements SessionAware{
+
+	private String inquiry_name;
+	private String inquiry_mail;
+	private String qtype;
+	private String body;
+	private String master_id;
+
+	public Map<String, Object> session;
+	private String errorMessage;
+
+
+	public String execute(String inquiry_name,String inquiry_mail, String body){
+
+		String result = SUCCESS;
+
+		InquiryConfirmDAO dao = new InquiryConfirmDAO();
+		boolean check = dao.getInquiryInfo();
+
+
+
+		if(inquiry_name.equals(""))
+			&& !(inquiry_mail.equals(""))
+			&& !(body.equals(""))){
+
+
+			}
+
+
+
+
+
+	}
+
+}

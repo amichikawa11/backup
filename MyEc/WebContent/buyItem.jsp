@@ -349,7 +349,7 @@
 
 					<div class="content-downpush"></div>
 			<div>
-				<p><a href='<s:url action="MyPageMovementAction" />'>マイぺージはこちら</a></p>
+				<p><a href='<s:url action="MyPageAction" />'>マイぺージはこちら</a></p>
 				<p><a href='<s:url action="GoHomeAction" />'>Homeへ戻る場合はこちら</a></p>
 			</div>
 	</div>

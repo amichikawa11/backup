@@ -1,5 +1,6 @@
 package com.internousdev.myec.action;
 
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -24,14 +25,19 @@ public class InquiryCompleteAction extends ActionSupport implements SessionAware
 	/**
 	 * ★実行メソッド
 	 */
-	public String execute(){
+	public String execute() throws SQLException {
 		String ret = ERROR;
 		InquiryCompleteDAO inquiryCompleteDAO = new InquiryCompleteDAO();
 
 		//InquiryCompleteDAOで定義したinsertメソッドを実行
 		//実行して得られた更新数をcountに代入
 		//（実行するためにインスタンスinquiryCompleteDAOを生み出している
-		int count = inquiryCompleteDAO.insert(inquiry_name, inquiry_mail, qtype, body, master_id);
+		int count = inquiryCompleteDAO.insert(
+				session.get("inquiryName").toString(),
+				session.get("inquiryMail").toString(),
+				session.get("inquiryQtype").toString(),
+				session.get("inquiryBody").toString(),
+				master_id);
 
 		//↓追加分（動作がおかしくなったら消す）
 		session.put("master_id", master_id);

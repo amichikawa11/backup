@@ -67,8 +67,15 @@
 	<div class="top"></div>
 	<h3>MY PAGE</h3>
 
+	<br>
+
+	<img src="./image/tai.png" style="width:50px;">
+
+	<br>
+
+
 	<!-- ユーザー情報 -->
-	<br><br>
+	<br>
 	<span>USER INFORMATION</span>
 	<br><br><br>
 	<div class="user-table">

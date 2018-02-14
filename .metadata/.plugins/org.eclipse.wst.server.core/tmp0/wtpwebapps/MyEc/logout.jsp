@@ -63,7 +63,7 @@
 
 		<br><br><br>
 
-		<img src="./image/thanks.png" style="width:20%;">
+		<img src="./image/logout2.png" style="width:150px;">
 	</div>
 	<br><br>
 

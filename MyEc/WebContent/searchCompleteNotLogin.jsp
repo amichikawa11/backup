@@ -81,6 +81,9 @@
 		</s:form>
 		</div>
 
+		<p><a href='<s:url action="ProductPageAction"/>'>検索のリセット</a></p>
+
+
 		<!-- 商品検索機能 -->
 		<div>
 		<s:form action="SearchAction">

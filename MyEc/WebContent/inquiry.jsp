@@ -60,12 +60,18 @@
 	</div>
 	<br>
 
+		<div>
+			<s:if test="errorMessage != null ">
+			<p class="error-message"><s:property value="errorMessage" escape="false"/></p>
+		</s:if>
+		</div>
+
 	<table>
-	<s:form method="post" action="InquiryCompleteAction">
+	<s:form action="InquiryConfirmAction">
 		名前<br>
-		<input type="text" name="inquiry_name"/><br><br>
+		<input type="text" name="inquiry_name" value=""/><br><br>
 		メールアドレス<br>
-		<input type="text" name="inquiry_mail"/><br><br>
+		<input type="text" name="inquiry_mail" value=""/><br><br>
 		お問い合わせの種類<br>
 		<select name="qtype">
 			<option value="company">会社について</option>
@@ -77,7 +83,7 @@
 		<br><br>
 
 		お問い合わせ内容<br>
-		<s:textarea cols="30" rows="5" name="body"/>
+		<s:textarea cols="30" rows="5" name="body" value=""/>
 		<br>
 		<input type="hidden" name="master_id" value="kanri"/>
 		<s:submit class="button" value="送信"/>

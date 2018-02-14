@@ -56,61 +56,20 @@
 <div class="main-contents">
 	<div class="top">
 		<h3>INQUIRY COMPLETE</h3>
+
+		<br><br>
+
 		<p>お問い合わせを受け付けました。</p>
+
+		<br><br>
+
+		<img src="./image/inquiry.png" style="width:150px;">
+
+		<br><br>
+
+
 	</div>
 
-	<table>
-
-	<!-- InquiryCompleteActionで定義したsessionの
-		"inquiryDTOList"を使用して値を取得 -->
-	<tr>
-		<td>
-			<span>名前:</span>
-		</td>
-		<td><s:property value="inquiry_name"/></td>
-	</tr>
-	<tr>
-		<td>
-			<span>メールアドレス:</span>
-		</td>
-		<td>
-			<s:property value="inquiry_mail"/>
-		</td>
-	</tr>
-	<tr>
-		<td>
-			<span>問い合わせの種類:</span>
-		<s:if test='qtype=="company"'>
-		<td>会社について</td>
-		</s:if>
-
-		<s:if test='qtype=="product"'>
-		<td>商品について</td>
-		</s:if>
-
-		<s:if test='qtype=="order"'>
-		<td>注文について</td>
-		</s:if>
-
-		<s:if test='qtype=="support"'>
-		<td>アフターサポートについて</td>
-		</s:if>
-
-		<s:if test='qtype=="another"'>
-		<td>その他のお問い合わせ</td>
-		</s:if>
-	</tr>
-	<tr>
-		<td>
-			<span>問い合わせ内容:</span>
-		</td>
-		<td>
-			<s:property value="body"/>
-		</td>
-	</tr>
-
-	</table>
-	<br><br>
 	<div>
 		<p><a href='<s:url action="GoHomeAction"/>'>Homeへ戻る場合はこちら</a></p>
 	</div>
