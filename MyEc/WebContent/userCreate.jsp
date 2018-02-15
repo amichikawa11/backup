@@ -11,158 +11,141 @@
 <meta name="description" content="" />
 <meta name="keywords" content="" />
 
-<link rel="stylesheet" type="text/css" href="./css/basis_style.css">
+<!-- CSSとSCRIPTの読み込み -->
+	<link rel="stylesheet" type="text/css" href="./css/basis_style.css">
 
 <!-- ファビコン -->
-<link rel="shortcut icon" href="http://www.iconj.com/icon.php?pid=eh53o8d8gl" type="image/x-icon" />
-<link rel="shortcut icon" href="http://www.iconj.com/gif_icon.php?pid=eh53o8d8gl" type="image/gif" />
-<!-- end of iconj.com favicon code -->
+	<link rel="shortcut icon" href="http://www.iconj.com/icon.php?pid=eh53o8d8gl" type="image/x-icon" />
+	<link rel="shortcut icon" href="http://www.iconj.com/gif_icon.php?pid=eh53o8d8gl" type="image/gif" />
+	<!-- end of iconj.com favicon code -->
 
 <title>UserCreate画面</title>
 </head>
+
+
 <body>
 
-<!-- ヘッダー部分 -->
+<!-- フッター固定の為のdiv(container) -->
 <div class="container">
+
+<!-- ヘッダー部分 -->
 <header>
 	<div id="header">
 		<div class="header-logo">SWEETOPIA</div>
 
-	<div class="top-menu">
+		<div class="top-menu">
 
-	<div class="left-list">
-		<ul>
+			<div class="left-list">
+			<ul class="top-li">
 			<li><a href='<s:url action="GoHomeAction"/>'>TOP</a></li>
 			<li><a href='<s:url action="ProductPageAction"/>'>PRODUCT</a></li>
 			<li><a href='<s:url action="UserCreateAction"/>'>SIGNUP</a></li>
-		</ul>
-	</div>
+			</ul>
+			</div>
 
-	<div class="right-list">
-		<ul>
+			<div class="right-list">
+			<ul>
 			<li><a href='<s:url action="LoginMovementAction"/>'>LOGIN</a></li>
 			<li><a href='<s:url action="MyPageAction"/>'>MYPAGE</a></li>
 			<li><a href='<s:url action="LogoutAction"/>'>LOGOUT</a></li>
 			<li><a href='<s:url action="InquiryAction"/>'>MAIL</a></li>
-		</ul>
+			</ul>
+			</div>
+		</div>
+
 	</div>
-	</div>
-</div>
 </header>
 
-<!-- メイン部分 -->
-<div class="top-push content-push"></div>
-<div id="main">
-<div class="main-contents">
-	<div class="top">
-		<h3>USER CREATE</h3>
+<div class="main-push"></div>
 
-	<br>
+<!-- メイン部分 -->
+<div id="main">
+	<h3>USER CREATE</h3>
+
+	<div class="push"></div>
 
 	<img src="./image/cup1.png" style="width:40px;">
 
-	<br>
-	</div>
-	<div>
-	<br>
+	<div class="icon-push"></div>
+
+	<div class="main-content">
 		<p>はじめてご利用される方は新規登録をお願いします。</p>
-		<br>
+		<div class="push"></div>
 
+	<!-- エラーメッセージ -->
 		<s:if test="errorMessage != ''">
-
-		<div  class="error-message">
+			<div  class="error-message">
 			<s:property value="errorMessage" escape="false"/>
-		</div>
-		<br><br>
+			</div>
 
+			<div class="push"></div>
 		</s:if>
+
 		<table>
 		<s:form action="UserCreateConfirmAction">
 		<tr>
-			<td>
-				<label>ログインID:</label>
-			</td>
-			<td>
-				<input type="text" name="loginUserId" value=""/>
-			</td>
+			<td><label>ログインID:</label></td>
+			<td><input type="text" name="loginUserId" value=""/></td>
 		</tr>
+
 		<tr>
-			<td>
-				<label>ログインPASS:</label>
-			</td>
-			<td>
-				<input type="text" name="loginPassword" value=""/>
-			</td>
+			<td><label>ログインPASS:</label></td>
+			<td><input type="text" name="loginPassword" value=""/></td>
 		</tr>
+
 		<tr>
-			<td>
-				<label>名前:</label>
-			</td>
-			<td>
-				<input type="text" name="userName" value=""/>
-			</td>
+			<td><label>名前:</label></td>
+			<td><input type="text" name="userName" value=""/></td>
 		</tr>
+
 		<tr>
-			<td>
-				<label>性別:</label>
-			</td>
+			<td><label>性別:</label></td>
 			<td>
 				<input type="radio" name="userSex" value="男" checked="checked">男
 				<input type="radio" name="userSex" value="女">女
 			</td>
 		</tr>
+
 		<tr>
-			<td>
-				<label>住所:</label>
-			</td>
-			<td>
-				<input type="text" name="userAddress" value=""/>
-			</td>
+			<td><label>住所:</label></td>
+			<td><input type="text" name="userAddress" value=""/></td>
 		</tr>
 
 		<tr>
-			<td>
-				<label>TEL番号（ハイフン必須）:</label>
-			</td>
-			<td>
-				<input type="text" name="userTell" value=""/>
-			</td>
+			<td><label>TEL番号（ハイフン必須）:</label></td>
+			<td><input type="text" name="userTell" value=""/></td>
 		</tr>
+
 		<tr>
-			<td>
-				<label>メールアドレス:</label>
-			</td>
-			<td>
-				<input type="text" name="userMail" value=""/>
-			</td>
+			<td><label>メールアドレス:</label></td>
+			<td><input type="text" name="userMail" value=""/></td>
 		</tr>
+
 		<tr>
-			<td>
-				<s:submit class="button" value="登録する"/>
-			</td>
+			<td><s:submit class="button" value="登録する"/></td>
 		</tr>
+
 		</s:form>
 		</table>
+	</div>
 
 		<div class="push"></div>
 
-			<p><a href='<s:url action="GoHomeAction"/>'>Homeへ戻る場合はこちら</a>
+		<div id="text-link">
+			<p><a href='<s:url action="GoHomeAction"/>'>Homeへ戻る場合はこちら</a></p>
 			<p><a href='<s:url action="LoginMovementAction"/>'>すでにIDをお持ちの場合はこちら</a></p>
-
-		</div>
-
-
 		</div>
 
 </div>
 
-<div class="push"></div>
+<!-- メインとフッターの間隔調整用div -->
+<div class="footer-push"></div>
 
 
 <!-- フッター部分 -->
 <footer>
 
-	<div class="h"></div>
+	<div class="footer-height"></div>
 
 	<div class="footer-message">
 		Copyright©2018 SWEETOPIA. All Rights Reserved.
@@ -170,8 +153,6 @@
 
 </footer>
 </div>
-
-
 
 
 </body>

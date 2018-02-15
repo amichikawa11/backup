@@ -10,15 +10,11 @@
 <meta http-equiv="imagetoolbar" content="no" />
 <meta name="description" content="" />
 <meta name="keywords" content="" />
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
-<link rel="stylesheet" type="text/css" href="./css/basis_style.css">
-<link rel="stylesheet" type="text/css" href="./css/table_style.css">
-
-<!-- ファビコン -->
-<link rel="shortcut icon" href="http://www.iconj.com/icon.php?pid=eh53o8d8gl" type="image/x-icon" />
-<link rel="shortcut icon" href="http://www.iconj.com/gif_icon.php?pid=eh53o8d8gl" type="image/gif" />
-<!-- end of iconj.com favicon code -->
+<!-- CSSとSCRIPTの読み込み -->
+	<link rel="stylesheet" type="text/css" href="./css/basis_style.css">
+	<link rel="stylesheet" type="text/css" href="./css/table_style.css">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
 	<script type="text/javascript">
 		function submitAction(url) {
@@ -27,92 +23,88 @@
 		}
 	</script>
 
+<!-- ファビコン -->
+	<link rel="shortcut icon" href="http://www.iconj.com/icon.php?pid=eh53o8d8gl" type="image/x-icon" />
+	<link rel="shortcut icon" href="http://www.iconj.com/gif_icon.php?pid=eh53o8d8gl" type="image/gif" />
+	<!-- end of iconj.com favicon code -->
+
 <title>ItemDeleteComplete画面</title>
 </head>
+
+
 <body>
 
-<!-- ヘッダー部分 -->
+<!-- フッター固定の為のdiv(container) -->
 <div class="container">
+
+<!-- ヘッダー部分 -->
 <header>
 	<div id="header">
 		<div class="header-logo">SWEETOPIA</div>
 
-	<div class="top-menu">
+		<div class="top-menu">
 
-	<div class="left-list">
-		<ul>
+			<div class="left-list">
+			<ul class="top-li">
 			<li><a href='<s:url action="GoHomeAction"/>'>TOP</a></li>
 			<li><a href='<s:url action="ProductPageAction"/>'>PRODUCT</a></li>
 			<li><a href='<s:url action="UserCreateAction"/>'>SIGNUP</a></li>
-		</ul>
-	</div>
+			</ul>
+			</div>
 
-	<div class="right-list">
-		<ul>
+			<div class="right-list">
+			<ul>
 			<li><a href='<s:url action="LoginMovementAction"/>'>LOGIN</a></li>
 			<li><a href='<s:url action="MyPageAction"/>'>MYPAGE</a></li>
 			<li><a href='<s:url action="LogoutAction"/>'>LOGOUT</a></li>
 			<li><a href='<s:url action="InquiryAction"/>'>MAIL</a></li>
-		</ul>
+			</ul>
+			</div>
+		</div>
+
 	</div>
-	</div>
-</div>
 </header>
 
+<div class="main-push"></div>
+
 <!-- メイン部分 -->
-<div class="top-push content-push"></div>
 <div id="main">
-<div class="main-contents">
-	<div class="top">
-		<h3>ITEM DELETE COMPLETE</h3>
-	</div>
-	<div>
-	<table>
-					<s:form>
+	<h3>ITEM DELETE COMPLETE</h3>
 
-					<dl>
+	<div class="main-content">
+		<table>
+		<s:form>
+			<div class="push"></div>
 
-					<dd>
-			<div class="content-downpush"></div>
+			<div class="error-message">
+				<span>商品を</span><s:property value="session.itemDeleteListSize"/><span>件削除しました。</span>
+			</div>
 
-					<div class="error-message">
-					<span>商品を</span>
-				    <s:property value="session.itemDeleteListSize"/>
-				    <span>件削除しました。</span>
-				    </div>
+			<br><br>
 
-					</dd>
-					</dl>
+			<img src="./image/cake.png" style="width:100px;">
 
+			<div class="icon-push"></div>
+			<br><br>
 
-				<tr>
-					<td>
-
-					<div class="content-downpush"></div>
-					<div class="content-downpush"></div>
-
-					</td>
-				</tr>
-
-				<tr>
-					<td><input type="button" class="button" value="管理ページに戻る" onclick="submitAction('MasterMovementAction')" /></td>
-				</tr>
-			</s:form>
-			</table>
+			<tr>
+				<td><input type="button" class="button" value="管理ページに戻る" onclick="submitAction('MasterMovementAction')" /></td>
+			</tr>
+		</s:form>
+		</table>
 
 	</div>
-
 </div>
 
-</div>
 
-<div class="push"></div>
+<!-- メインとフッターの間隔調整用div -->
+<div class="footer-push"></div>
 
 
 <!-- フッター部分 -->
 <footer>
 
-	<div class="h"></div>
+	<div class="footer-height"></div>
 
 	<div class="footer-message">
 		Copyright©2018 SWEETOPIA. All Rights Reserved.
@@ -120,7 +112,6 @@
 
 </footer>
 </div>
-
 
 
 </body>

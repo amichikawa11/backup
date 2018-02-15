@@ -43,6 +43,7 @@ public class LoginAction extends ActionSupport implements SessionAware{
 	 */
 	private LoginDTO loginDTO = new LoginDTO();
 
+
 	/**
 	 * アイテム情報を取得（Listも宣言しておく）
 	 */
@@ -139,6 +140,7 @@ public class LoginAction extends ActionSupport implements SessionAware{
 	public void setBuyItemDTOList(List<BuyItemDTO> buyItemDTOList) {
 		this.buyItemDTOList = buyItemDTOList;
 	}
+
 
 	@Override
 	public void setSession(Map<String, Object> session) {

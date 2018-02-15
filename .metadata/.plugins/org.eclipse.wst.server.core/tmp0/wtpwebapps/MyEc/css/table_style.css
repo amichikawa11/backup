@@ -98,7 +98,7 @@
 /*ユーザー情報リスト*/
 .user-table{
 	background-color:rgba(222,78,42,0.2);
-	width:70%;
+	width:40%;
 	margin:0 auto;
 }
 .mypage-table {
@@ -118,7 +118,7 @@
 /*購入履歴がなかった時のテキストCSS*/
 .no-purchase{
 	background-color:rgba(222,78,42,0.2);
-	width:70%;
+	width:40%;
 	height:20px;
 	margin:0 auto;
 	padding-top:15px;

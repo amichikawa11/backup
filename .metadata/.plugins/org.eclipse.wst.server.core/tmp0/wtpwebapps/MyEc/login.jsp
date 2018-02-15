@@ -11,111 +11,112 @@
 <meta name="description" content="" />
 <meta name="keywords" content="" />
 
-<link rel="stylesheet" type="text/css" href="./css/basis_style.css">
+<!-- CSSとSCRIPTの読み込み -->
+	<link rel="stylesheet" type="text/css" href="./css/basis_style.css">
 
 <!-- ファビコン -->
-<link rel="shortcut icon" href="http://www.iconj.com/icon.php?pid=eh53o8d8gl" type="image/x-icon" />
-<link rel="shortcut icon" href="http://www.iconj.com/gif_icon.php?pid=eh53o8d8gl" type="image/gif" />
-<!-- end of iconj.com favicon code -->
+	<link rel="shortcut icon" href="http://www.iconj.com/icon.php?pid=eh53o8d8gl" type="image/x-icon" />
+	<link rel="shortcut icon" href="http://www.iconj.com/gif_icon.php?pid=eh53o8d8gl" type="image/gif" />
+	<!-- end of iconj.com favicon code -->
 
 <title>Login画面</title>
 </head>
+
+
 <body>
 
-<!-- ヘッダー部分 -->
+<!-- フッター固定の為のdiv(container) -->
 <div class="container">
+
+<!-- ヘッダー部分 -->
 <header>
 	<div id="header">
 		<div class="header-logo">SWEETOPIA</div>
 
-	<div class="top-menu">
+		<div class="top-menu">
 
-	<div class="left-list">
-		<ul>
+			<div class="left-list">
+			<ul class="top-li">
 			<li><a href='<s:url action="GoHomeAction"/>'>TOP</a></li>
 			<li><a href='<s:url action="ProductPageAction"/>'>PRODUCT</a></li>
 			<li><a href='<s:url action="UserCreateAction"/>'>SIGNUP</a></li>
-		</ul>
-	</div>
+			</ul>
+			</div>
 
-	<div class="right-list">
-		<ul>
+			<div class="right-list">
+			<ul>
 			<li><a href='<s:url action="LoginMovementAction"/>'>LOGIN</a></li>
 			<li><a href='<s:url action="MyPageAction"/>'>MYPAGE</a></li>
 			<li><a href='<s:url action="LogoutAction"/>'>LOGOUT</a></li>
 			<li><a href='<s:url action="InquiryAction"/>'>MAIL</a></li>
-		</ul>
+			</ul>
+			</div>
+		</div>
+
 	</div>
-	</div>
-</div>
 </header>
 
+<div class="main-push"></div>
+
 <!-- メイン部分 -->
-<div class="top-push content-push"></div>
 <div id="main">
-<div class="main-contents">
-	<div class="top">
-		<h3>LOGIN</h3>
+	<h3>LOGIN</h3>
+	<div class="push"></div>
 
-		<br>
+	<img src="./image/candy.png" style="width:50px;">
 
-		<img src="./image/candy.png" style="width:50px;">
+	<div class="icon-push"></div>
 
-		<br>
+	<div class="main-content">
+		<p>商品の購入をする際はログインをお願いします。</p>
 
-	</div><br>
-	<div>
+		<div class="error-message">
+			<s:if test="loginMessage != null ">
+			<p><s:property value="loginMessage" escape="false"/></p>
+			</s:if>
+		</div>
 
-		<p>商品の購入をする際はログインをお願いします。</p></div>
-		<br>
+		<div class="push"></div>
 
 		<s:form action="LoginAction">
 		<table>
-
-				<tr>
-			<td>
-				<label>ログインID:</label>
-			</td>
-			<td>
-				<input type="text" name="loginUserId" value=""/>
-			</td>
-		</tr>
 		<tr>
-			<td>
-				<label>ログインPASS:</label>
-			</td>
-			<td>
-				<input type="password" name="loginPassword" value=""/>
-			</td>
+			<td><label>ログインID:</label></td>
+			<td><input type="text" name="loginUserId" value=""/></td>
 		</tr>
-
 
 		<tr>
-			<td>
-			<s:submit class="button" value="ログイン"/>
-			</td>
+			<td><label>ログインPASS:</label></td>
+			<td><input type="password" name="loginPassword" value=""/></td>
 		</tr>
+
+		<tr>
+			<td><s:submit class="button" value="ログイン"/></td>
+		</tr>
+
 		</table>
 		</s:form>
-		<br/>
 
-		</div>
+		<div class="push"></div>
 
-<div class="content-downpush"></div>
-		<div id="text-link">
-			<p><a href='<s:url action="UserCreateAction"/>'>新規ユーザー登録はこちら</a></p>
-			<p><a href='<s:url action="GoHomeAction"/>'>Homeへ戻る場合はこちら</a></p>
+	</div>
 
-		</div>
+
+	<div class="content-downpush"></div>
+	<div id="text-link">
+		<p><a href='<s:url action="UserCreateAction"/>'>新規ユーザー登録はこちら</a></p>
+		<p><a href='<s:url action="GoHomeAction"/>'>Homeへ戻る場合はこちら</a></p>
+	</div>
 </div>
 
-<div class="push"></div>
+<!-- メインとフッターの間隔調整用div -->
+<div class="footer-push"></div>
 
 
 <!-- フッター部分 -->
 <footer>
 
-	<div class="h"></div>
+	<div class="footer-height"></div>
 
 	<div class="footer-message">
 		Copyright©2018 SWEETOPIA. All Rights Reserved.
@@ -123,7 +124,6 @@
 
 </footer>
 </div>
-
 
 
 </body>

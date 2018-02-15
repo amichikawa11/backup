@@ -2,3 +2,10 @@
 1518571336464	型名 'InquiryComfirmAction' を変更します
 1518576083684	要素を削除
 1518581682834	要素を削除
+1518655606178	型名 'ItemInvestoryConfirmAction' を変更します
+1518655617650	型名 'ItemInvestoryControlAction' を変更します
+1518655634091	型名 'ItemInvestoryMovementAction' を変更します
+1518655738740	リソース 'itemInvestoryComplete.jsp' の名前変更
+1518655748691	リソース 'itemInvestoryConfirm.jsp' の名前変更
+1518655753968	リソース 'itemInvestoryControl.jsp' の名前変更
+1518655891900	型名 'ItemInvestoryDAO' を変更します
