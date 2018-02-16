@@ -103,6 +103,8 @@
 			</table>
 		</div>
 
+		<div class="push"></div>
+
 		<div id="text-link">
 			<p><a href='<s:url action="UserUpdateMovementAction"/>'>ユーザー情報を変更する場合はこちら</a></p>
 			<p><a href='<s:url action="UserDeleteMovementAction"/>'>退会する場合はこちら</a></p>

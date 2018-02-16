@@ -13,54 +13,38 @@ public class BuyItemAction extends ActionSupport implements SessionAware {
 
 	private ArrayList<BuyItemDTO> buyItemDTOList = new ArrayList<>();
 
-	/**
-	 * ここのsessionの値をbuyItem.jspで表示しています。
-	 */
-
-
-	/**
-	 * アイテム購入個数（複数になるのでList(String)型の変数）
-	 */
+	//count=購入個数（複数購入の可能性があるのでList(String)型の変数）
 	private List<String> count;
 
-	/**
-	 * 支払い方法
-	 */
 	private String pay;
 
-	/**
-	 * アイテム情報を格納
-	 */
 	public Map<String, Object>  session;
 
 
 	/**
 	 * 商品情報取得メソッド
 	 */
+
 	public String execute() {
 		String result = SUCCESS;
 
-		//"count"にcountの値を紐付け
 		session.put("count", count);
 
 		//LoginActionで保管したbuyItemDTOListの値を使用する
-		//→"buyItemDTOList"から保管されている値をgetで取得
+		//→"buyItemDTOList"から保管されている値をgetで取得してlistに保管
 
 		@SuppressWarnings("unchecked")
 		List<BuyItemDTO> list = (List<BuyItemDTO>) session.get("buyItemDTOList");
 
 
-
 		/**
-		 * 合計金額を計算する処理
+		 * 合計金額を計算する処理（購入数の分だけループ処理）
 		 */
 
-		//繰り返し処理（購入数countの数だけ繰り返す）
 		for(int i=0; i<count.size(); i++){
 
 			BuyItemDTO buyItemDTO = new BuyItemDTO();
 
-			//i番目の値をgetterで取得して代入
 			String buyItemName = list.get(i).getItemName();
 			session.put("itemName",buyItemName);
 
@@ -78,7 +62,7 @@ public class BuyItemAction extends ActionSupport implements SessionAware {
 			String item_description = list.get(i).getItem_description();
 
 
-			//countはList型変数なのでget(i)で取得
+			//countはList型変数なのでget(i)で取得してint型に変換
 			int intCount = Integer.parseInt(count.get(i));
 			int intPrice = list.get(i).getItemPrice();
 
@@ -93,32 +77,24 @@ public class BuyItemAction extends ActionSupport implements SessionAware {
 				//buyItemNameは、Object型なのでString型にキャスト
 				buyItemDTO.setItemName(session.get("itemName").toString());
 
-				//同じ理由でString型に変換
 				buyItemDTO.setItemPrice((int) session.get("itemPrice"));
 
 				buyItemDTO.setCount(intCount);
 
-				//item_stockはそのまま取得しているのでキャストなし
 				buyItemDTO.setItem_stock(item_stock);
 
-
-				//画像のファイルパス
 				buyItemDTO.setImage_file_path(image_file_path);
 
-				//商品の詳細説明
 				buyItemDTO.setItem_description(item_description);
 
-				//購入個数×金額の結果をDTOに格納
+				//購入個数×金額の結果をbuyItemDTOに格納
 				//"total_price"にも格納して他で使えるようにする
 				buyItemDTO.setTotal_price(intCount * intPrice);
 				session.put("total_price",intCount* intPrice);
 
 				/**
-				 * 合計金額の計算はここで終わり
-				 */
-
-				/**
-				 * ここから支払い方法の選択処理
+				 * 合計額の計算はここで終わり
+				 * 以下、支払い方法の選択処理
 				 */
 
 
@@ -137,15 +113,14 @@ public class BuyItemAction extends ActionSupport implements SessionAware {
 			buyItemDTO.setPay(payment);
 		}
 
-		//ここまで支払い選択処理
-		//DTOに格納したので、それをDTOListに保管する
 		buyItemDTOList.add(buyItemDTO);
 
 		}
-			//buyItemDTOListの値を"list"に紐付け
-			session.put("list",buyItemDTOList);
+
+		session.put("list",buyItemDTOList);
 
 		}//←ここで繰り返し終わり
+
 
 		/**
 		 * 複数購入した時の合計額を取得
@@ -154,10 +129,14 @@ public class BuyItemAction extends ActionSupport implements SessionAware {
 		 */
 
 		if(buyItemDTOList.size()>1){
+
 			int totalPrice = 0;
-			for(int a = 0;a<buyItemDTOList.size(); a++){
-				totalPrice = totalPrice +buyItemDTOList.get(a).getTotal_price();
+			for(int a = 0; a < buyItemDTOList.size(); a++){
+
+				totalPrice = totalPrice + buyItemDTOList.get(a).getTotal_price();
+
 			}
+
 			System.out.println(totalPrice);
 			session.put("totalPrice",totalPrice);
 
