@@ -1,0 +1,25 @@
+package com.internousdev.myec.action;
+
+import java.util.Map;
+
+import com.internousdev.myec.dao.UserDeleteDAO;
+import com.internousdev.myec.dto.LoginDTO;
+
+public class UserDeleteAction {
+
+	public String execute(){
+
+		Map<String, Object> session;
+
+		UserDeleteDAO userDeleteDAO = new UserDeleteDAO();
+
+		String deleteId = session.get("login_user_id").toString();
+		String deletePass = session.get("login_password").toString();
+
+		userDeleteDAO.userDeleteInfo(deleteId, deletePass);
+
+		return  SUCCESS;
+
+		}
+	}
+

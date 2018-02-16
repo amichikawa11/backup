@@ -10,14 +10,23 @@ body {
 	font-size:12px;
 	color:#333;
 	background-image:url("../image/b074.jpg");
-
 }
 
-/*行間をあける用のCSS*/
+/*テーブル（デザインはtable_styleに記述）*/
+table {
+	text-align:center;
+	margin:0 auto;
+}
+
+/*floatの解除*/
+.clear{
+	clear:both;
+}
+
+/*小さく行間をあけたい時のCSS*/
 .push{
 	height:20px;
 }
-
 
 /*ヘッダーからフッターまでのdiv（フッターの位置調整に必要）*/
 .container{
@@ -27,14 +36,6 @@ body {
 	height: 100%;
 	min-height: 100%;
 }
-
-
-/*テーブル（詳細はtable_styleに記述）*/
-table {
-	text-align:center;
-	margin:0 auto;
-}
-
 
 /*エラーメッセージの色*/
 .error-message{
@@ -94,7 +95,6 @@ li {
 	margin-right:15px;
 }
 
-
 /*---------------------------------------------------------------------------------------*/
 
 /*ヘッダー部分*/
@@ -120,6 +120,7 @@ li {
 	padding-top:10px;
 }
 
+/*上部メニューリスト*/
 .left-list{
 	float:left;
 }
@@ -145,14 +146,34 @@ li {
 	padding-top:40px;
 }
 
+/*アイコン下の間隔*/
+.icon-push{
+	margin-top:30px;
+	height:30px;
+}
+
+/*メインコンテンツ下の間隔*/
+.contentdown-push{
+	heigt:20px;
+	margin-bottom:130px;
+}
+
+/*---------------------------------------------------------------------------------------*/
+
 /*ホーム画面*/
+
 #home-main{
 	width:70%;
 	margin:0 auto;
 }
 
-/*ホームにあるスライドショーの写真*/
+/*コンテンツ部分とヘッダーの間隔*/
+.main-push{
+	margin-top:10px;
+	height:50px;
+}
 
+/*ホームにあるスライドショー*/
 .top-image{
 	display:block;
 	margin:0 auto;
@@ -177,8 +198,6 @@ li {
 	margin:0 auto;
 }
 
-
-
 /*ホームのスライドと更新情報間の間隔*/
 .menu-push{
 	margin-top:50px;
@@ -192,32 +211,18 @@ li {
 	text-align:center;
 }
 
-/*商品検索リセット*/
+/*---------------------------------------------------------------------------------------*/
+
+/*商品一覧関係のCSS*/
+
+/*「検索リセット」の文字列の背景*/
 .reset{
 	background-color:#FFD5EC;
-}
-
-/*コンテンツ部分とヘッダーの間隔*/
-.main-push{
-	margin-top:10px;
-	height:50px;
-}
-
-/*アイコン下の間隔*/
-.icon-push{
-	margin-top:30px;
-	height:30px;
 }
 
 /*支払選択の間隔*/
 .pay-push{
 	margin-top:70px;
-}
-
-/*メインコンテンツ下の間隔*/
-.contentdown-push{
-	heigt:20px;
-	margin-bottom:130px;
 }
 
 /*商品一覧の下の間隔*/
@@ -244,11 +249,11 @@ footer {
 	padding-top:40px;
 }
 
+.footer-push{
+	height:100px;
+}
+
 .footer-message{
 	text-align:center;
 	background:rgba(255,239,209,0.5);
-}
-
-.footer-push{
-	height:100px;
 }

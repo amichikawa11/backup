@@ -20,9 +20,7 @@ public class UserUpdateAction extends ActionSupport implements SessionAware{
 
 	public Map<String,Object> session;
 
-	private String errorMassage;
-
-	private LoginDTO loginDTO = new LoginDTO();
+	private String errorMessage;
 
 	private UserCreateConfirmDAO dao = new UserCreateConfirmDAO();
 
@@ -77,7 +75,7 @@ public class UserUpdateAction extends ActionSupport implements SessionAware{
 			session.put("userMail", userMail);
 
 		}else{
-			setErrorMassage("同じIDまたはパスワードが存在します。");
+			setErrorMessage("同じIDまたはパスワードが存在します。");
 			result = ERROR;
 		}
 		}
@@ -85,7 +83,7 @@ public class UserUpdateAction extends ActionSupport implements SessionAware{
 			//一番最初のifに合致しなかった場合
 			//（（入力項目の長さが0の時）は下記の警告文を出す。
 			else{
-				setErrorMassage("未入力の項目があります。");
+				setErrorMessage("未入力の項目があります。");
 				result = ERROR;
 			}
 
@@ -169,12 +167,12 @@ public class UserUpdateAction extends ActionSupport implements SessionAware{
 		this.session = session;
 	}
 
-	public String getErrorMassage() {
-		return errorMassage;
+	public String getErrorMessage() {
+		return errorMessage;
 	}
 
-	public void setErrorMassage(String errorMassage) {
-		this.errorMassage = errorMassage;
+	public void setErrorMessage(String errorMessage) {
+		this.errorMessage = errorMessage;
 	}
 
 }

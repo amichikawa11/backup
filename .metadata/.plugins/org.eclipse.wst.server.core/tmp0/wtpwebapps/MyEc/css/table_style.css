@@ -1,12 +1,6 @@
 @CHARSET "UTF-8";
-@CHARSET "UTF-8";
 
-
-/*floatの解除*/
-
-.clear{
-	clear:both;
-}
+/*商品や個人情報一覧のデザインCSS*/
 
 
 /*---------------------------------------------------------------------------------------*/
@@ -26,6 +20,24 @@
 	background-color:rgba(214,126,126,0.4);
 }
 
+.dd-list{
+	width:31%;
+	display:inline-block;
+	background-color:rgba(255,255,255,0.4);
+ 	font-size: 12px;
+ 	float:left;
+	margin:0;
+	padding:15px 0px;
+	margin-left:2%;
+	margin-bottom:20px;
+}
+
+.dd-list:last-child {
+	margin-right: 0;
+}
+
+
+/*商品詳細の説明をオンマウスで表示*/
 .remark{
 	display:none;
 }
@@ -47,29 +59,11 @@
 
 }
 
-
-.dd-list{
-	width:31%;
-	display:inline-block;
-	background-color:rgba(255,255,255,0.4);
- 	font-size: 12px;
- 	float:left;
-	margin:0;
-	padding:15px 0px;
-	margin-left:2%;
-	margin-bottom:20px;
-}
-
-.dd-list:last-child {
-	margin-right: 0;
-}
-
-
 /*---------------------------------------------------------------------------------------*/
-
 /*購入確定ページのCSS*/
 
-.buy_item{
+/*購入する商品一覧*/
+.buy-item-list{
 	background-color:rgba(255,255,255,0.4);
 	display: inline-block;
 	width:400px;
@@ -77,22 +71,19 @@
 	padding-bottom:15px;
 	padding-top:15px;
 	margin-bottom:15px;
-
 }
 
-
-.final{
+/*購入金額などを表示する欄*/
+.buy-item-confirm{
 	background-color:rgba(216, 191, 191, 0.5);
 	display: inline-block;
 	margin-top:30px;
 	padding:15px 20px;
 	padding-right:50px;
-
 }
 
 
 /*---------------------------------------------------------------------------------------*/
-
 /*マイページのCSS*/
 
 /*ユーザー情報リスト*/
@@ -101,13 +92,13 @@
 	width:40%;
 	margin:0 auto;
 }
+
 .mypage-table {
 	border:solid 1px #996f31;
 }
 
 .mypage-th{
 	background-color:rgba(230,191,133,0.5);
-
 }
 
 .mypage-td{

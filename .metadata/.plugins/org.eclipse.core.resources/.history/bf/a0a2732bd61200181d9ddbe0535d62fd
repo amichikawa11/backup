@@ -1,0 +1,49 @@
+package com.internousdev.myec.dao;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
+import com.internousdev.myec.util.DBConnector;
+
+public class UserDeleteDAO {
+
+	private DBConnector dbConnector = new DBConnector();
+	private Connection connection = dbConnector.getConnection();
+
+	private String sql = "DELETE FROM login_user_transaction WHERE login_id=? and login_pass=?";
+
+
+	public boolean userDeleteInfo(String deleteID, String deletePass) throws SQLException{
+
+		boolean result = false;
+
+		try{
+
+			PreparedStatement preparedStatement = connection.prepareStatement(sql);
+			preparedStatement.setString(1, deleteID);
+			preparedStatement.setString(2, deletePass);
+
+			int checkUpdate = preparedStatement.executeUpdate();
+
+			if(checkUpdate > 0){
+
+			result = true;
+
+			}
+
+
+		}catch(SQLException e){
+
+			e.printStackTrace();
+
+		}finally{
+
+			connection.close();
+		}
+
+		return result;
+
+	}
+
+}

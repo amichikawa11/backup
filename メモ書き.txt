@@ -11,3 +11,6 @@ amichikawa11(@gmail.com) misoko3
 ②git add --all
 ③git commit -m"12/12"  （""内は日付）
 ④git push
+
+■下のエラー　→　actionなしのformタグ内にactionつきのformタグを書いていた
+Unexpected Exception caught setting 'deleteFlg' on 'class com.internousdev.myec.action.UserDeleteMovementAction: Error setting expression 'deleteFlg' with value ['退会する', ]

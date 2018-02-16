@@ -10,14 +10,10 @@
 <meta http-equiv="imagetoolbar" content="no" />
 <meta name="description" content="" />
 <meta name="keywords" content="" />
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
-<link rel="stylesheet" type="text/css" href="./css/basis_style.css">
-
-<!-- ファビコン -->
-<link rel="shortcut icon" href="http://www.iconj.com/icon.php?pid=eh53o8d8gl" type="image/x-icon" />
-<link rel="shortcut icon" href="http://www.iconj.com/gif_icon.php?pid=eh53o8d8gl" type="image/gif" />
-<!-- end of iconj.com favicon code -->
+<!-- CSSとSCRIPTの読み込み -->
+	<link rel="stylesheet" type="text/css" href="./css/basis_style.css">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
 	<script type="text/javascript">
 		function submitAction(url) {
@@ -26,133 +22,125 @@
 		}
 	</script>
 
+<!-- ファビコン -->
+	<link rel="shortcut icon" href="http://www.iconj.com/icon.php?pid=eh53o8d8gl" type="image/x-icon" />
+	<link rel="shortcut icon" href="http://www.iconj.com/gif_icon.php?pid=eh53o8d8gl" type="image/gif" />
+	<!-- end of iconj.com favicon code -->
+
 <title>UserUpdateConfirm画面</title>
 </head>
+
+
 <body>
 
-<!-- ヘッダー部分 -->
+<!-- フッター固定の為のdiv(container) -->
 <div class="container">
+
+<!-- ヘッダー部分 -->
 <header>
 	<div id="header">
 		<div class="header-logo">SWEETOPIA</div>
 
-	<div class="top-menu">
+		<div class="top-menu">
 
-	<div class="left-list">
-		<ul>
+			<div class="left-list">
+			<ul class="top-li">
 			<li><a href='<s:url action="GoHomeAction"/>'>TOP</a></li>
 			<li><a href='<s:url action="ProductPageAction"/>'>PRODUCT</a></li>
 			<li><a href='<s:url action="UserCreateAction"/>'>SIGNUP</a></li>
-		</ul>
-	</div>
+			</ul>
+			</div>
 
-	<div class="right-list">
-		<ul>
+			<div class="right-list">
+			<ul>
 			<li><a href='<s:url action="LoginMovementAction"/>'>LOGIN</a></li>
 			<li><a href='<s:url action="MyPageAction"/>'>MYPAGE</a></li>
 			<li><a href='<s:url action="LogoutAction"/>'>LOGOUT</a></li>
 			<li><a href='<s:url action="InquiryAction"/>'>MAIL</a></li>
-		</ul>
+			</ul>
+			</div>
+		</div>
+
 	</div>
-	</div>
-</div>
 </header>
 
-<!-- メイン部分 -->
-<div class="top-push content-push"></div>
-<div id="main">
-<div class="main-contents">
-	<div class="top">
-		<h3>USER UPDATE CONFIRM</h3>
+<div class="main-push"></div>
 
-	<br>
+<!-- メイン部分 -->
+<div id="main">
+	<h3>USER UPDATE CONFIRM</h3>
+
+	<div class="push"></div>
 
 	<img src="./image/pudding.png" style="width:40px;">
 
-	<br><br>
-	</div>
+	<div class="icon-push"></div>
 
-	<div>
-		<p>登録する内容は以下でよろしいですか。</p><br>
+	<div class="main-content">
+		<p>登録する内容は以下でよろしいですか。</p>
+		<div class="icon-push"></div>
+
 		<table>
-			<s:form action="UserUpdateConfirmAction">
+		<s:form action="UserUpdateConfirmAction">
 			<tr id="box">
-				<td>
-					<label>ログインID:</label>
-				</td>
-				<td>
-					<s:property value="loginUserId" escape="false"/>
-				</td>
+				<td><label>ログインID:</label></td>
+				<td><s:property value="loginUserId" escape="false"/></td>
 			</tr>
+
 			<tr>
-				<td>
-					<label>ログインPASS:</label>
-				</td>
-				<td>
-					<s:property value="loginPassword" escape="false"/>
-				</td>
+				<td><label>ログインPASS:</label></td>
+				<td><s:property value="loginPassword" escape="false"/></td>
 			</tr>
+
 			<tr>
-				<td>
-					<label>名前:</label>
-				</td>
-				<td>
-					<s:property value="userName" escape="false"/>
-				</td>
+				<td><label>名前:</label></td>
+				<td><s:property value="userName" escape="false"/></td>
 			</tr>
+
 			<tr>
-				<td>
-					<label>性別:</label>
-				</td>
-				<td>
-					<s:property value="userSex" escape="false"/>
-				</td>
+				<td><label>性別:</label></td>
+				<td><s:property value="userSex" escape="false"/></td>
 			</tr>
+
 			<tr>
-				<td>
-					<label>住所:</label>
-				</td>
-				<td>
-					<s:property value="userAddress" escape="false"/>
-				</td>
+				<td><label>住所:</label></td>
+				<td><s:property value="userAddress" escape="false"/></td>
 			</tr>
+
 			<tr>
-				<td>
-					<label>TEL番号:</label>
-				</td>
-				<td>
-					<s:property value="userTell" escape="false"/>
-				</td>
+				<td><label>TEL番号:</label></td>
+				<td><s:property value="userTell" escape="false"/></td>
 			</tr>
+
 			<tr>
-				<td>
-					<label>メールアドレス:</label>
-				</td>
-				<td>
-					<s:property value="userMail" escape="false"/>
-				</td>
+				<td><label>メールアドレス:</label></td>
+				<td><s:property value="userMail" escape="false"/></td>
 			</tr>
+
+			<tr>
+				<td><br></td>
+			</tr>
+
 			<tr>
 				<td><input type="button" class="button" value="戻る" onclick="submitAction('UserUpdateMovementAction')" /></td>
 				<td><input type="button" class="button" value="完了" onclick="submitAction('UserUpdateConfirmAction')" /></td>
 			</tr>
-			</s:form>
 
+		</s:form>
 		</table>
 
+	</div>
 
-
-		</div>
-</div>
 </div>
 
-<div class="push"></div>
+<!-- メインとフッターの間隔調整用div -->
+<div class="footer-push"></div>
 
 
 <!-- フッター部分 -->
 <footer>
 
-	<div class="h"></div>
+	<div class="footer-height"></div>
 
 	<div class="footer-message">
 		Copyright©2018 SWEETOPIA. All Rights Reserved.

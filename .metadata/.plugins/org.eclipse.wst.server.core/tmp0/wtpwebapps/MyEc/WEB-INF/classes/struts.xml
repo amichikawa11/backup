@@ -101,6 +101,17 @@
 		<result name="error">userUpdate.jsp</result>
 	</action>
 
+	<!-- 退会 -->
+	<!-- UserDeleteMovementAction -->
+	<action name="UserDeleteMovementAction" class="com.internousdev.myec.action.UserDeleteMovementAction" method="execute">
+		<result name="success">userDelete.jsp</result>
+	</action>
+
+	<!-- UserDeleteAction -->
+	<action name="UserDeleteAction" class="com.internousdev.myec.action.UserDeleteAction" method="execute">
+		<result name="success">userDeleteComplete.jsp</result>
+	</action>
+
 
 	<!-- 商品の購入 -->
 

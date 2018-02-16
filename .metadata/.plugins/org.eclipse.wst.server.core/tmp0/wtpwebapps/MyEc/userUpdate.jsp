@@ -20,152 +20,135 @@
 
 <title>UserUpdate画面</title>
 </head>
+
+
 <body>
 
-<!-- ヘッダー部分 -->
+<!-- フッター固定の為のdiv(container) -->
 <div class="container">
+
+<!-- ヘッダー部分 -->
 <header>
 	<div id="header">
 		<div class="header-logo">SWEETOPIA</div>
 
-	<div class="top-menu">
+		<div class="top-menu">
 
-	<div class="left-list">
-		<ul>
+			<div class="left-list">
+			<ul class="top-li">
 			<li><a href='<s:url action="GoHomeAction"/>'>TOP</a></li>
 			<li><a href='<s:url action="ProductPageAction"/>'>PRODUCT</a></li>
 			<li><a href='<s:url action="UserCreateAction"/>'>SIGNUP</a></li>
-		</ul>
-	</div>
+			</ul>
+			</div>
 
-	<div class="right-list">
-		<ul>
+			<div class="right-list">
+			<ul>
 			<li><a href='<s:url action="LoginMovementAction"/>'>LOGIN</a></li>
 			<li><a href='<s:url action="MyPageAction"/>'>MYPAGE</a></li>
 			<li><a href='<s:url action="LogoutAction"/>'>LOGOUT</a></li>
 			<li><a href='<s:url action="InquiryAction"/>'>MAIL</a></li>
-		</ul>
+			</ul>
+			</div>
+		</div>
+
 	</div>
-	</div>
-</div>
 </header>
 
-<!-- メイン部分 -->
-<div class="top-push content-push"></div>
-<div id="main">
-<div class="main-contents">
-	<div class="top">
-		<h3>USER UPDATE</h3>
+<div class="main-push"></div>
 
-	<br>
+<!-- メイン部分 -->
+<div id="main">
+	<h3>USER UPDATE</h3>
+
+	<div class="push"></div>
 
 	<img src="./image/pudding.png" style="width:40px;">
 
-	<br>
+	<div class="icon-push"></div>
 
-	</div>
-	<div>
-		<p>変更情報を入力してください。</p></div>
+	<div class="main-content">
+		<p>変更情報を入力してください。</p>
 
-		<!-- errorMassageに文章が入っていれば警告文を表示 -->
+		<!-- エラーメッセージ -->
 		<div class="error-message">
-		<s:if test="errorMassage != ''">
-			<s:property value="errorMassage" escape="false"/>
+		<s:if test="errorMessage != ''">
+			<s:property value="errorMessage" escape="false"/>
 		</s:if>
 		</div>
-		<br>
+
+		<div class="push"></div>
 
 		<table>
 		<s:form action="UserUpdateAction">
 		<tr>
-			<td>
-				<label>ログインID:</label>
-			</td>
-			<td>
-				<input type="text" name="loginUserId" value="<s:property value="session.loginUserId"/>"/>
-			</td>
+			<td><label>ログインID:</label></td>
+			<td><input type="text" name="loginUserId" value="<s:property value="session.loginUserId"/>"/></td>
 		</tr>
+
 		<tr>
-			<td>
-				<label>ログインPASS:</label>
-			</td>
-			<td>
-				<input type="password" name="loginPassword" value="<s:property value='session.loginPassword'/>"/>
-			</td>
+			<td><label>ログインPASS:</label></td>
+			<td><input type="password" name="loginPassword" value="<s:property value='session.loginPassword'/>"/></td>
 		</tr>
+
 		<tr>
-			<td>
-				<label>名前:</label>
-			</td>
-			<td>
-				<input type="text" name="userName" value="<s:property value='session.userName'/>"/>
-			</td>
+			<td><label>名前:</label></td>
+			<td><input type="text" name="userName" value="<s:property value='session.userName'/>"/></td>
 		</tr>
+
 		<tr>
+			<td><label>性別:</label></td>
 			<td>
-				<label>性別:</label>
-			</td>
-			<td>
-			<s:if test='session.userSex == "男"'>
+				<s:if test='session.userSex == "男"'>
 				<input type="radio" name="userSex" value="男" checked="checked">男
 				<input type="radio" name="userSex" value="女">女
-			</s:if>
-			<s:else>
+				</s:if>
+				<s:else>
 				<input type="radio" name="userSex" value="男">男
 				<input type="radio" name="userSex" value="女" checked="checked">女
-			</s:else>
-			</td>
-		</tr>
-		<tr>
-			<td>
-				<label>住所:</label>
-			</td>
-			<td>
-				<input type="text" name="userAddress" value="<s:property value='session.userAddress'/>"/>
+				</s:else>
 			</td>
 		</tr>
 
 		<tr>
-			<td>
-				<label>TEL番号（ハイフン必須）:</label>
-			</td>
-			<td>
-				<input type="text" name="userTell" value="<s:property value='session.userTell'/>"/>
-			</td>
+			<td><label>住所:</label></td>
+			<td><input type="text" name="userAddress" value="<s:property value='session.userAddress'/>"/></td>
 		</tr>
+
 		<tr>
-			<td>
-				<label>メールアドレス:</label>
-			</td>
-			<td>
-				<input type="text" name="userMail" value="<s:property value='session.userMail'/>"/>
-			</td>
+			<td><label>TEL番号（ハイフン必須）:</label></td>
+			<td><input type="text" name="userTell" value="<s:property value='session.userTell'/>"/></td>
 		</tr>
+
 		<tr>
-			<td>
-				<s:submit class="button" value="登録する"/>
-			</td>
+			<td><label>メールアドレス:</label></td>
+			<td><input type="text" name="userMail" value="<s:property value='session.userMail'/>"/></td>
 		</tr>
+
+		<tr>
+			<td><s:submit class="button" value="登録する"/></td>
+		</tr>
+
 		</s:form>
 		</table>
+	</div>
 
-
-			<!-- GoHomeAction未作成 -->
-
-			<p><a href='<s:url action="MyPageAction"/>'>マイページへ戻る場合はこちら</a></p>
-			<p><a href='<s:url action="GoHomeAction"/>'>Homeへ戻る場合はこちら</a></p>
-
-		</div>
+	<div class="push"></div>
+	<div id="text-link">
+		<p><a href='<s:url action="MyPageAction"/>'>マイページへ戻る場合はこちら</a></p>
+		<p><a href='<s:url action="GoHomeAction"/>'>Homeへ戻る場合はこちら</a></p>
+	</div>
 
 </div>
 
-<div class="push"></div>
-<div class="content-downpush"></div>
+<!-- メインとフッターの間隔調整用div -->
+<div class="footer-push"></div>
+
 
 <!-- フッター部分 -->
 <footer>
 
-	<div class="h"></div>
+	<div class="footer-height"></div>
 
 	<div class="footer-message">
 		Copyright©2018 SWEETOPIA. All Rights Reserved.
@@ -173,8 +156,6 @@
 
 </footer>
 </div>
-
-
 
 
 </body>

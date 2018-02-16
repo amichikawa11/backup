@@ -81,7 +81,7 @@
 		<s:iterator value="buyItemDTOList">
 			<s:if test="count !=0">
 
-				<dl class="buy_item">
+				<dl class="buy-item-list">
 
 					<dd>
 					<img class="image" style="width:150px; height:100px;" src="<s:property value='image_file_path'/>" ><br>
@@ -107,7 +107,7 @@
 
 			<div class="clear"></div>
 
-				<dl class="final">
+				<dl class="buy-item-confirm">
 					<dd>
 						支払い方法:
 						<s:property value="session.pay" />

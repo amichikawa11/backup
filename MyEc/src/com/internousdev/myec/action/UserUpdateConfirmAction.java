@@ -13,7 +13,7 @@ public class UserUpdateConfirmAction extends ActionSupport implements SessionAwa
 
 	public Map<String, Object> session;
 	public UserUpdateDAO userUpdateDAO = new UserUpdateDAO();
-	private LoginDTO loginDTO = new LoginDTO();
+
 
 	/**
 	 * 実行メソッド

@@ -103,6 +103,13 @@
 			</table>
 		</div>
 
+		<div id="text-link">
+			<p><a href='<s:url action="UserUpdateMovementAction"/>'>ユーザー情報を変更する場合はこちら</a></p>
+			<p><a href='<s:url action="UserDeleteMovementAction"/>'>退会する場合はこちら</a></p>
+		</div>
+
+		<div class="contentdown-push"></div>
+
 		<!-- 購入履歴（購入したものがない場合） -->
 			<s:if test="myPageList == null">
 				<div class="push"></div>
@@ -154,9 +161,8 @@
 			</s:if>
 	</div>
 
-	<div class="contentdown-push"></div>
+	<div class="push"></div>
 	<div id="text-link">
-		<p><a href='<s:url action="UserUpdateMovementAction"/>'>ユーザー情報を変更する場合はこちら</a></p>
 		<p><a href='<s:url action="GoHomeAction"/>'>Homeへ戻る場合はこちら</a></p>
 		<p><a href='<s:url action="LogoutAction"/>'>ログアウトする場合はこちら</a></p>
 	</div>
