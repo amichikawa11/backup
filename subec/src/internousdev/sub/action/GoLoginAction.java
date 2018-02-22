@@ -1,0 +1,48 @@
+package internousdev.sub.action;
+import java.util.Map;
+
+import org.apache.struts2.interceptor.SessionAware;
+
+import com.opensymphony.xwork2.ActionSupport;
+
+public class GoLoginAction extends ActionSupport implements SessionAware{
+
+	private String loginErrorMessage;
+	public Map<String, Object> session;
+
+	public String execute(){
+
+		if(session.containsKey("masterId")){
+
+			loginErrorMessage = "管理者IDでログイン済です。";
+
+
+		}else if(session.containsKey("id")){
+
+			loginErrorMessage = "ログイン済です。";
+		}
+
+		return  SUCCESS;
+
+		}
+
+	public String getLoginErrorMessage() {
+		return loginErrorMessage;
+	}
+
+	public void setLoginErrorMessage(String loginErrorMessage) {
+		this.loginErrorMessage = loginErrorMessage;
+
+	}
+
+	public Map<String, Object> getSession() {
+		return session;
+	}
+
+	public void setSession(Map<String, Object> session) {
+		this.session = session;
+	}
+
+
+
+}

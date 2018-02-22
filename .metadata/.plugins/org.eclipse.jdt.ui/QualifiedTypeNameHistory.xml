@@ -17,9 +17,7 @@
 <fullyQualifiedTypeName name="com.internousdev.template.dao.UserCreateCompleteDAO"/>
 <fullyQualifiedTypeName name="com.internousdev.template.dto.BuyItemDTO"/>
 <fullyQualifiedTypeName name="com.internousdev.template.dao.BuyItemDAO"/>
-<fullyQualifiedTypeName name="com.opensymphony.xwork2.ActionSupport"/>
 <fullyQualifiedTypeName name="com.internousdev.webproj4.dto.LoginDTO"/>
-<fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="com.internousdev.webproj5.dao.InquiryCompleteDAO"/>
 <fullyQualifiedTypeName name="com.internousdev.myec.dao.UserCreateCompleteDAO"/>
 <fullyQualifiedTypeName name="com.internousdev.myec.dao.LoginDAO"/>
@@ -36,5 +34,7 @@
 <fullyQualifiedTypeName name="com.internousdev.myec.dao.CategorySearchDAO"/>
 <fullyQualifiedTypeName name="com.internousdev.myec.dto.LoginDTO"/>
 <fullyQualifiedTypeName name="com.internousdev.myec.dao.UserDeleteDAO"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="com.opensymphony.xwork2.ActionSupport"/>
 <fullyQualifiedTypeName name="java.sql.SQLException"/>
 </qualifiedTypeNameHistroy>

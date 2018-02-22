@@ -1,0 +1,26 @@
+package internousdev.sub.action;
+
+import com.opensymphony.xwork2.ActionSupport;
+import java.util.Map;
+import org.apache.struts2.interceptor.SessionAware;
+
+public class GoUserCreateAction extends ActionSupport implements SessionAware{
+
+	public Map<String, Object> session;
+
+	public String execute(){
+
+		return SUCCESS;
+	}
+
+	public Map<String, Object> getSession() {
+		return session;
+	}
+
+	public void setSession(Map<String, Object> session) {
+		this.session = session;
+	}
+
+
+
+}
