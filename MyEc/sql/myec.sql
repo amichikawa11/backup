@@ -70,7 +70,7 @@ master_id varchar(50)
 
 
 INSERT INTO item_info_transaction(item_name, item_price, item_stock, item_category,item_description, image_file_path) VALUES
-("生チョコケーキ", 200, 50,"cake","チョコレートのケーキです。","./image/cake1.jpg"),
+("生チョコケーキ", 200, 10,"cake","チョコレートのケーキです。","./image/cake1.jpg"),
 ("チーズケーキ",170,50,"cake","チーズのコクが濃厚なケーキです。","./image/cake4.jpg"),
 ("ラズベリーパイ",250,50,"cake","数種類のベリーが入ったパイです。","./image/pie1.jpg"),
 ("フルーツロール",150,50,"cake","季節の果物がたくさん入ったケーキです。","./image/roll1.jpg"),

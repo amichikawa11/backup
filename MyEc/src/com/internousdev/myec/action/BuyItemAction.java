@@ -18,6 +18,8 @@ public class BuyItemAction extends ActionSupport implements SessionAware {
 
 	private String pay;
 
+	private String buyItemErrorMessage;
+
 	public Map<String, Object>  session;
 
 
@@ -35,7 +37,6 @@ public class BuyItemAction extends ActionSupport implements SessionAware {
 
 		@SuppressWarnings("unchecked")
 		List<BuyItemDTO> list = (List<BuyItemDTO>) session.get("buyItemDTOList");
-
 
 		/**
 		 * 合計金額を計算する処理（購入数の分だけループ処理）
@@ -106,7 +107,7 @@ public class BuyItemAction extends ActionSupport implements SessionAware {
 			session.put("pay", payment);
 			buyItemDTO.setPay(payment);
 
-		} else {
+		} else{
 
 			payment = "クレジットカード";
 			session.put("pay", payment);
@@ -120,6 +121,7 @@ public class BuyItemAction extends ActionSupport implements SessionAware {
 		session.put("list",buyItemDTOList);
 
 		}//←ここで繰り返し終わり
+
 
 
 		/**
@@ -141,6 +143,11 @@ public class BuyItemAction extends ActionSupport implements SessionAware {
 			session.put("totalPrice",totalPrice);
 
 		}
+
+		if(buyItemDTOList.size() ==0){
+				buyItemErrorMessage = "商品を選択してください。";
+				result = ERROR;
+			}
 
 		return result;
 
@@ -168,6 +175,14 @@ public class BuyItemAction extends ActionSupport implements SessionAware {
 
 	public void setPay(String pay) {
 		this.pay = pay;
+	}
+
+	public String getBuyItemErrorMessage() {
+		return buyItemErrorMessage;
+	}
+
+	public void setBuyItemErrorMessage(String buyItemErrorMessage) {
+		this.buyItemErrorMessage = buyItemErrorMessage;
 	}
 
 	@Override
