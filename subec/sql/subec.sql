@@ -51,7 +51,9 @@ create table buy_item_transaction(
 );
 
 INSERT INTO item_info(item_name,item_price,item_stock,item_category,item_description,image_file_path,release_date) VALUES
-("ノート", 150, 50, "note", "シンプルで使いやすいノート", "./image/note.png", "1990/10/1");
+("スポーツシューズ", 2000, 50, "exercise", "シンプルで使いやすいシューズ", "./image/1.jpg", "1990/10/1"),
+("サンダル", 3500, 10, "sandals", "かわいいサンダル", "./image/2.jpg", "2017/8/10"),
+("赤いスポーツシューズ", 1500, 25, "exercise", "動きやすいシューズ", "./image/3.jpg", "2018/1/1");
 
 INSERT INTO login_user(login_id, login_pass, user_name, user_address, user_sex, user_tell, user_mail) VALUES
 ("kanri", "123", "管理者", "***", "***", "***", "***"),
