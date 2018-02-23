@@ -24,7 +24,10 @@
 <header>
 <div id="header">
 	<div class="top">
-		<div class="site-logo"></div>
+		<div class="site-logo vw vh">
+		<p>ONLINE</p>
+		<p>SHOP</p>
+		</div>
 
 		<div class="top-menu-list">
 			<ul class="menu-list">
@@ -42,22 +45,15 @@
 
 <!-- メインコンテンツ -->
 <div id="home-main">
-</div>
+
 	<div class="contents">
-	<div class="home-top-push"></div>
+
 
 	</div>
 
 
-
-<!-- フッター -->
-<footer>
-<div id="footer">
-	<div class="footer-message">
-	<p>Copyright©2018 ROUGE. All Rights Reserved.</p>
-	</div>
 </div>
-</footer>
+
 </div>
 
 

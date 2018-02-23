@@ -24,7 +24,10 @@
 <header>
 <div id="header">
 	<div class="top">
-		<div class="site-logo"></div>
+		<div class="site-logo">
+		<p>ONLINE</p>
+		<p>SHOP</p>
+		</div>
 
 		<div class="top-menu-list">
 			<ul class="menu-list">
@@ -54,9 +57,11 @@
 
 	<div class="push"></div>
 
+	<div class="text-link">
 	<p>商品の追加</p>
-	<p>商品の削除</p>
+	<p><a href='<s:url action="GoItemDeleteAction"/>'>商品の削除</a></p>
 	<p>在庫管理</p>
+	</div>
 
 	<div class="content-push"></div>
 
@@ -70,14 +75,7 @@
 
 <div class="footer-push"></div>
 
-<!-- フッター -->
-<footer>
-<div id="footer">
-	<div class="footer-message">
-	<p>Copyright©2018 ROUGE. All Rights Reserved.</p>
-	</div>
-</div>
-</footer>
+
 </div>
 
 

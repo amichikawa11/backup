@@ -44,7 +44,7 @@ public class BuyItemAction extends ActionSupport implements SessionAware{
 			session.put("itemPrice", buyItemPrice);
 
 			int buyItemId = list.get(i).getId();
-			session.put("buyItemId", buyItemId);
+			session.put("id", buyItemId);
 
 			int itemStock = list.get(i).getItemStock();
 
@@ -81,13 +81,13 @@ public class BuyItemAction extends ActionSupport implements SessionAware{
 
 				if(pay.equals("cash")){
 
-					payment = "現金払い";
+					payment = "CASH";
 					session.put("pay", payment);
 					buyItemDTO.setPay(payment);
 
 				}else{
 
-					payment = "クレジットカード";
+					payment = "CREDIT";
 					session.put("pay", payment);
 					buyItemDTO.setPay(payment);
 				}

@@ -24,7 +24,10 @@
 <header>
 <div id="header">
 	<div class="top">
-		<div class="site-logo"></div>
+		<div class="site-logo">
+		<p>ONLINE</p>
+		<p>SHOP</p>
+		</div>
 
 		<div class="top-menu-list">
 			<ul class="menu-list">
@@ -58,13 +61,19 @@
 	<s:form action="BuyItemAction">
 	<s:iterator value="session.buyItemDTOList">
 		<dl>
-			<dd>
-			<s:property value="itemName"/>
+			<dd class="image">
+			<img style="width:200px;" src="<s:property value='imageFilePath'/>">
+			</dd>
 
-			<s:property value="itemPrice"/>
+			<dd class="item-letter">
+			<s:property value="itemName"/><br>
 
+			<span>PRICE:</span>
+			<s:property value="itemPrice"/><br>
+
+			<span>STOCK:</span>
 			<s:if test="itemStock>0">
-				<s:property value="itemStock"/>
+				<s:property value="itemStock"/><br>
 			</s:if>
 			<s:else>
 				<span>品切れ</span>
@@ -92,14 +101,7 @@
 
 <div class="footer-push"></div>
 
-<!-- フッター -->
-<footer>
-<div id="footer">
-	<div class="footer-message">
-	<p>Copyright©2018 ROUGE. All Rights Reserved.</p>
-	</div>
-</div>
-</footer>
+
 </div>
 
 
