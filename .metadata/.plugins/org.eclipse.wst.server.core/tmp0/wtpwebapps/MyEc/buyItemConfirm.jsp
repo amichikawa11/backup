@@ -42,7 +42,7 @@
 <!-- ヘッダー部分 -->
 <header>
 	<div id="header">
-		<div class="header-logo">SWEETOPIA</div>
+		<div class="header-logo">ONLINE SHOP</div>
 
 		<div class="top-menu">
 
