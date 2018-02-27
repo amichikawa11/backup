@@ -33,9 +33,9 @@
 <fullyQualifiedTypeName name="com.internousdev.myec.dao.CategorySearchDAO"/>
 <fullyQualifiedTypeName name="com.internousdev.myec.dto.LoginDTO"/>
 <fullyQualifiedTypeName name="com.internousdev.myec.dao.UserDeleteDAO"/>
-<fullyQualifiedTypeName name="java.sql.SQLException"/>
 <fullyQualifiedTypeName name="com.opensymphony.xwork2.ActionSupport"/>
 <fullyQualifiedTypeName name="java.util.Iterator"/>
 <fullyQualifiedTypeName name="internousdev.sub.dao.ItemHistoryDeleteDAO"/>
 <fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="java.sql.SQLException"/>
 </qualifiedTypeNameHistroy>

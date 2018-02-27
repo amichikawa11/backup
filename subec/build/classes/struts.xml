@@ -106,6 +106,15 @@
 		<result name="success">itemDeleteComplete.jsp</result>
 		</action>
 
+		<!-- GoItemInsertAction -->
+		<action name="GoItemInsertAction" class="internousdev.sub.action.GoItemInsertAction" method="execute">
+		<result name="success">itemInsert.jsp</result>
+		</action>
+
+		<!-- ItemInsertCompleteAction -->
+		<action name="ItemInsertCompleteAction" class="internousdev.sub.action.ItemInsertCompleteAction" method="execute">
+		<result name="success">itemInsertComplete.jsp</result>
+		</action>
 
 	</package>
 </struts>

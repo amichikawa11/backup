@@ -58,9 +58,8 @@
 	<div class="push"></div>
 
 	<div class="text-link">
-	<p>商品の追加</p>
+	<p><a href='<s:url action="GoItemInsertAction"/>'>商品の追加</a></p>
 	<p><a href='<s:url action="GoItemDeleteAction"/>'>商品の削除</a></p>
-	<p>在庫管理</p>
 	</div>
 
 	<div class="content-push"></div>

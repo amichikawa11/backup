@@ -31,7 +31,6 @@ public class ItemInventoryConfirmAction extends ActionSupport implements Session
 		for(int i =0; i < list.size(); i++){
 
 			int count = list.get(i).getCount();
-			int itemStock = list.get(i).getItem_stock();
 			int totalCount = list.get(i).getTotal_count();
 			String itemName = list.get(i).getItemName();
 			String imageFilePath = list.get(i).getImage_file_path();
