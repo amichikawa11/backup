@@ -9,13 +9,20 @@ import com.internousdev.myec.util.DateUtil;
 
 public class UserUpdateDAO {
 
+	/**
+	 * ユーザーの情報を更新するメソッド
+	 */
+
 	private DBConnector dbConnector = new DBConnector();
+
 	private Connection connection = dbConnector.getConnection();
+
 	private DateUtil dateUtil = new DateUtil();
 
 	private String sql = "UPDATE login_user_transaction SET login_id=?,login_pass =?, user_name=?, user_address =?, user_sex=?, user_tell=?, user_mail=?, update_date =? WHERE id=?";
 
 	public boolean userUpdateInfo(String login_id, String login_pass, String user_name, String user_address, String user_sex, String user_tell, String user_mail, String defaultLoginId) throws SQLException{
+
 		boolean result = false;
 
 		try{
@@ -34,14 +41,20 @@ public class UserUpdateDAO {
 
 			//更新(executeUpdate）する場合はtrueを返す
 			if(checkUpdate > 0){
+
 				result = true;
 
 			}
+
 		}catch(Exception e){
+
 			e.printStackTrace();
+
 		}finally{
+
 			connection.close();
 		}
+
 		return result;
 	}
 }

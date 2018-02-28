@@ -25,8 +25,6 @@ public class CategorySearchAction extends ActionSupport implements SessionAware{
 		String result = ERROR;
 
 
-
-
 		if (session.containsKey("id")) {
 
 			session.put("sortCategory", sortCategory);
@@ -41,7 +39,9 @@ public class CategorySearchAction extends ActionSupport implements SessionAware{
 			if(sortCategory == "all"){
 
 				BuyItemDAO buyItemDAO = new BuyItemDAO();
+
 				buyItemDTOList = buyItemDAO.getBuyItemInfo();
+
 				session.put("buyItemDTOList", buyItemDTOList);
 			}
 
@@ -60,7 +60,9 @@ public class CategorySearchAction extends ActionSupport implements SessionAware{
 			if(sortCategory == "all"){
 
 				BuyItemDAO buyItemDAO = new BuyItemDAO();
+
 				buyItemDTOList = buyItemDAO.getBuyItemInfo();
+
 				session.put("buyItemDTOList", buyItemDTOList);
 			}
 
@@ -81,10 +83,11 @@ public class CategorySearchAction extends ActionSupport implements SessionAware{
 			if(sortCategory == "all"){
 
 				BuyItemDAO buyItemDAO = new BuyItemDAO();
+
 				buyItemDTOList = buyItemDAO.getBuyItemInfo();
+
 				session.put("buyItemDTOList", buyItemDTOList);
 			}
-
 
 			result = ERROR;
 		}
@@ -117,6 +120,5 @@ public class CategorySearchAction extends ActionSupport implements SessionAware{
 	public void setSession(Map<String, Object> session) {
 		this.session = session;
 	}
-
 
 }

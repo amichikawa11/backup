@@ -31,8 +31,11 @@ public class ItemInventoryConfirmAction extends ActionSupport implements Session
 		for(int i =0; i < list.size(); i++){
 
 			int count = list.get(i).getCount();
+
 			int totalCount = list.get(i).getTotal_count();
+
 			String itemName = list.get(i).getItemName();
+
 			String imageFilePath = list.get(i).getImage_file_path();
 
 			//DBに値を格納するメソッドで使用するのでidも取得しておく
@@ -50,16 +53,17 @@ public class ItemInventoryConfirmAction extends ActionSupport implements Session
 			//ItemInvestoryDAOのメソッドを使ってDBに値を保管
 
 			ItemInventoryDAO itemInventoryDAO = new ItemInventoryDAO();
+
 			itemInventoryDAO.itemInfo(totalCount,id);
 
 		}
 
 		String result = SUCCESS;
+
 		return result;
 	}
 
 
-	//以下、getterとsetter
 
 	public ArrayList<BuyItemDTO> getBuyItemDTOList(){
 		return buyItemDTOList;

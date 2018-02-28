@@ -4,7 +4,7 @@ package com.internousdev.myec.dto;
 public class LoginDTO {
 
 	/**
-	 * 登録されているユーザー情報
+	 * ユーザー情報を保管する変数
 	 */
 
 	private String loginId;
@@ -24,14 +24,14 @@ public class LoginDTO {
 	//↓idを格納する変数
 	private String userNumber;
 
-	//ログインしているか否か
+	//ログインチェックに使用
 	private boolean loginFlg = false;
 
-	//管理者か否か
+	//管理者IDでのログインチェックに使用
 	private boolean loginMaster = false;
 
 
-	//ログインID
+
 	public String getLoginId() {
 		return loginId;
 	}
@@ -40,7 +40,6 @@ public class LoginDTO {
 		this.loginId = loginId;
 	}
 
-	//ログインPASS
 	public String getLoginPassword() {
 		return loginPassword;
 	}
@@ -50,7 +49,6 @@ public class LoginDTO {
 	}
 
 
-	//名前
 	public String getUserName() {
 		return userName;
 	}
@@ -59,7 +57,6 @@ public class LoginDTO {
 		this.userName = userName;
 	}
 
-	//住所
 	public String getUserAddress() {
 		return userAddress;
 	}
@@ -68,7 +65,6 @@ public class LoginDTO {
 		this.userAddress = userAddress;
 	}
 
-	//性別
 	public String getUserSex() {
 		return userSex;
 	}
@@ -77,7 +73,6 @@ public class LoginDTO {
 		this.userSex = userSex;
 	}
 
-	//電話番号
 	public String getUserTell() {
 		return userTell;
 	}
@@ -86,7 +81,6 @@ public class LoginDTO {
 		this.userTell = userTell;
 	}
 
-	//メールアドレス
 	public String getUserMail() {
 		return userMail;
 	}
@@ -95,7 +89,6 @@ public class LoginDTO {
 		this.userMail = userMail;
 	}
 
-	//ユーザーナンバー(DBのidを格納する）
 	public String getUserNumber() {
 		return userNumber;
 	}
@@ -104,8 +97,6 @@ public class LoginDTO {
 		this.userNumber = userNumber;
 	}
 
-
-	//ログインチェック
 	public boolean getLoginFlg() {
 		return loginFlg;
 	}
@@ -114,7 +105,6 @@ public class LoginDTO {
 		this.loginFlg = loginFlg;
 	}
 
-	//管理者チェック
 	public boolean getLoginMaster(){
 		return loginMaster;
 	}

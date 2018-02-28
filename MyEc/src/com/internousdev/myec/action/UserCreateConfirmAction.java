@@ -7,14 +7,23 @@ import com.internousdev.myec.dao.UserCreateConfirmDAO;
 import com.opensymphony.xwork2.ActionSupport;
 
 public class UserCreateConfirmAction extends ActionSupport implements SessionAware {
+
 	private String loginUserId;
+
 	private String loginPassword;
+
 	private String userName;
+
 	private String userAddress;
+
 	private String userSex;
+
 	private String userTell;
+
 	private String userMail;
+
 	public Map<String,Object> session;
+
 	private String errorMessage;
 
 	public String execute() {
@@ -39,13 +48,17 @@ public class UserCreateConfirmAction extends ActionSupport implements SessionAwa
 				session.put("userSex", userSex);
 				session.put("userTell", userTell);
 				session.put("userMail", userMail);
-				} else {
+
+			} else {
 
 					setErrorMessage("同じID、もしくはパスワードが存在します。");
+
 					result = ERROR;
 				}
+
 		}else{
 				setErrorMessage("未入力の項目があります。");
+
 				result = ERROR;
 
 				}return result;
@@ -111,11 +124,6 @@ public class UserCreateConfirmAction extends ActionSupport implements SessionAwa
 		this.userMail = userMail;
 	}
 
-	@Override
-	public void setSession(Map<String, Object> session) {
-		this.session = session;
-	}
-
 	public String getErrorMessage() {
 		return errorMessage;
 	}
@@ -123,4 +131,9 @@ public class UserCreateConfirmAction extends ActionSupport implements SessionAwa
 	public void setErrorMessage(String errorMessage) {
 		this.errorMessage = errorMessage;
 	}
-			}
+
+	@Override
+	public void setSession(Map<String, Object> session) {
+		this.session = session;
+	}
+}

@@ -22,7 +22,9 @@ public class UserDeleteAction extends ActionSupport implements SessionAware{
 		if(deleteFlg != null){
 
 			delete();
+
 			session.clear();
+
 			result = SUCCESS;
 		}
 
@@ -30,7 +32,7 @@ public class UserDeleteAction extends ActionSupport implements SessionAware{
 	}
 
 
-	//削除メソッド
+	//executeで使用する削除メソッド
 
 	public void delete() throws SQLException{
 

@@ -18,13 +18,10 @@ public class SearchAction extends ActionSupport implements SessionAware{
 	//検索結果の表示メッセージ
 	private String searchMessage;
 
-	//セッション
 	public Map<String,Object> session;
 
-	//検索結果格納リスト
 	private List<BuyItemDTO> buyItemDTOList = new ArrayList<BuyItemDTO>();
 
-	//検索結果の取得メソッドを使用するのでインスタンス作成
 	private SearchDAO searchDAO = new SearchDAO();
 
 
@@ -56,9 +53,13 @@ public class SearchAction extends ActionSupport implements SessionAware{
 			//検索結果があった時の処理
 			//検索結果の数をString型に変換して表示
 			if(buyItemDTOList.size() > 0){
+
 				session.put("buyItemDTOList", buyItemDTOList);
+
 				int a = buyItemDTOList.size();
+
 				String number = Integer.toString(a);
+
 				setSearchMessage(number + "件の商品が見つかりました。");
 
 				result = SUCCESS;
@@ -67,7 +68,9 @@ public class SearchAction extends ActionSupport implements SessionAware{
 			}else{
 
 				result = ERROR;
+
 				buyItemDTOList = (List<BuyItemDTO>) session.get("buyItemDTOList");
+
 				setSearchMessage("該当する商品は見つかりませんでした。");
 
 			}
@@ -76,11 +79,14 @@ public class SearchAction extends ActionSupport implements SessionAware{
 
 		//②管理者IDを持っている時
 		if(session.containsKey("masterId")){
+
 			//検索欄に文字が入っていない時はerrorを返す
 			if(searchWord.equals("")){
 
 				result = ERROR;
+
 				buyItemDTOList = (List<BuyItemDTO>) session.get("buyItemDTOList");
+
 				setSearchMessage("該当する商品は見つかりませんでした。");
 
 			}else{
@@ -92,9 +98,13 @@ public class SearchAction extends ActionSupport implements SessionAware{
 				//検索結果があった時の処理
 				//検索結果の数をString型に変換して表示
 				if(buyItemDTOList.size() > 0){
+
 					session.put("buyItemDTOList", buyItemDTOList);
+
 					int a = buyItemDTOList.size();
+
 					String number = Integer.toString(a);
+
 					setSearchMessage(number + "件の商品が見つかりました。");
 
 					result = SUCCESS;
@@ -103,12 +113,15 @@ public class SearchAction extends ActionSupport implements SessionAware{
 				}else{
 
 					result = ERROR;
+
 					buyItemDTOList = (List<BuyItemDTO>) session.get("buyItemDTOList");
+
 					setSearchMessage("該当する商品は見つかりませんでした。");
 
 				}
 			}
 		}
+
 		}else{
 			//③ログインしていない時
 
@@ -116,7 +129,9 @@ public class SearchAction extends ActionSupport implements SessionAware{
 			if(searchWord.equals("")){
 
 				result = "logoffError";
+
 				buyItemDTOList = (List<BuyItemDTO>) session.get("buyItemDTOList");
+
 				setSearchMessage("該当する商品は見つかりませんでした。");
 
 			}else{
@@ -128,9 +143,13 @@ public class SearchAction extends ActionSupport implements SessionAware{
 				//検索結果があった時の処理
 				//検索結果の数をString型に変換して表示
 				if(buyItemDTOList.size() > 0){
+
 					session.put("buyItemDTOList", buyItemDTOList);
+
 					int a = buyItemDTOList.size();
+
 					String number = Integer.toString(a);
+
 					setSearchMessage(number + "件の商品が見つかりました。");
 
 					result = "logoffSuccess";
@@ -139,13 +158,14 @@ public class SearchAction extends ActionSupport implements SessionAware{
 				}else{
 
 					result = "logoffError";
+
 					buyItemDTOList = (List<BuyItemDTO>) session.get("buyItemDTOList");
+
 					setSearchMessage("該当する商品は見つかりませんでした。");
 
 				}
 			}
 		}
-
 
 		session.put("list",  buyItemDTOList);
 

@@ -18,37 +18,20 @@ import com.opensymphony.xwork2.ActionSupport;
  */
 public class LoginAction extends ActionSupport implements SessionAware{
 
-	/**
-	 * ログインID
-	 */
 	private String loginUserId;
 
-	/**
-	 * ログインパスワード
-	 */
 	private String loginPassword;
 
-	/**
-	 * ログイン情報を格納
-	 */
 	public Map<String, Object> session;
 
-	/**
-	 * ログイン情報取得（DAOインスタンス）
-	 */
 	private LoginDAO loginDAO = new LoginDAO();
 
-	/**
-	 * ログイン情報格納（DTOインスタンス）
-	 */
 	private LoginDTO loginDTO = new LoginDTO();
 
-
-	/**
-	 * アイテム情報を取得（Listも宣言しておく）
-	 */
 	private BuyItemDAO buyItemDAO = new BuyItemDAO();
+
 	private BuyItemDTO buyItemDTO = new BuyItemDTO();
+
 	private List<BuyItemDTO> buyItemDTOList;
 
 	/**
@@ -112,7 +95,9 @@ public class LoginAction extends ActionSupport implements SessionAware{
 			session.put("userMail",loginDTO.getUserMail());
 
 			}
+
 		}
+
 		}
 
 		return result;

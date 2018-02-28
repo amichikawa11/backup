@@ -14,36 +14,20 @@ import com.opensymphony.xwork2.ActionSupport;
 
 public class MyPageLoginAction extends ActionSupport implements SessionAware{
 
-		/**
-		 * ログインID
-		 */
 		private String loginUserId;
 
-		/**
-		 * ログインパスワード
-		 */
 		private String loginPassword;
 
-		/**
-		 * ログイン情報を格納
-		 */
 		public Map<String, Object> session;
 
-		/**
-		 * ログイン情報取得（DAOインスタンス）
-		 */
 		private LoginDAO loginDAO = new LoginDAO();
 
-		/**
-		 * ログイン情報格納（DTOインスタンス）
-		 */
 		private LoginDTO loginDTO = new LoginDTO();
 
-		/**
-		 * アイテム情報を取得（Listも宣言しておく）
-		 */
 		private BuyItemDAO buyItemDAO = new BuyItemDAO();
+
 		private BuyItemDTO buyItemDTO = new BuyItemDTO();
+
 		private List<BuyItemDTO> buyItemDTOList;
 
 		/**
@@ -71,15 +55,20 @@ public class MyPageLoginAction extends ActionSupport implements SessionAware{
 			//"masterId"にloginUserIdを紐付け
 
 			if(((LoginDTO) session.get("loginUser")).getLoginMaster()){
+
 				buyItemDTOList = buyItemDAO.getBuyItemInfo();
+
 				session.put("buyItemDTOList",buyItemDTOList);
 				session.put("masterId",loginUserId);
+
 				result = "master";
 			}
 
 			//masterではない ＆ loginFlgがtrueだった時の処理
 			if(result != "master"){
+
 				if(((LoginDTO) session.get("loginUser")).getLoginFlg()) {
+
 				result = SUCCESS;
 
 				// アイテム情報を取得
@@ -88,6 +77,7 @@ public class MyPageLoginAction extends ActionSupport implements SessionAware{
 				//BuyItemActionで使用するので、
 				//"buyItemDTOList"に取得したアイテム情報を紐付け
 				//購入する商品名などはBuyItemActionで定義する
+
 				session.put("buyItemDTOList",buyItemDTOList);
 				session.put("id", buyItemDTO.getId());
 				session.put("login_user_id",loginDTO.getLoginId());

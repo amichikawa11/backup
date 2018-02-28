@@ -45,11 +45,14 @@ public class InquiryAllDeleteAction extends ActionSupport implements SessionAwar
 		if(deleteFlg == null){
 
 			if(inquiryDTOList != null){
-				for(int i=0; i<inquiryDTOList.size(); i++){
-					inquiryDTOList = inquiryCompleteDAO.select();
-					session.put("inquiryDTOList", inquiryDTOList);
-				}
 
+				for(int i=0; i<inquiryDTOList.size(); i++){
+
+					inquiryDTOList = inquiryCompleteDAO.select();
+
+					session.put("inquiryDTOList", inquiryDTOList);
+
+				}
 
 			}
 
@@ -58,11 +61,12 @@ public class InquiryAllDeleteAction extends ActionSupport implements SessionAwar
 		}else{
 
 			delete();
-			inquiryDTOList = null;
 
+			inquiryDTOList = null;
 		}
 
 		result = SUCCESS;
+
 		return result;
 	}
 
@@ -76,14 +80,17 @@ public class InquiryAllDeleteAction extends ActionSupport implements SessionAwar
 		String masterId = session.get("master_id").toString();
 
 		InquiryCompleteDAO dao = new InquiryCompleteDAO();
+
 		int res = dao.inquiryAllDelete(masterId);
 
 		if(res > 0){
+
 			setMessage("問合せ履歴をすべて削除しました。");
 			inquiryDTOList = null;
 			session.put("inquiryDTOList", inquiryDTOList);
 
 		}else if(res == 0){
+
 			setMessage("問合せ履歴の削除に失敗しました。");
 		}
 

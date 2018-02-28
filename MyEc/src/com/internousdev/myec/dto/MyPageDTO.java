@@ -3,6 +3,10 @@ package com.internousdev.myec.dto;
 
 public class MyPageDTO {
 
+	/**
+	 * マイページ（購入履歴）用の変数
+	 */
+
 	public String itemName;
 
 	public String totalPrice;
@@ -16,6 +20,8 @@ public class MyPageDTO {
 	public String id;
 
 	public String insert_date;
+
+
 
 	public String getItemName() {
 		return itemName;

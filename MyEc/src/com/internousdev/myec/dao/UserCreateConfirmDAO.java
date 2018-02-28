@@ -9,6 +9,10 @@ import com.internousdev.myec.util.DBConnector;
 
 public class UserCreateConfirmDAO {
 
+	/**
+	 * 新規登録時にIDが重複していないか確認するメソッド
+	 */
+
 	private DBConnector db = new DBConnector();
 
 	private Connection con = db.getConnection();
@@ -22,6 +26,7 @@ public class UserCreateConfirmDAO {
 		String sql="SELECT * FROM login_user_transaction";
 
 		try{
+
 			PreparedStatement ps = con.prepareStatement(sql);
 			ResultSet rs = ps.executeQuery();
 
@@ -35,18 +40,24 @@ public class UserCreateConfirmDAO {
 
 					//IDが重複していたらfalse
 					if(loginId.equals(loginUserId)){
+
 						result = false;
 						return result;
 
+						//パスワードのみ重複していたらtrue
 					}else{
 						result = true;
 					}
 
 				}else{
+
+					//IDもパスワードも同じではない時はtrue
 					result = true;
 				}
 			}
+
 		}catch(Exception e){
+
 			e.printStackTrace();
 		}
 

@@ -12,6 +12,7 @@ import com.opensymphony.xwork2.ActionSupport;
 public class UserUpdateConfirmAction extends ActionSupport implements SessionAware{
 
 	public Map<String, Object> session;
+
 	public UserUpdateDAO userUpdateDAO = new UserUpdateDAO();
 
 
@@ -36,6 +37,7 @@ public class UserUpdateConfirmAction extends ActionSupport implements SessionAwa
 				((LoginDTO) session.get("loginUser")).getUserNumber().toString());
 
 		if(checkUpdate){
+
 			result = SUCCESS;
 		}
 

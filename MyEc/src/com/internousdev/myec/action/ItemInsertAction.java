@@ -26,6 +26,7 @@ public class ItemInsertAction extends ActionSupport implements SessionAware{
 	public Map<String,Object> session;
 
 	private ItemInsertDTO dto = new ItemInsertDTO();
+
 	private ItemInsertDAO dao = new ItemInsertDAO();
 
 
@@ -38,18 +39,20 @@ public class ItemInsertAction extends ActionSupport implements SessionAware{
 		if(itemName.length() != 0 && itemPrice.length() != 0 && itemStock.length() != 0 && itemCategory.length() != 0 && itemDescription.length() != 0 && imageFilePath.length() != 0 ){
 
 			dto = dao.itemInsertInfo(itemName, itemPrice, itemStock, itemCategory, itemDescription, imageFilePath);
-				session.put("itemInsertDTO", dto);
-				session.put("itemName",itemName);
-				session.put("itemPrice", itemPrice);
-				session.put("itemStock",itemStock);
-				session.put("itemCategory",itemCategory);
-				session.put("itemDescription",itemDescription);
-				session.put("imageFilePath",imageFilePath);
 
-				result = SUCCESS;
+			session.put("itemInsertDTO", dto);
+			session.put("itemName",itemName);
+			session.put("itemPrice", itemPrice);
+			session.put("itemStock",itemStock);
+			session.put("itemCategory",itemCategory);
+			session.put("itemDescription",itemDescription);
+			session.put("imageFilePath",imageFilePath);
 
-			}return result;
-		}
+			result = SUCCESS;
+
+		}return result;
+
+	}
 
 
 	public String getItemName() {

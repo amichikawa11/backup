@@ -32,6 +32,7 @@ public class ItemDeleteConfirmAction extends ActionSupport implements SessionAwa
 		}
 
 		String result = SUCCESS;
+
 		return result;
 	}
 

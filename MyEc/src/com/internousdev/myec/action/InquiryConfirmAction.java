@@ -10,12 +10,17 @@ import com.opensymphony.xwork2.ActionSupport;
 public class InquiryConfirmAction extends ActionSupport implements SessionAware{
 
 	private String inquiry_name;
+
 	private String inquiry_mail;
+
 	private String qtype;
+
 	private String body;
+
 	private String master_id;
 
 	public Map<String, Object> session;
+
 	private String errorMessage;
 
 
@@ -93,24 +98,21 @@ public class InquiryConfirmAction extends ActionSupport implements SessionAware{
 		this.master_id = master_id;
 	}
 
+	public String getErrorMessage() {
+		return errorMessage;
+	}
+
+	public void setErrorMessage(String errorMessage) {
+		this.errorMessage = errorMessage;
+	}
 
 	public Map<String, Object> getSession() {
 		return session;
 	}
 
-
+	@Override
 	public void setSession(Map<String, Object> session) {
 		this.session = session;
-	}
-
-
-	public String getErrorMessage() {
-		return errorMessage;
-	}
-
-
-	public void setErrorMessage(String errorMessage) {
-		this.errorMessage = errorMessage;
 	}
 
 

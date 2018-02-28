@@ -10,8 +10,11 @@ import com.internousdev.myec.dto.BuyItemDTO;
 import com.opensymphony.xwork2.ActionSupport;
 
 public class GoHomeAction extends ActionSupport implements SessionAware {
+
 	public Map<String, Object> session;
+
 	private BuyItemDAO buyItemDAO = new BuyItemDAO();
+
 	private List<BuyItemDTO> buyItemDTOList;
 
 	public String execute() {
@@ -19,14 +22,19 @@ public class GoHomeAction extends ActionSupport implements SessionAware {
 		String result = SUCCESS;
 
 		if(session.containsKey("masterId")){
+
 			buyItemDTOList = buyItemDAO.getBuyItemInfo();
+
 			session.put("buyItemDTOList", buyItemDTOList);
+
 			result = "master";
 		}
 		return result;
 	}
 
+
 	public Map<String, Object> getSession() {
+
 		return this.session;
 	}
 

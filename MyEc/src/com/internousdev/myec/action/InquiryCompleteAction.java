@@ -14,18 +14,24 @@ import com.opensymphony.xwork2.ActionSupport;
 public class InquiryCompleteAction extends ActionSupport implements SessionAware{
 
 	private String inquiry_name;
+
 	private String inquiry_mail;
+
 	private String qtype;
+
 	private String body;
+
 	private String master_id;
 
 	List<InquiryDTO> inquiryDTOList = new ArrayList<InquiryDTO>();
+
 	private Map<String,Object> session;
 
 	/**
 	 * ★実行メソッド
 	 */
 	public String execute() throws SQLException {
+
 		String ret = ERROR;
 		InquiryCompleteDAO inquiryCompleteDAO = new InquiryCompleteDAO();
 
@@ -39,9 +45,9 @@ public class InquiryCompleteAction extends ActionSupport implements SessionAware
 				session.get("inquiryBody").toString(),
 				master_id);
 
-		//↓追加分（動作がおかしくなったら消す）
-		session.put("master_id", master_id);
-		//↑追加分
+				session.put("master_id", master_id);
+
+
 
 		//1件でも更新していれば、InquiryCompleteDAOで定義した
 		//selectメソッドを実行→問い合わせ内容をinquiryDTOListに格納
@@ -60,8 +66,6 @@ public class InquiryCompleteAction extends ActionSupport implements SessionAware
 		return ret;
 	}
 
-
-	//getterとsetterの作成
 
 	public String getInquiry_name() {
 		return inquiry_name;
@@ -104,11 +108,9 @@ public class InquiryCompleteAction extends ActionSupport implements SessionAware
 		this.master_id = master_id;
 	}
 
-
+@Override
 	public void setSession(Map<String,Object> session){
 		this.session = session;
 	}
-
-
 
 }

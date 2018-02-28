@@ -10,6 +10,7 @@ import com.internousdev.myec.dao.BuyItemCompleteDAO;
 import com.internousdev.myec.dto.BuyItemDTO;
 import com.opensymphony.xwork2.ActionSupport;
 
+
 public class BuyItemConfirmAction extends ActionSupport implements SessionAware{
 
 	public Map<String,Object> session;
@@ -39,9 +40,11 @@ public class BuyItemConfirmAction extends ActionSupport implements SessionAware{
 			int count = buyItemDTOList.get(i).getCount();
 
 			int item_stock = stock - count;
+
 			System.out.println(item_stock);
 
 			if(item_stock<0){
+
 				result = ERROR;
 
 
@@ -51,6 +54,7 @@ public class BuyItemConfirmAction extends ActionSupport implements SessionAware{
 
 			//BuyItemCompleteDAOで定義したメソッドを使用
 		BuyItemCompleteDAO buyItemCompleteDAO = new BuyItemCompleteDAO();
+
 		buyItemCompleteDAO.buyItemeInfo(
 				id,
 				session.get("login_user_id").toString(),
@@ -58,7 +62,6 @@ public class BuyItemConfirmAction extends ActionSupport implements SessionAware{
 				count,
 				buyItemDTOList.get(i).getPay(),
 				item_stock);
-
 
 			result = SUCCESS;
 

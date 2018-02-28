@@ -13,6 +13,7 @@ public class GoUserUpdateAction extends ActionSupport implements SessionAware{
 	public String execute(){
 
 		String result = SUCCESS;
+
 		return result;
 	}
 

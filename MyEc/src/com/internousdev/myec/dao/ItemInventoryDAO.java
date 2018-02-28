@@ -8,12 +8,13 @@ import com.internousdev.myec.util.DBConnector;
 
 
 /**
- * 在庫変更
+ * 在庫変更メソッド
  */
 
 public class ItemInventoryDAO {
 
 	private DBConnector dbConnector = new DBConnector();
+
 	private Connection connection = dbConnector.getConnection();
 
 	private String sql = "UPDATE item_info_transaction SET item_stock =? WHERE id =?";

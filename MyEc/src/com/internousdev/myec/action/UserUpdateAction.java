@@ -11,11 +11,17 @@ import com.opensymphony.xwork2.ActionSupport;
 public class UserUpdateAction extends ActionSupport implements SessionAware{
 
 	private String loginUserId;
+
 	private String loginPassword;
+
 	private String userName;
+
 	private String userAddress;
+
 	private String userSex;
+
 	private String userTell;
+
 	private String userMail;
 
 	public Map<String,Object> session;
@@ -38,7 +44,9 @@ public class UserUpdateAction extends ActionSupport implements SessionAware{
 				&&!(userTell.length() ==0) &&!(userMail.length() ==0)){
 
 			String defaultLoginId = ((LoginDTO) session.get("loginUser")).getLoginId();
+
 			String defaultPassword =((LoginDTO) session.get("loginUser")).getLoginPassword();
+
 			session.put("defaultLoginId", defaultLoginId);
 
 			if(defaultLoginId.equals(loginUserId) || defaultPassword.equals(loginPassword)){
@@ -75,7 +83,9 @@ public class UserUpdateAction extends ActionSupport implements SessionAware{
 			session.put("userMail", userMail);
 
 		}else{
+
 			setErrorMessage("同じIDまたはパスワードが存在します。");
+
 			result = ERROR;
 		}
 		}
@@ -83,7 +93,9 @@ public class UserUpdateAction extends ActionSupport implements SessionAware{
 			//一番最初のifに合致しなかった場合
 			//（（入力項目の長さが0の時）は下記の警告文を出す。
 			else{
+
 				setErrorMessage("未入力の項目があります。");
+
 				result = ERROR;
 			}
 

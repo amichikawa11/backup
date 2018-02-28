@@ -10,22 +10,24 @@ import java.util.List;
 import com.internousdev.myec.dto.InquiryDTO;
 import com.internousdev.myec.util.DBConnector;
 
+
 public class InquiryCompleteDAO {
 
-	//Listで宣言、ArrayListでインスタンス生成を行う
-	List<InquiryDTO> inquiryDTOList = new ArrayList<InquiryDTO>();
+	//①問合せデータ取得 ②データの保存 ③問合せ履歴の削除のメソッド
 
 	/**
-	 * ★実行メソッド
-	 * 	入力された問い合わせデータをDBから取得、
-	 * 	情報をinquiryDTOに格納、最後にaddで
-	 * inquiryDTOに格納した値をinquiryDTOListに格納する
+	 * 	①問い合わせデータの取得メソッド
 	 */
+
+	List<InquiryDTO> inquiryDTOList = new ArrayList<InquiryDTO>();
+
+
 	public List<InquiryDTO> select(){
 
 		//DBに接続
 
 		DBConnector dbConnector = new DBConnector();
+
 		Connection connection = dbConnector.getConnection();
 
 		String sql = "select * from inquiry";
@@ -33,17 +35,21 @@ public class InquiryCompleteDAO {
 	try{
 
 		PreparedStatement preparedStatement = connection.prepareStatement(sql);
+
 		ResultSet resultSet = preparedStatement.executeQuery();
 
-		//DBからgetterで取得した値をsetterでInquiryDTOに格納
+		//DBから取得した値をsetterでInquiryDTOに格納
 
 		while(resultSet.next()){
+
 			InquiryDTO inquiryDTO = new InquiryDTO();
+
 			inquiryDTO.setInquiry_name(resultSet.getString("inquiry_name"));
 			inquiryDTO.setInquiry_mail(resultSet.getString("inquiry_mail"));
 			inquiryDTO.setQtype(resultSet.getString("qtype"));
 			inquiryDTO.setBody(resultSet.getString("body"));
 			inquiryDTO.setMaster_id(resultSet.getString("master_id"));
+
 			inquiryDTOList.add(inquiryDTO);
 
 		}
@@ -53,9 +59,11 @@ public class InquiryCompleteDAO {
 	}
 
 	try{
+
 		connection.close();
 
 	}catch(SQLException e){
+
 		e.printStackTrace();
 	}
 
@@ -64,20 +72,22 @@ public class InquiryCompleteDAO {
 }
 
 	/**
-	 * ★実行メソッド
-	 * 	入力された値をDBに保管する
+	 * ②問合せデータをDBに格納するメソッド
 	 */
 
 
 public int insert(String inquiry_name, String inquiry_mail, String qtype, String body, String master_id){
+
 	int ret = 0;
+
 	DBConnector dbConnector = new DBConnector();
+
 	Connection connection = dbConnector.getConnection();
 
-	//どこにinsertするかを指定
 	String sql = "insert into inquiry values(?,?,?,?,?)";
 
 	try{
+
 		PreparedStatement preparedStatement = connection.prepareStatement(sql);
 		preparedStatement.setString(1, inquiry_name);
 		preparedStatement.setString(2, inquiry_mail);
@@ -90,11 +100,15 @@ public int insert(String inquiry_name, String inquiry_mail, String qtype, String
 
 		//DBへ値を保管できたら、保管した件数を表示
 		//retに追加した件数を代入
+
 		if(i>0){
+
 			System.out.println(i+"件登録されました");
 			ret = i ;
 		}
+
 	}catch(SQLException e){
+
 		e.printStackTrace();
 
 	}
@@ -110,34 +124,38 @@ public int insert(String inquiry_name, String inquiry_mail, String qtype, String
 }
 
 
-/**
- * 問合せ履歴の一括削除メソッド
- */
+	/**
+	 * ③問合せ履歴の一括削除メソッド
+	 */
+
 public int inquiryAllDelete(String master_id) throws SQLException{
 
-String sql = "DELETE FROM inquiry WHERE master_id=?";
+	String sql = "DELETE FROM inquiry WHERE master_id=?";
 
-DBConnector dbConnector = new DBConnector();
-Connection connection = dbConnector.getConnection();
-PreparedStatement preparedStatement;
+	DBConnector dbConnector = new DBConnector();
 
-int result = 0;
+	Connection connection = dbConnector.getConnection();
 
-try{
-	preparedStatement = connection.prepareStatement(sql);
-	preparedStatement.setString(1,master_id);
+	PreparedStatement preparedStatement;
 
-	result = preparedStatement.executeUpdate();
 
-}catch(SQLException e){
-	e.printStackTrace();
+	int result = 0;
 
-}finally{
-	connection.close();
-}
+	try{
+		preparedStatement = connection.prepareStatement(sql);
+		preparedStatement.setString(1,master_id);
 
-return result;
+		result = preparedStatement.executeUpdate();
 
-}
+	}catch(SQLException e){
+		e.printStackTrace();
+
+	}finally{
+		connection.close();
+	}
+
+	return result;
+
+	}
 
 }

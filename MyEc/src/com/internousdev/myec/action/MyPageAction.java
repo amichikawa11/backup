@@ -45,9 +45,11 @@ public class MyPageAction extends ActionSupport implements SessionAware{
 	public String execute() throws SQLException {
 		@SuppressWarnings("unchecked")
 		List<BuyItemDTO> buyItemDTOList=(List<BuyItemDTO>) session.get("list");
+
 		if (!session.containsKey("id")) {
 
 			if(session.containsKey("masterId")){
+
 				return "master";
 			}
 
@@ -82,16 +84,19 @@ public class MyPageAction extends ActionSupport implements SessionAware{
 
 
 			Iterator<MyPageDTO> iterator = myPageList.iterator();
+
 			if (!(iterator.hasNext())) {
 				myPageList = null;
 			}
 
 		// 商品履歴を削除する場合（下記のdeleteメソッド使用）
 		} else{
+
 			delete();
 		}
 
 		String result = SUCCESS;
+
 		return result;
 	}
 
@@ -109,8 +114,11 @@ public class MyPageAction extends ActionSupport implements SessionAware{
 		if(res > 0) {
 
 			myPageList = null;
+
 			setMessage("商品情報を正しく削除しました。");
+
 		} else if(res == 0) {
+
 			setMessage("商品情報の削除に失敗しました。");
 		}
 

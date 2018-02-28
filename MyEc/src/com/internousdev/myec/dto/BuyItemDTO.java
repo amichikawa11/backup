@@ -3,6 +3,10 @@ package com.internousdev.myec.dto;
 
 public class BuyItemDTO {
 
+	/**
+	 * 商品情報を保管する変数
+	 */
+
 	private int id;
 
 	private String itemName;
@@ -26,7 +30,6 @@ public class BuyItemDTO {
 	private String image_file_path;
 
 
-	//getter と setter の作成
 
 	public String getItemName() {
 		return itemName;

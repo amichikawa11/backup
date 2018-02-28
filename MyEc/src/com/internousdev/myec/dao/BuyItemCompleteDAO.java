@@ -1,6 +1,5 @@
 package com.internousdev.myec.dao;
 
-
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
@@ -20,15 +19,9 @@ public class BuyItemCompleteDAO {
 	private String sql = "INSERT INTO user_buy_item_transaction (item_transaction_id, total_price, total_count, user_master_id, pay, insert_date) VALUES(?, ?, ?, ?, ?, ?)";
 
 	/**
-	 * 商品購入情報登録メソッド
-	 *
-	 * @param item_transaction_id
-	 * @param user_master_id
-	 * @param total_price
-	 * @param total_count
-	 * @param pay
-	 * @throws SQLException
+	 * 商品購入情報の登録メソッド
 	 */
+
 	public void buyItemeInfo(int item_transaction_id, String user_master_id, int total_price, int total_count, String pay, int item_stock) throws SQLException {
 
 		try {
@@ -40,11 +33,13 @@ public class BuyItemCompleteDAO {
 			preparedStatement.setString(5, pay);
 			preparedStatement.setString(6, dateUtil.getDate());
 
-			/**
-			 * 購入した個数分、在庫を減らす
-			 */
+
+			// 購入した個数分、在庫を減らす
+
 			int buyCount = preparedStatement.executeUpdate();
+
 			if(buyCount > 0){
+
 				String sql2 = "UPDATE item_info_transaction SET item_stock=? WHERE id=?";
 
 				PreparedStatement ps = connection.prepareStatement(sql2);

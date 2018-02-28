@@ -18,6 +18,8 @@ public class ItemInsertDTO {
 
 	private String imageFilePath;
 
+
+
 	public String getItemName() {
 		return itemName;
 	}

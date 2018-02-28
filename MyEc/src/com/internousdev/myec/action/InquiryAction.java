@@ -13,6 +13,7 @@ import com.opensymphony.xwork2.ActionSupport;
 public class InquiryAction extends ActionSupport implements SessionAware{
 
 	List<InquiryDTO> inquiryDTOList = new ArrayList<InquiryDTO>();
+
 	private Map<String,Object> session;
 
 
@@ -27,10 +28,12 @@ public class InquiryAction extends ActionSupport implements SessionAware{
 	@Override
 	public void setSession(Map<String, Object> session){
 		this.session = session;
+
 	}
 
 	public void setsession(Map<String, Object> session) {
 		this.session = session;
+
 	}
 
 	public Map<String, Object> getsession() {

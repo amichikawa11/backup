@@ -24,10 +24,11 @@ public class BuyItemAction extends ActionSupport implements SessionAware {
 
 
 	/**
-	 * 商品情報取得メソッド
+	 * 実行メソッド（商品一覧に載せる商品情報の取得）
 	 */
 
 	public String execute() {
+
 		String result = SUCCESS;
 
 		session.put("count", count);

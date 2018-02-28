@@ -9,10 +9,16 @@ public class InquiryDTO {
 	 */
 
 	private String inquiry_name;
+
 	private String inquiry_mail;
+
 	private String qtype;
+
 	private String body;
+
 	private String master_id;
+
+
 
 	public String getInquiry_name() {
 		return inquiry_name;

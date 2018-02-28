@@ -19,6 +19,7 @@ public class ItemInventoryControlAction extends ActionSupport implements Session
 	public Map<String,Object> session;
 
 	public String execute(){
+
 		String result=SUCCESS;
 
 		session.put("count", count);
@@ -27,15 +28,23 @@ public class ItemInventoryControlAction extends ActionSupport implements Session
 		List<BuyItemDTO> list=(List<BuyItemDTO>) session.get("buyItemDTOList");
 
 		for(int i=0; i<count.size(); i++){
+
 			BuyItemDTO buyItemDTO=new BuyItemDTO();
 
 			String itemName=list.get(i).getItemName();
+
 			String imageFilePath = list.get(i).getImage_file_path();
+
 			int itemStock=list.get(i).getItem_stock();
+
 			int intCount=Integer.parseInt(count.get(i));
+
 			int id=list.get(i).getId();
+
 			int totalCount=itemStock + intCount;
+
 			if(intCount != 0){
+
 				buyItemDTO.setItemName(itemName);
 				buyItemDTO.setImage_file_path(imageFilePath);
 				buyItemDTO.setItem_stock(itemStock);
@@ -44,7 +53,9 @@ public class ItemInventoryControlAction extends ActionSupport implements Session
 				buyItemDTO.setTotal_count(totalCount);
 
 				buyItemDTOList.add(buyItemDTO);
+
 			}
+
 			session.put("list",buyItemDTOList);
 		}
 

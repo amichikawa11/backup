@@ -18,14 +18,14 @@ public class ItemInsertDAO {
 	private String sql = "INSERT INTO item_info(item_name, item_price, item_stock, item_category, item_description, image_file_path, release_date) VALUES(?,?,?,?,?,?,?)";
 
 
-	public ItemInsertDTO itemInsertInfo(String itemName, String itemPrice, String itemStock, String itemCategory, String itemDescription, String imageFilePath, String releaseDate) throws SQLException{
+	public ItemInsertDTO itemInsertInfo(String itemName, int itemPrice, int itemStock, String itemCategory, String itemDescription, String imageFilePath, String releaseDate) throws SQLException{
 
 		try{
 
 			PreparedStatement ps = con.prepareStatement(sql);
 			ps.setString(1, itemName);
-			ps.setString(2, itemPrice);
-			ps.setString(3, itemStock);
+			ps.setInt(2, itemPrice);
+			ps.setInt(3, itemStock);
 			ps.setString(4, itemCategory);
 			ps.setString(5, itemDescription);
 			ps.setString(6, imageFilePath);

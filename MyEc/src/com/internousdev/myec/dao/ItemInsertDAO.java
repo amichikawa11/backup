@@ -10,6 +10,7 @@ import com.internousdev.myec.util.DBConnector;
 public class ItemInsertDAO {
 
 	private DBConnector dbConnector = new DBConnector();
+
 	private Connection connection = dbConnector.getConnection();
 
 	private ItemInsertDTO itemInsertDTO = new ItemInsertDTO();
@@ -19,7 +20,6 @@ public class ItemInsertDAO {
 
 	/**
 	 * 商品追加メソッド
-	 * (BDに引数の値をセット
 	 */
 
 	public ItemInsertDTO itemInsertInfo(String itemName, String itemPrice, String itemStock, String itemCategory, String itemDescription, String imageFilePath) throws SQLException{

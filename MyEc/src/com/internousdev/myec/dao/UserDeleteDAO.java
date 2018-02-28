@@ -6,9 +6,15 @@ import java.sql.SQLException;
 
 import com.internousdev.myec.util.DBConnector;
 
+
 public class UserDeleteDAO {
 
+	/**
+	 * ユーザー情報の削除（退会処理）メソッド
+	 */
+
 	private DBConnector dbConnector = new DBConnector();
+
 	private Connection connection = dbConnector.getConnection();
 
 	public int userDeleteInfo(String deleteId) throws SQLException{
@@ -19,6 +25,7 @@ public class UserDeleteDAO {
 
 		try{
 			PreparedStatement preparedStatement = connection.prepareStatement(sql);
+
 			preparedStatement.setString(1, deleteId);
 
 			result = preparedStatement.executeUpdate();

@@ -11,16 +11,12 @@ import com.opensymphony.xwork2.ActionSupport;
 
 public class GoItemInventoryAction extends ActionSupport implements SessionAware{
 
-	/**
-	 * ログイン情報を格納
-	 */
 	public Map<String, Object> session;
 
-	/**
-	 * アイテム情報を取得
-	 */
 	private BuyItemDAO buyItemDAO=new BuyItemDAO();
+
 	private BuyItemDTO buyItemDTO=new BuyItemDTO();
+
 	private List<BuyItemDTO> buyItemDTOList;
 
 	/**
@@ -34,25 +30,33 @@ public class GoItemInventoryAction extends ActionSupport implements SessionAware
 
 		buyItemDTOList=buyItemDAO.getBuyItemInfo();
 
-		// BuyItemActionで利用したいから"buyItemDTOList"という鍵の名前でbuyItemDTOListのデータを保管する。
+		// BuyItemActionで利用したいので"buyItemDTOList"
+		//という鍵の名前でbuyItemDTOListのデータを保管する。
+
 		session.put("buyItemDTOList", buyItemDTOList);
+
 		session.put("id", buyItemDTO.getId());
 
 		result = SUCCESS;
+
 		return result;
 
 	}
 
 
 	public List<BuyItemDTO> getBuyItemDTOList(){
+
 		return buyItemDTOList;
+
 	}
+
 	public void setBuyItemDTOList(List<BuyItemDTO> buyItemDTOList){
+
 		this.buyItemDTOList=buyItemDTOList;
 	}
 
 	@Override
 	public void setSession(Map<String, Object> session) {
 		this.session = session;
-}
+	}
 }

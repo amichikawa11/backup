@@ -7,7 +7,12 @@ import java.sql.SQLException;
 import com.internousdev.myec.util.DBConnector;
 import com.internousdev.myec.util.DateUtil;
 
+
 public class UserCreateCompleteDAO {
+
+	/**
+	 * 新規ユーザー登録のDB保存メソッド
+	 */
 
 	private DBConnector db = new DBConnector();
 
@@ -33,8 +38,11 @@ public class UserCreateCompleteDAO {
 			ps.execute();
 
 		} catch(Exception e) {
+
 			e.printStackTrace();
+
 		} finally {
+
 			con.close();
 		}
 	}

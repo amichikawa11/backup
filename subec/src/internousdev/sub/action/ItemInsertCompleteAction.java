@@ -12,9 +12,9 @@ public class ItemInsertCompleteAction extends ActionSupport{
 
 	private String itemName;
 
-	private String itemPrice;
+	private int itemPrice;
 
-	private String itemStock;
+	private int itemStock;
 
 	private String itemCategory;
 
@@ -37,6 +37,7 @@ public class ItemInsertCompleteAction extends ActionSupport{
 		itemInsertDTO = itemInsertDAO.itemInsertInfo(itemName, itemPrice, itemStock, itemCategory, itemDescription, imageFilePath, releaseDate);
 
 		result = SUCCESS;
+
 		return result;
 
 		}
@@ -52,22 +53,22 @@ public class ItemInsertCompleteAction extends ActionSupport{
 	}
 
 
-	public String getItemPrice() {
+	public int getItemPrice() {
 		return itemPrice;
 	}
 
 
-	public void setItemPrice(String itemPrice) {
+	public void setItemPrice(int itemPrice) {
 		this.itemPrice = itemPrice;
 	}
 
 
-	public String getItemStock() {
+	public int getItemStock() {
 		return itemStock;
 	}
 
 
-	public void setItemStock(String itemStock) {
+	public void setItemStock(int itemStock) {
 		this.itemStock = itemStock;
 	}
 
@@ -110,7 +111,6 @@ public class ItemInsertCompleteAction extends ActionSupport{
 	public void setReleaseDate(String releaseDate) {
 		this.releaseDate = releaseDate;
 	}
-
 
 
 	}
