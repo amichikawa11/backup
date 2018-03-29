@@ -1,0 +1,46 @@
+package internousdev.sub.action;
+
+import java.sql.SQLException;
+
+import com.opensymphony.xwork2.ActionSupport;
+import org.apache.struts2.interceptor.SessionAware;
+
+import internousdev.sub.dao.ItemInsertDAO;
+import internousdev.sub.dto.ItemInsertDTO;
+
+
+public class ItemInsertCompleteAction extends ActionSupport implements SessionAware{
+
+	private String itemName;
+
+	private String itemPrice;
+
+	private String itemStock;
+
+	private String itemCategory;
+
+	private String itemDescription;
+
+	private String imageFilePath;
+
+	private String releaseDate;
+
+	private ItemInsertDTO itemInsertDTO = new ItemInsertDTO();
+
+	private ItemInsertDAO itemInsertDAO = new ItemInsertDAO();
+
+
+	public String execute() throws SQLException{
+
+		String result = ERROR;
+
+		itemInsertDTO = itemInsertDAO.itemInsertInfo(itemName, itemPrice, itemStock, itemCategory, itemDescription, imageFilePath, releaseDate);
+
+			result = SUCCESS;
+
+		}return result;
+	}
+
+
+
+}

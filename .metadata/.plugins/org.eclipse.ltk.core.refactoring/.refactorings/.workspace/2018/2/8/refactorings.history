@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="リソース名 &apos;SubEcsite&apos; を &apos;subecsite&apos; に変更します" description="リソース &apos;SubEcsite&apos; の名前変更" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/SubEcsite" name="subecsite" stamp="1519174483289" updateReferences="true"/>&#x0A;<refactoring comment="リソース名 &apos;subecsite&apos; を &apos;subec&apos; に変更します" description="リソース &apos;subecsite&apos; の名前変更" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/subecsite" name="subec" stamp="1519174771027" updateReferences="true"/>
+</session>

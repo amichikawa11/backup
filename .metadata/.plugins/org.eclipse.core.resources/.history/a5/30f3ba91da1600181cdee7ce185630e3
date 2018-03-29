@@ -1,0 +1,38 @@
+package internousdev.sub.action;
+import java.util.Map;
+
+import com.opensymphony.xwork2.ActionSupport;
+
+public class GoLoginAction extends ActionSupport{
+
+	private String loginErrorMessage;
+	public Map<String, Object> session;
+
+	public String execute(){
+
+		String result;
+
+		if(session.containsKey("id") || session.containsKey("masterId")){
+
+		loginErrorMessage = "既にログインしています。";
+		result = "alreadyLogged";
+
+		}else{
+
+			result = SUCCESS;
+		}
+
+		return result;
+
+		}
+
+	public String getLoginErrorMessage() {
+		return loginErrorMessage;
+	}
+
+	public void setLoginErrorMessage(String loginErrorMessage) {
+		this.loginErrorMessage = loginErrorMessage;
+
+	}
+
+}

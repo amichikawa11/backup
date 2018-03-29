@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+"http://struts.apache.org/dtds/struts-2.3.dtd">
+<!-- Strutsの詳細設定 -->
+
+<struts>
+
+	<constant name="struts.devMode" value="true"/>
+	<package name="internousdev.sub.action" extends="struts-default">
+
+		<!-- GoHomeAction -->
+		<action name="GoHomeAction" class="internousdev.sub.action.GoHomeAction" method="execute">
+		<result name="success">home.jsp</result>
+		</action>
+
+		<!-- GoLoginAction -->
+		<action name="GoLoginAction" class="internousdev.sub.action.GoLoginAction" method="execute">
+		<result name="success">login.jsp</result>
+		</action>
+
+		<!-- LoginAction -->
+		<action name="LoginAction" class="internousdev.sub.action.LoginAction" method="execute">
+		<result name="success">itemList.jsp</result>
+		<result name="master">masterHome.jsp</result>
+		<result name="alreadyLogged">login.jsp</result>
+		<result name="error">loginError.jsp</result>
+		</action>
+
+		<!-- LogoutAction -->
+		<action name="LogoutAction" class="internousdev.sub.action.LogoutAction" method="execute">
+		<result name="success">logoutComplete.jsp</result>
+		</action>
+
+		<!-- GoItemListAction -->
+		<action name="GoItemListAction" class="internousdev.sub.action.GoItemListAction" method="execute">
+		<result name="success">itemList.jsp</result>
+		<result name="master">itemList.jsp</result>
+		<result name="error">itemListNotLogin.jsp</result>
+		</action>
+
+		<!-- BuyItemAction -->
+		<action name="BuyItemAction" class="internousdev.sub.action.BuyItemAction" method="execute">
+		<result name="success">buyItemConfirm.jsp</result>
+		</action>
+
+		<!-- BuyItemConfirmAction -->
+		<action name="BuyItemConfirmAction" class="internousdev.sub.action.BuyItemConfirmAction" method="execute">
+		<result name="success">buyItemComplete.jsp</result>
+		<result name="error">buyItem.jsp</result>
+		</action>
+
+
+		<!-- GoUserCreateAction -->
+		<action name="GoUserCreateAction" class="internousdev.sub.action.GoUserCreateAction" method="execute">
+		<result name="success">userCreate.jsp</result>
+		</action>
+
+		<!-- UserCreateConfirmAction -->
+		<action name="UserCreateConfirmAction" class="internousdev.sub.action.UserCreateConfirmAction" method="execute">
+		<result name="success">userCreateConfirm.jsp</result>
+		<result name="error">userCreate.jsp</result>
+		</action>
+
+		<!-- UserCreateCompleteAction -->
+		<action name="UserCreateCompleteAction" class="internousdev.sub.action.UserCreateCompleteAction" method="execute">
+		<result name="success">userCreateComplete.jsp</result>
+		</action>
+
+		<!-- GoMyPageAction -->
+		<action name="GoMyPageAction" class="internousdev.sub.action.GoMyPageAction" method="execute">
+		<result name="success">myPage.jsp</result>
+		<result name="master">masterHome.jsp</result>
+		<result name="error">myPageLogin.jsp</result>
+		</action>
+
+		<!-- MyPageLoginAction -->
+		<action name="MyPageLoginAction" class="internousdev.sub.action.MyPageLoginAction" method="execute">
+		<result name="success">myPage.jsp</result>
+		<result name="master">masterHome.jsp</result>
+		<result name="error">myPageLogin.jsp</result>
+		</action>
+
+		<!-- ItemHistoryAction -->
+		<action name="ItemHistoryAction" class="internousdev.sub.action.ItemHistoryAction" method="execute">
+		<result name="success">itemHistory.jsp</result>
+		</action>
+
+		<!-- GoMasterPageAction -->
+		<action name="GoMasterPageAction" class="internousdev.sub.action.GoMasterPageAction" method="execute">
+		<result name="success">masterHome.jsp</result>
+		</action>
+
+		<!-- GoItemDeleteAction -->
+		<action name="GoItemDeleteAction" class="internousdev.sub.action.GoItemDeleteAction" method="execute">
+		<result name="success">itemDelete.jsp</result>
+		</action>
+
+		<!-- ItemDeleteAction -->
+		<action name="ItemDeleteAction" class="internousdev.sub.action.ItemDeleteAction" method="execute">
+		<result name="success">itemDeleteConfirm.jsp</result>
+		</action>
+
+		<!-- ItemDeleteConfirmAction -->
+		<action name="ItemDeleteConfirmAction" class="internousdev.sub.action.ItemDeleteConfirmAction" method="execute">
+		<result name="success">itemDeleteComplete.jsp</result>
+		</action>
+
+		<!-- GoItemInsertAction -->
+		<action name="GoItemInsertAction" class="internousdev.sub.action.GoItemInsertAction" method="execute">
+		<result name="success">itemInsert.jsp</result>
+		</action>
+
+	</package>
+</struts>

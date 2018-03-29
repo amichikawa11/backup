@@ -1,0 +1,42 @@
+package internousdev.sub.dao;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+import internousdev.sub.util.DBConnector;
+import internousdev.sub.dto.ItemHistoryDTO;
+
+public class ItemHistoryDeleteDAO {
+
+	private DBConnector db = new DBConnector();
+
+	private Connection con = db.getConnection();
+
+	public boolean itemHistoryDelete(String user_master_id) throws SQLException{
+
+		boolean result = false;
+
+		String sql = "DELETE FROM buy_item_transaction WHERE user_master_id=?";
+
+		try{
+
+			PreparedStatement ps = con.prepareStatement(sql);
+			ps.setString(1, user_master_id);
+			result = true;
+
+		}catch(SQLException e){
+
+			e.printStackTrace();
+
+		}finally{
+
+			con.close();
+		}
+
+		return result;
+
+	}
+
+}
